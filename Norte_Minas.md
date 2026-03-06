@@ -1,5 +1,5 @@
 Pernsona: Willian Marcos
-Idade: 32 | Profissão: Soldador | Cidade: Jaíba
+Idade: 32 | Profissão: Soldador | Cidade: Jaíba |
 Renda estimada: R$2.300| Dispositivo preferido: mobile
 
 OBJETIVOS:
