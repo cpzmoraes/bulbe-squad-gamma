@@ -1,5 +1,5 @@
 PERSONA: Juliana Santos
-Idade: 28 | Profissão: Gerente de RH | Cidade: Betim
+Idade: 28 | Profissão: Gerente de RH | Cidade: Betim |
 Renda estimada: R$9.000| Dispositivo preferido: desktop
 
 OBJETIVOS:
