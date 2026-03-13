@@ -1,1 +1,0 @@
-# bulbe-squad-gamma
