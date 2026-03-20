@@ -106,29 +106,29 @@
 
 ---
 
-### Persona 1 — [Nome Fictício]
+### Persona 1 — [ Sergio Rodrigues ]
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  👤  [Nome], [Idade] anos                                   │
-│      [Profissão] · [Cidade / Região]                        │
+│  👤  [Sergio Rodrigues], [42] anos                                   │
+│      [Empreendedor] · [Belo Horizonte]                        │
 └─────────────────────────────────────────────────────────────┘
 ```
 
 | Atributo | Descrição |
 |---|---|
-| **Perfil** | [1 frase sobre quem é essa pessoa] |
-| **Escolaridade** | [Ex: Ensino Superior Completo] |
-| **Familiaridade com tecnologia** | [Baixa / Média / Alta] |
-| **Dispositivo principal** | [Ex: Smartphone Android] |
+| **Perfil** | [ Cliente Inseguro ] |
+| **Escolaridade** | [ Ensino médio completo ] |
+| **Familiaridade com tecnologia** | [ Média ] |
+| **Dispositivo principal** | [Smartphone Iphone] |
 
 **Objetivos:**
-- [Objetivo 1 relacionado ao uso do produto]
-- [Objetivo 2]
+- [Objetivo 1 - Aumentar a margem de lucro para maiores investimentos na infraestrutura.]
+- [Objetivo 2 - Diminuir o custo de energia em sua linha de restaurantes.]
 
 **Frustrações:**
-- [Frustração 1 com o estado atual]
-- [Frustração 2]
+- [Frustração 1 - Não confiar que terá uma redução significativa na conta de luz.]
+- [Frustração 2 - Baixa confiabilidade. Promessas vazias.]
 
 **Citação representativa:**
 > *"[Frase que captura a motivação central desta persona — use dados das entrevistas]"*
@@ -138,11 +138,105 @@
 
 ---
 
-### Persona 2 — [Nome Fictício]
+### Persona 2 — [ Juliana Santos ]
 
-> 🔁 *Repita a estrutura acima. Recomendado: 2 a 3 personas.*
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  👤  [Juliana Santos], [28] anos                                   │
+│      [Gerente de RH] · [Betim]                        │
+└─────────────────────────────────────────────────────────────┘
+```
+
+| Atributo | Descrição |
+|---|---|
+| **Perfil** | [ Cliente Parceiro ] |
+| **Escolaridade** | [ Ensino superior complet0 ] |
+| **Familiaridade com tecnologia** | [ Alta ] |
+| **Dispositivo principal** | [Smartphone Iphone/ Desktop ] |
+
+**Objetivos:**
+- [Objetivo 1 - Aumentar o número de beneficios da vaga de emprego.]
+- [Objetivo 2 - Falta de atratividade na vaga.]
+
+**Frustrações:**
+- [Frustração 1 - Taxa de desconto abaixo do mercado.]
+- [Frustração 2 - Falta de visibilidade da bulbe.]
+
+**Citação representativa:**
+> *"[Frase que captura a motivação central desta persona — use dados das entrevistas]"*
+
+**Relevância para o Projeto:**  
+[Explique por que esta persona é central para as decisões de design da squad.]
 
 ---
+
+### Persona 3 — [ Wesley ]
+
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  👤  [Wesley], [42] anos                                   │
+│      [Repositor de Mercearia] · [Raposos/MG]                        │
+└─────────────────────────────────────────────────────────────┘
+```
+
+| Atributo | Descrição |
+|---|---|
+| **Perfil** | [ Cliente Preocupado com o valor da conta ] |
+| **Escolaridade** | [ Ensino médio incompleto ] |
+| **Familiaridade com tecnologia** | [ Baixa ] |
+| **Dispositivo principal** | [Smartphone Android] |
+
+**Objetivos:**
+- [Objetivo 1 - Economizar na conta de luz de forma signativa para aumentar o poder de compra com o baixo salário.]
+- [Objetivo 2 - A dor de gastar muito com energia e faltar para o lazer ou outras compras mais satisfatórias.]
+
+**Frustrações:**
+- [Frustração 1 - Confiança em uma empresa que promete uma redução "gratuita" em um pagamento que é recorrente desde muitos anos.]
+- [Frustração 2 - Pagar caro na conta de luz.]
+
+**Citação representativa:**
+> *"[Frase que captura a motivação central desta persona — use dados das entrevistas]"*
+
+**Relevância para o Projeto:**  
+[Explique por que esta persona é central para as decisões de design da squad.]
+
+---
+
+### Persona 4 — [Willian Marcos]
+
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  👤  [Willian Marcos], [32] anos                                   │
+│      [Soldador] · [Jaíba]                        │
+└─────────────────────────────────────────────────────────────┘
+```
+
+| Atributo | Descrição |
+|---|---|
+| **Perfil** | [ Cliente que indica o que gosta ] |
+| **Escolaridade** | [ Ensino médio completo ] |
+| **Familiaridade com tecnologia** | [ Média ] |
+| **Dispositivo principal** | [Smartphone Android] |
+
+**Objetivos:**
+- [Objetivo 1 - O objetivo principal é economizar para que sobre um pouco de dinheiro para o lazer.]
+- [Objetivo 2 - A dor de querer sair da classe D+E, e não ter dinheiro para sair nos finais de semana.]
+
+**Frustrações:**
+- [Frustração 1 - A demora dos resultados.]
+- [Frustração 2 - A demora da ativação.]
+
+**Citação representativa:**
+> *"[Frase que captura a motivação central desta persona — use dados das entrevistas]"*
+
+**Relevância para o Projeto:**  
+[Porque precisamos atender ao publico de android e com familiaridade media com a tecnologia.]
+
+---
+
 
 ## 4. User Stories
 
