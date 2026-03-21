@@ -1,7 +1,7 @@
 # 🌞 [Nome do Projeto] — Bulbe Energia
 > **Disciplina:** Projeto Aplicado I — Ibmec 2026.1  
 > **Professor:** Cristiano de Macedo Neto, M.Sc.  
-> **Squad:** [Nome da Squad]  
+> **Squad:** [Gamma]  
 > **Cliente:** Bulbe Energia · [bulbeenergia.com.br](https://bulbeenergia.com.br)
 
 ---
@@ -23,26 +23,28 @@
 
 ### 1.1 Contexto do Projeto
 
-> ⚠️ **Instrução para a Squad:** Descreva aqui o contexto do projeto com base na visita ao cliente e nas entrevistas realizadas. Não copie materiais de referência do professor; use suas próprias palavras e cite as fontes das informações.
-
-[Descreva brevemente o mercado de energia solar por assinatura no Brasil, a posição da Bulbe Energia nesse mercado e o problema central que motivou este projeto. Referencie dados de mercado confiáveis, como relatórios da ANEEL, ABSOLAR ou artigos acadêmicos.]
+Atualmente a Bulbe atende no mercado de energia apenas em Minas Gerais, com usinas no norte de Minas, eles estão em 4 posição entre as empresas de mesma área, uma delas é a Cemig SIM que se destaca como ponto relevante, CEMIG é o serviço de distribuição de energia em Minas Gerais onde todos pagam há anos. Devido ao nome a CEMIG SIM já está a frente no quesito confiabilidade.
 
 ### 1.2 Problema de Design
 
-[Descreva o problema específico que a squad identificou durante a fase de descoberta com o cliente. Seja preciso: qual dor do usuário ou do negócio este projeto resolve?]
-
+O problema identificado é a baixa tangibilidade do serviço, que resulta em desconfiança por parte do público-alvo (classes C e D). Devido à distância geográfica das usinas (localizadas no Norte de Minas), o modelo de negócio de geração distribuída parece "invisível" para clientes de Belo Horizonte e Contagem. 
+ 
 ### 1.3 Solução Proposta
-
-[Descreva em 2–3 parágrafos a solução de frontend que a squad propõe. Inclua o escopo definido (o que está dentro e fora do projeto).]
-
+ 
+Para o frontend, a Squad propõe uma atualização que ao tirar foto da conta antiga gera a previsão do ganho do usuário ao assinar com a Bulbe, de modo que já seja descontada a energia pública, sendo apresentada a quantidade de meses que seriam suficientes para que uma conta média do usuário seja "gratuita".
+ 
+Além disso, pensamos em alternativas para mostrar a infraestrutura da empresa que incluem mostrar a parte da geração de energia por meio de fotos, vídeos e link do google maps mostrando o local caso viável, a partir disso, haverá maior clareza sobre a existência real da instituição.
+ 
 ### 1.4 Integrantes da Squad
-
+ 
 | Nome Completo | Matrícula | Curso | Papel na Squad |
 |---|---|---|---|
-| [Nome] | [Matrícula] | [Eng. Software / Ciência de Dados / Eng. Computação] | [Ex: Tech Lead] |
-| [Nome] | [Matrícula] | [Curso] | [Papel] |
-| [Nome] | [Matrícula] | [Curso] | [Papel] |
-| [Nome] | [Matrícula] | [Curso] | [Papel] |
+| [Victória Epifanio Soares Lucas] | [202508406136] | [Eng. Software] | [Dev] |
+| [Cauã Felipe de Moraes Paz] | [202505008016] | [Eng. Software] | [Dev] |
+| [Henrique Costa Bomfim] | [202302445391] | [Ciência de Dados] | [Dev] |
+| [Danilo Dias Lima] | [202508885204] | [Eng. Computação] | [Dev] |
+| [João Hector de Oliveira Fraga] | [202508827931] | [Ciência de Dados] | [Dev] |
+| [Lucas Davi Alves de Souza] | [202501561306] | [Eng. Software] | [Dev] |
 
 ### 1.5 Repositório e Entrega
 
@@ -60,43 +62,87 @@
 
 ### Declaração de Rastreabilidade
 
-> Declaro que as demandas registradas neste documento foram levantadas pela Squad [Nome] durante a visita ao cliente em [data], com base em entrevistas diretas e observação. As evidências estão documentadas nas Issues do GitHub: [link para as Issues].
+> Declaro que as demandas registradas neste documento foram levantadas pela Squad [Gamma] durante a visita ao cliente em [04/03], com base em entrevistas diretas e observação. As evidências estão documentadas nas Issues do GitHub: [link para as Issues].
 
 ---
 
-### D-01 · [Título Curto da Demanda]
+### D-01 · Insegurança dos assinantes
 
 | Campo | Conteúdo |
 |---|---|
 | **ID** | D-01 |
-| **Título** | [Título descritivo] |
-| **Origem** | Entrevista com [cargo/nome do contato na Bulbe], [data] |
-| **Evidência** | *"[Trecho literal de fala do cliente que justifica esta demanda]"* |
-| **Prioridade MoSCoW** | Must / Should / Could / Won't |
-| **Impacto no Negócio** | [Descreva o impacto: churn, conversão, satisfação, etc.] |
+| **Título** | Insegurança e Déficit de Comunicação no Pós-Venda |
+| **Origem** | Durante a visita, 04/03 |
+| **Evidência** | *"Estou esperando a algum tempo e ainda não sei quando vou ter meu desconto"* |
+| **Prioridade MoSCoW** | Must |
+| **Impacto no Negócio** | A falha de comunicação transforma a expectativa do desconto em frustração, gerando cancelamentos evitáveis e dificultando a entrada de novos clientes. |
 
 **Descrição:**  
-[2–3 frases explicando a demanda com suas próprias palavras.]
+A demanda aborda a falta de clareza e transparência no processo de pós-assinatura, o que gera ansiedade e desconfiança nos clientes durante o período de espera pela ativação do benefício (desconto na conta de luz/CEMIG).
 
 ---
 
-### D-02 · [Título Curto da Demanda]
+### D-02 · Não pagamento da primeira fatura por insegurança do cliente ao receber a da cemig
 
 | Campo | Conteúdo |
 |---|---|
 | **ID** | D-02 |
-| **Título** | [Título descritivo] |
-| **Origem** | [Fonte da demanda] |
-| **Evidência** | *"[Trecho ou dado que evidencia a demanda]"* |
-| **Prioridade MoSCoW** | Must / Should / Could / Won't |
-| **Impacto no Negócio** | [Impacto] |
+| **Título** | Barreiras na Conversão do Primeiro Pagamento por Conflito de Faturas |
+| **Origem** | Durante a visita, 04/03 |
+| **Evidência** | *"A Cemig está me cobrando e o aplicativo dele também está me cobrando"* |
+| **Prioridade MoSCoW** | Should |
+| **Impacto no Negócio** | A confusão visual e educacional entre a conta da CEMIG e a da Bulbe trava o recebimento da empresa e gera uma crise de credibilidade imediata que pode matar o LTV (valor do cliente ao longo do tempo). |
 
 **Descrição:**  
-[Descrição da demanda.]
+Esta demanda trata da resistência ao pagamento da primeira fatura, causada pela percepção equivocada de uma "cobrança duplicada" quando o cliente recebe tanto o boleto da concessionária (CEMIG) quanto o da empresa (Bulbe).
 
 ---
 
-> 🔁 *Repita o bloco acima para cada demanda identificada (recomendado: 4 a 8 demandas).*
+### D-03 · Alto cancelamento durante os primeiros 90 dias
+
+| Campo | Conteúdo |
+|---|---|
+| **ID** | D-03 |
+| **Título** | Abandono Pós-Venda e Deficiência no Suporte Humano de Boas-Vindas |
+| **Origem** | Durante a visita, 04/03 |
+| **Evidência** | *"Fiquei com medo de ser algum golpe. A gente assina, fica meses sem nenhuma notícia e quando tenta perguntar algo, não tem retorno. Pedi para cancelar."* |
+| **Prioridade MoSCoW** | Should |
+| **Impacto no Negócio** | O "vácuo" de comunicação nos primeiros 90 dias destrói a confiança e transforma o que deveria ser economia em ansiedade, gerando um prejuízo financeiro direto e manchando a reputação da marca. |
+
+**Descrição:**  
+Esta demanda foca na perda prematura de clientes logo após a adesão, motivada por um sentimento de abandono e falta de suporte humano durante o período de espera.
+
+---
+
+### D-04 · Indicações são importantes para gerar confiabilidade
+
+| Campo | Conteúdo |
+|---|---|
+| **ID** | D-04 |
+| **Título** | Marketing de Indicação como Ativador de Confiança |
+| **Origem** | Durante a visita, 04/03 |
+| **Evidência** | *"100% confiável. Estou economizando na conta de luz todos os meses, além de ganhar R$50 por indicação de amigos."* |
+| **Prioridade MoSCoW** | Should |
+| **Impacto no Negócio** | A implementação desta estratégia reduz drasticamente o custo de aquisição de clientes (CAC) e a taxa de cancelamento precoce, pois a indicação de um conhecido possui um peso de confiança superior a qualquer publicidade paga. |
+
+**Descrição:**  
+Esta demanda foca no uso do Marketing de Indicação (Referral) não apenas como canal de vendas, mas como uma ferramenta estratégica para reduzir o medo e a desconfiança de novos clientes.
+
+---
+
+### D-05 · O app não tem objetividade e não há clareza
+
+| Campo | Conteúdo |
+|---|---|
+| **ID** | D-05 |
+| **Título** | Retenção e Adimplência via Transparência de Dados no Appa |
+| **Origem** | Durante a visita, 04/03 |
+| **Evidência** | *"App da confiança e a chance de pagamento aumenta em 65%"* |
+| **Prioridade MoSCoW** | Must |
+| **Impacto no Negócio** | A otimização do aplicativo eleva a probabilidade de pagamento em até 65%, pois tangibiliza o valor do serviço e reduz a insegurança do cliente. Ao oferecer informações claras e de fácil acesso, a empresa diminui drasticamente o volume de chamados no suporte e fortalece a retenção, consolidando o ambiente digital como o principal pilar de credibilidade e fidelização do assinante. |
+
+**Descrição:**  
+Esta demanda foca na reformulação do aplicativo para torná-lo mais intuitivo e informativo, eliminando a falta de objetividade que gera dúvida no usuário. A proposta é incluir funcionalidades de acompanhamento de gastos e economia acumulada, transformando o app em uma ferramenta de transparência que oferece suporte visual e dados claros durante todo o ciclo de assinatura, especialmente nos primeiros 90 dias.
 
 ---
 
@@ -131,10 +177,10 @@
 - [Frustração 2 - Baixa confiabilidade. Promessas vazias.]
 
 **Citação representativa:**
-> *"[Frase que captura a motivação central desta persona — use dados das entrevistas]"*
+> *"Eu até quero economizar na conta de luz, mas preciso ter certeza de que isso realmente funciona — já vi muita promessa que não se cumpre."*
 
 **Relevância para o Projeto:**  
-[Explique por que esta persona é central para as decisões de design da squad.]
+Sergio representa clientes interessados, mas com alto nível de desconfiança. Ele é essencial para o projeto porque evidencia a necessidade de transmitir credibilidade, clareza e comprovação de resultados. As decisões de design devem focar em reduzir inseguranças e facilitar a confiança no serviço.
 
 ---
 
@@ -164,10 +210,10 @@
 - [Frustração 2 - Falta de visibilidade da bulbe.]
 
 **Citação representativa:**
-> *"[Frase que captura a motivação central desta persona — use dados das entrevistas]"*
+> *"Eu preciso oferecer benefícios que realmente chamem atenção, mas também preciso de soluções confiáveis e que façam sentido para a empresa."*
 
 **Relevância para o Projeto:**  
-[Explique por que esta persona é central para as decisões de design da squad.]
+Juliana representa empresas que podem atuar como parceiras estratégicas, utilizando o serviço como benefício corporativo. Ela é importante porque destaca a necessidade de posicionar a solução como diferencial competitivo, com boa comunicação de valor e visibilidade. O design deve facilitar o entendimento dos benefícios e reforçar a atratividade para empresas e colaboradores.
 
 ---
 
@@ -197,10 +243,10 @@
 - [Frustração 2 - Pagar caro na conta de luz.]
 
 **Citação representativa:**
-> *"[Frase que captura a motivação central desta persona — use dados das entrevistas]"*
+> *"Se realmente der pra pagar menos na conta de luz sem complicação, já ajuda muito no fim do mês — mas eu fico com o pé atrás."*
 
 **Relevância para o Projeto:**  
-[Explique por que esta persona é central para as decisões de design da squad.]
+Wesley representa usuários com baixa familiaridade digital e alta sensibilidade a preço. Ele é importante porque evidencia a necessidade de um design simples, acessível e fácil de entender, além de reforçar a confiança no serviço. O produto deve reduzir barreiras de uso e comunicar os benefícios de forma clara e direta.
 
 ---
 
@@ -230,10 +276,10 @@
 - [Frustração 2 - A demora da ativação.]
 
 **Citação representativa:**
-> *"[Frase que captura a motivação central desta persona — use dados das entrevistas]"*
+> *"Se eu ver que realmente funciona e economiza, eu mesmo falo pra todo mundo — mas tem que acontecer rápido."*
 
 **Relevância para o Projeto:**  
-[Porque precisamos atender ao publico de android e com familiaridade media com a tecnologia.]
+Willian representa usuários com potencial de indicação, sendo importante para o crescimento orgânico do serviço. Ele destaca a necessidade de uma boa experiência inicial, com ativação rápida e resultados perceptíveis. O design deve valorizar a agilidade e incentivar o compartilhamento da solução.
 
 ---
 
