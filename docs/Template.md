@@ -283,6 +283,72 @@ Willian representa usuários com potencial de indicação, sendo importante para
 
 ---
 
+### Persona 5 — [Carlos Eduardo]
+
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  👤  [Carlos Eduardo], [32] anos                            │
+│      [Personal Trainer] · [Belo Horizonte/MG]              │
+└─────────────────────────────────────────────────────────────┘
+```
+
+| Atributo | Descrição |
+|---|---|
+| **Perfil** | [ Profissional ativo, comunicativo e influente entre clientes ] |
+| **Escolaridade** | [ Ensino superior completo (Educação Física) ] |
+| **Familiaridade com tecnologia** | [ Alta ] |
+| **Dispositivo principal** | [ Smartphone e Notebook ] |
+
+**Objetivos:**
+- [Objetivo 1 - Alcançar estabilidade e autonomia energética.]
+- [Objetivo 2 - Evitar variações de preço e ter controle previsível dos custos.]
+
+**Frustrações:**
+- [Frustração 1 - Não entender bem o que é geração distribuída.]
+- [Frustração 2 - Dificuldade em diferenciar empresas confiáveis.]
+
+**Citação representativa:**
+> *"Se for simples, confiável e realmente reduzir meus custos, eu indico sem pensar duas vezes."*
+
+**Relevância para o Projeto:**  
+Carlos é um perfil estratégico com alto potencial de indicação. Ele valoriza clareza, confiança e praticidade. Uma boa experiência e prova social aumentam significativamente o alcance orgânico do serviço.
+
+---
+
+### Persona 6 — [Toninho]
+
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  👤  [Toninho], [73] anos                                  │
+│      [Aposentado e Uber] · [Ipatinga/MG]                  │
+└─────────────────────────────────────────────────────────────┘
+```
+
+| Atributo | Descrição |
+|---|---|
+| **Perfil** | [ Conservador, prático e resistente a mudanças ] |
+| **Escolaridade** | [ Ensino fundamental completo ] |
+| **Familiaridade com tecnologia** | [ Baixa ] |
+| **Dispositivo principal** | [ Smartphone ] |
+
+**Objetivos:**
+- [Objetivo 1 - Economizar na conta de luz sem precisar instalar nada.]
+- [Objetivo 2 - Manter praticidade sem mudar sua rotina.]
+
+**Frustrações:**
+- [Frustração 1 - Resistência a mudanças no modo de pagamento.]
+- [Frustração 2 - Burocracia e processos complicados.]
+
+**Citação representativa:**
+> *"Se for complicado, eu nem tento. Tem que ser simples e direto."*
+
+**Relevância para o Projeto:**  
+Toninho representa um público que exige simplicidade máxima. O projeto deve focar em comunicação clara, redução de fricção e suporte humano para gerar confiança e facilitar a adesão.
+
+---
+
 
 ## 4. User Stories
 
@@ -292,19 +358,19 @@ Willian representa usuários com potencial de indicação, sendo importante para
 
 | ID | Persona | Título | Prioridade | Status |
 |---|---|---|---|---|
-| US-01 | [Persona] | [Título curto] | Alta / Média / Baixa | To Do / In Progress / Done |
-| US-02 | [Persona] | [Título curto] | | |
-| US-03 | [Persona] | [Título curto] | | |
+| US-01 | [Sergio Rodrigues] | [Cliente Inseguro] | Alta / Média / Baixa | To Do / In Progress / Done |
+| US-02 | [Juliana Santos] | [Cliente Parceiro] | Alta / Média / Baixa | To Do / In Progress / Done |
+| US-03 | [Wesley] | [Cliente Preocupado com a conta] | Alta / Média / Baixa | To Do / In Progress / Done |
+| US-04 | [Wilha Marcos] | [Cliente que indica o que gosta] | Alta / Média / Baixa | To Do / In Progress / Done |
 
 ---
+### US-01 · [Cliente Inseguro]
 
-### US-01 · [Título]
+> **Como** [Sergio Rodrigues],  
+> **quero** [visualizar um cronograma claro no aplicativo mostrando as etapas até meu desconto ser ativado],  
+> **para que** [eu não sinta que cai em um golpe durante os meses de espera].
 
-> **Como** [Persona],  
-> **quero** [ação que o usuário deseja realizar],  
-> **para que** [benefício ou objetivo que o usuário alcança].
-
-**Demanda relacionada:** D-0X  
+**Demanda relacionada:** D-01 - Insegurança dos assinantes
 **Estimativa de esforço:** [P / M / G] *(Story Points ou T-shirt sizing)*
 
 **Critérios de Aceitação:**
@@ -316,20 +382,92 @@ Willian representa usuários com potencial de indicação, sendo importante para
 [Observações relevantes para a implementação, limitações conhecidas ou dependências.]
 
 ---
+### US-02 · [Cliente Parceiro]
 
-### US-02 · [Título]
+> **Como** [Juliana Santos],  
+> **quero** [acessar uma área institucional com fotos e localização das usinas solares],  
+> **para que** [eu possa provar aos meus colaboradores que o benefício da Bulbe é sólido e confiável].
 
-> **Como** [Persona],  
-> **quero** [ação],  
-> **para que** [benefício].
-
-**Demanda relacionada:** D-0X  
-**Estimativa de esforço:** [P / M / G]
+**Demanda relacionada:** D-05 - O app não tem objetividade (focado na transparência)
+**Estimativa de esforço:** [P / M / G] *(Story Points ou T-shirt sizing)*
 
 **Critérios de Aceitação:**
-- [ ] [Critério 1]
+- [ ] [Critério 1: condição verificável e objetiva]
 - [ ] [Critério 2]
+- [ ] [Critério 3]
 
+**Notas técnicas:**  
+[Observações relevantes para a implementação, limitações conhecidas ou dependências.]
+
+---
+### US-03 · [Cliente Preocupado com a conta]
+
+> **Como** [Wesley],  
+> **quero** [enviar a foto da minha conta de luz antiga para simular como ficará o novo pagamento],  
+> **para que** [eu entenda o desconto e não tenha medo de pagar a primeira fatura da Bulbe].
+
+**Demanda relacionada:** D-02 - Não pagamento da primeira fatura por insegurança do cliente ao receber a da Cemig.
+**Estimativa de esforço:** [P / M / G] *(Story Points ou T-shirt sizing)*
+
+**Critérios de Aceitação:**
+- [ ] [Critério 1: condição verificável e objetiva]
+- [ ] [Critério 2]
+- [ ] [Critério 3]
+
+**Notas técnicas:**  
+[Observações relevantes para a implementação, limitações conhecidas ou dependências.]
+
+---
+### US-04 · [Cliente que indica o que gosta]
+
+> **Como** [Wilha Marcos],  
+> **quero** [um botão rápido no app para compartilhar meu link de indicação],  
+> **para que** [eu possa ganhar os R$50 de bônus mesmo antes da minha primeira conta reduzida chegar].
+
+**Demanda relacionada:** D-04 - Indicações são importantes para gerar confiabilidade.
+**Estimativa de esforço:** [P / M / G] *(Story Points ou T-shirt sizing)*
+
+**Critérios de Aceitação:**
+- [ ] [Critério 1: condição verificável e objetiva]
+- [ ] [Critério 2]
+- [ ] [Critério 3]
+
+**Notas técnicas:**  
+[Observações relevantes para a implementação, limitações conhecidas ou dependências.]
+---
+### US-05 · [Idoso sistemático]
+
+> **Como** [Toninho],  
+> **quero** [acompanhamento no app e uma empresa confiável],  
+> **para que** [tenha certeza de que nao estou caindo em algum golpe].
+
+**Demanda relacionada:** D-03 - Alto cancelamento durante os primeiros 90 dias.
+**Estimativa de esforço:** [P / M / G] *(Story Points ou T-shirt sizing)*
+
+**Critérios de Aceitação:**
+- [ ] [Critério 1: condição verificável e objetiva]
+- [ ] [Critério 2]
+- [ ] [Critério 3]
+
+**Notas técnicas:**  
+[Observações relevantes para a implementação, limitações conhecidas ou dependências.]
+---
+### US-06 · [Alguém que veio a bulbe através de indicação]
+
+> **Como** [Carlos Eduardo],  
+> **quero** [entender o que é geração distribuída],  
+> **para que** [eu possa indicar outros alunos meus para a bulbe].
+
+**Demanda relacionada:** D-04 - Indicações são importantes para gerar confiabilidade.
+**Estimativa de esforço:** [P / M / G] *(Story Points ou T-shirt sizing)*
+
+**Critérios de Aceitação:**
+- [ ] [Critério 1: condição verificável e objetiva]
+- [ ] [Critério 2]
+- [ ] [Critério 3]
+
+**Notas técnicas:**  
+[Observações relevantes para a implementação, limitações conhecidas ou dependências.]
 ---
 
 > 🔁 *Repita o bloco para cada User Story. Recomendado: mínimo de 6 histórias.*
