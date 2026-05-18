@@ -1,4 +1,4 @@
-# 🌞 [Nome do Projeto] — Bulbe Energia
+# 🌞 [Gamma] — Bulbe Energia
 > **Disciplina:** Projeto Aplicado I — Ibmec 2026.1  
 > **Professor:** Cristiano de Macedo Neto, M.Sc.  
 > **Squad:** [Gamma]  
