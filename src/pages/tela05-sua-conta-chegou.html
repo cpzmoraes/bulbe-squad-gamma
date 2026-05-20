@@ -30,6 +30,7 @@
 
 		<!--
 			.top-section
+			Faixa de fundo azul que cobre header e section
 		-->
 		<div class="top-section">
 			<!-- 
@@ -99,6 +100,11 @@
 				</div>
 			</section>
 		</div>
+		
+		<!-- 
+			--- CONTEÚDO PRINCIPAL --- 
+			Elemento semântico <main> - conteúdo principal da página
+		-->
 		<main class="main-board">
 			<!---
 				ALERT CARD (Card Informativo)
@@ -116,6 +122,42 @@
 					<p class="alert-text">
 						Seu desconto ainda não apareceu porque estamos em fase de ativação com a concessionária.
 					</p>
+				</div>
+			</div>
+
+			<!--
+				CAIXA DE CALCULADORA INTERATIVA
+				Contêiner principal com borda azul
+			-->
+			<div class="calculator-box">
+				<!-- Título instrucional -->
+				<h3 class="calc-title">Informe o valor da sua conta atual</h3>
+
+				<!-- 
+					Display do valor atual 
+					Separados "R$" e o número para aplicar tamanhos diferentes
+				-->
+				<div class="calc-display">
+					<span class="calc-currency">R$</span>
+					<span class="calc-value">260,72</span>
+				</div>
+
+				<!-- 
+					Área do Slider de Valor
+					<input type="range"> é o elemento HTML nativo
+					para seleção de valor em um intervalo.
+
+					Atributos:
+					- min="50"    -> valor mínimo da conta
+					- max="1000"  -> valor máximo da conta
+					- value="260" -> posição inicial do slider
+				-->
+				<div class="slider-area">
+					<input type="range" min="50" max="1000" value="260" class="value-slider">
+					<div class="slider-labels">
+						<span>R$ 50</span>
+						<span>R$ 1000</span>
+					</div>
 				</div>
 			</div>
 
