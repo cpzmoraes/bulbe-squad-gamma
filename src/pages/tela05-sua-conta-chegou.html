@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Bulbe - Simulação de Desconto</title>
+
+	<link rel="stylesheet" href="../styles/tela05-sua-conta-chegou.css">
+
+	<!---
+		Pré-conexão com os servidores do Google Fonts.
+		O "preconnect" reduz a latência
+	-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!-- Importa os pesos da fonte Poppins -->
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<!--
+		.app-viewport
+
+		CONTÊINER RAIZ que simula a tela de um smartphone.
+	-->
+
+	<div class="app-viewport">
+
+		<!--
+			.top-section
+		-->
+		<div class="top-section">
+			<!-- 
+				BARRA DE NAVEGAÇÃO SUPERIOR
+				Elemento semântico <header> que representa o cabeçalho
+				da aplicação.
+				[Esquerda] Botão de menu
+				[Centro] Logo da Bulbe
+				[Direito] Ícone de notificação 
+			-->
+
+			<header class="header">
+				<!-- BOTÃO DE MENU (LADO ESQUERDO) -->
+				<button class="icon-btn">
+					<div class="icon-placeholder">Menu</div>
+				</button>
+
+				<!-- LOGO BULBE (CENTRO) -->
+				<div class="logo-container">
+					<img src="../assets/logo-bulbe.png" alt="Logomarca Bulbe Energia">
+				</div>
+
+				<!--- 
+					SINO E AVATAR (LADO DIREIRO)
+					Todos agrupados dentro de uma div com um gap entre eles
+				-->
+				<div class="header-right">
+					<!-- BOTÃO DE NOTIFICAÇÕES (SINO) -->
+					<button class="icon-btn">
+						<div class="icon-placeholder">Sino</div>
+					</button>
+
+					<!-- BOTÃO AVATAR -->
+					<button class="profile-circle"></button>
+				</div>
+			</header>
+
+			<!--
+				SEÇÃO DE DESTAQUE COM CHAMADA PRINCIPAL
+				Elemento semântico <section> que representa a área
+				de destaque visual da tela.
+
+				[Esquerda] .hero-text  -> Título e subtítulo
+				[Direita]  .hero-image -> Ilustração do envelope
+			-->
+			<section class="hero">
+				<!--- Bloco de texto (ESQUERDA) -->
+				<div class="hero-text">
+
+					<!-- TÍTULO PRINCIPAL DA TELA -->
+					<h1 class="hero-title">
+						Sua conta da <br>
+						CEMIG <span class="highlight-yellow">chegou!</span>
+					</h1>
+
+					<!-- SUBTÍTULO -->
+					<p class="hero-subtitle">
+						Informe o valor e veja quanto você vai pagar com a Bulbe
+					</p>
+				</div>
+
+				<!--
+					ÁREA DA IMAGEM ILUSTRATIVA
+				-->
+				<div class="hero-image">
+					<div class="icon-placeholder">Aqui fica a imagem</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+</html>
