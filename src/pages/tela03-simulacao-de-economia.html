@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,14 +22,37 @@
     <div id="corpo-principal-tela">
         <h2 id="texto-pergunta">Quanto você paga na sua conta mensalmente?</h2>
         <img src="../assets/mulher-imagem-bulbe.png" alt="Imagem de uma mulher da Bulbe">
-        <br> <!--Esse br deve ser removido.-->
-        <input type="number">
-        <br> <!--Esse br deve ser removido.-->
-        <input type="range">
-        <br> <!--Esse br deve ser removido.-->
-        <button class="botao-valor">R$ 250</button>
-        <button class="botao-valor">R$ 500</button>
-        <button class="botao-valor">R$ 750</button>
+        
+        <div id="simulador-economia">
+
+            <br> <!--Esse br deve ser removido.-->
+            <input type="number">
+            <br> <!--Esse br deve ser removido.-->
+            <input type="range">
+            <br> <!--Esse br deve ser removido.-->
+
+            <div id="botoes-valores">
+                <button class="botao-valor">R$ 250</button>
+                <button class="botao-valor">R$ 500</button>
+                <button class="botao-valor">R$ 750</button>
+            </div>
+        </div>
+
+        <div id="lista-de-beneficios">
+            <div class="beneficio">
+                <h3>Sem fidelidade</h3>
+                <p>Cancele quando quiser</p>
+            </div>
+            <div class="beneficio">
+                <h3>100% digital</h3>
+                <p>Processo simples e seguro</p>
+            </div>
+            <div class="beneficio">
+                <h3>Você só paga</h3>
+                <p>Se realmente  economizar</p>
+            </div>
+        </div>
+        
     </div>
 
 </body>
