@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bulbe - Visualizar economia</title>
 </head>
 <body>
-    
-</body>
-</html>
+    <header class="economy-header">
+    <nav class="top-bar" aria-label="Menu principal">
+        <button class="menu-button" type="button" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        </button>
+
+        <img src="assets/logo-bulbe.svg" alt="Bulbe" class="logo" />
+
+        <div class="header-actions">
+        <button type="button" aria-label="Notificações" class="icon-button">
+            Sino
+        </button>
+
+        <button type="button" aria-label="Perfil" class="avatar-button"></button>
+        </div>
+    </nav>
+
+    <section class="hero-section" aria-labelledby="economy-title">
+        <h1 id="economy-title">
+        Veja a <strong>economia</strong> em volta de você 
+        </h1>
+
+        <label for="radius-range">Ajuste seu raio de economia:</label>
+
+        <input
+        id="radius-range"
+        name="radius"
+        type="range"
+        min="15"
+        max="45"
+        step="15"
+        value="30"
+        />
+
+        <div class="radius-labels" aria-hidden="true">
+        <span>15km</span>
+        <span>30km</span>
+        <span>45km</span>
+        </div>
+    </section>
+    </header>
