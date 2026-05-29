@@ -1,0 +1,742 @@
+.tela-02-final {
+  	width: 100%;
+  	height: 874px;
+  	position: relative;
+  	text-align: left;
+  	font-size: 12px;
+  	color: #536679;
+  	font-family: Poppins;
+}
+.iphone-17-13 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	background-color: #fff;
+  	width: 402px;
+  	height: 874px;
+  	overflow: hidden;
+}
+.iphone-17-13-child {
+  	position: absolute;
+  	top: -68px;
+  	left: -126px;
+  	border-radius: 50%;
+  	background-color: #08068d;
+  	width: 641px;
+  	height: 379px;
+  	flex-shrink: 0;
+}
+.energia-limpa-solar {
+  	position: absolute;
+  	top: 177px;
+  	left: 17px;
+  	font-size: 13px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	color: #fff;
+  	display: flex;
+  	align-items: center;
+  	width: 155px;
+  	height: 80px;
+  	flex-shrink: 0;
+}
+.component-1 {
+  	position: absolute;
+  	top: 26px;
+  	left: 17px;
+  	width: 141px;
+  	height: 51px;
+  	flex-shrink: 0;
+}
+.component-1-child {
+  	position: absolute;
+  	height: 86.14%;
+  	width: 100%;
+  	top: 0%;
+  	right: 0%;
+  	bottom: 13.86%;
+  	left: 0%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+
+.bell-light-icon {
+  	position: absolute;
+  	top: 23px;
+  	left: 312px;
+  	width: 35px;
+  	height: 35px;
+  	flex-shrink: 0;
+}
+.user-cicrle-light-icon {
+  	position: absolute;
+  	top: 24px;
+  	left: 356px;
+  	width: 33px;
+  	height: 33px;
+  	flex-shrink: 0;
+}
+.iphone-17-13-item {
+  	position: absolute;
+  	top: 258px;
+  	left: 0px;
+  	border-radius: 20px 20px 0px 0px;
+  	background-color: #fff;
+  	width: 402px;
+  	height: 536px;
+  	flex-shrink: 0;
+}
+.usinas-prximas-de {
+  	position: absolute;
+  	top: 265px;
+  	left: 13px;
+  	font-size: 13px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	font-weight: 600;
+  	color: #08068d;
+  	display: flex;
+  	align-items: center;
+  	width: 217px;
+  	height: 23px;
+  	flex-shrink: 0;
+}
+.usina-boa-vista {
+  	position: absolute;
+  	top: 427px;
+  	left: 17px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	font-weight: 600;
+  	color: #08068d;
+  	display: flex;
+  	align-items: center;
+  	width: 111px;
+  	height: 23px;
+  	flex-shrink: 0;
+}
+.nova-lima- {
+  	position: absolute;
+  	top: 444px;
+  	left: 17px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	display: flex;
+  	align-items: center;
+  	width: 115px;
+  	height: 23px;
+  	flex-shrink: 0;
+}
+.economia-gerada-ms {
+  	position: absolute;
+  	top: 466px;
+  	left: 17px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 170px;
+  	height: 23px;
+  	flex-shrink: 0;
+}
+.r20000 {
+  	position: absolute;
+  	top: 484px;
+  	left: 32px;
+  	font-size: 10px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	font-weight: 600;
+  	color: #18814d;
+  	display: flex;
+  	align-items: center;
+  	width: 59px;
+  	height: 23px;
+  	flex-shrink: 0;
+}
+.economia-gerada-ms2 {
+  	position: absolute;
+  	top: 466px;
+  	left: 215px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 159px;
+  	height: 23px;
+  	flex-shrink: 0;
+}
+.r200002 {
+  	position: absolute;
+  	top: 484px;
+  	left: 231px;
+  	font-size: 10px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	font-weight: 600;
+  	color: #18814d;
+  	display: flex;
+  	align-items: center;
+  	width: 59px;
+  	height: 23px;
+  	flex-shrink: 0;
+}
+.igarap-mg {
+  	position: absolute;
+  	top: 443px;
+  	left: 215px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	display: flex;
+  	align-items: center;
+  	width: 111px;
+  	height: 23px;
+  	flex-shrink: 0;
+}
+.usina-serra-azul {
+  	position: absolute;
+  	top: 427px;
+  	left: 215px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	font-weight: 600;
+  	color: #08068d;
+  	display: flex;
+  	align-items: center;
+  	width: 111px;
+  	height: 23px;
+  	flex-shrink: 0;
+}
+.energia-solar-que {
+  	position: absolute;
+  	top: 283px;
+  	left: 13px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	display: flex;
+  	align-items: center;
+  	width: 382px;
+  	height: 23px;
+  	flex-shrink: 0;
+}
+.image-23-icon {
+  	position: absolute;
+  	top: 319px;
+  	left: 16px;
+  	border-radius: 8px;
+  	width: 171px;
+  	height: 105px;
+  	object-fit: cover;
+  	flex-shrink: 0;
+}
+.image-38-icon {
+  	position: absolute;
+  	top: 319px;
+  	left: 214px;
+  	border-radius: 8px;
+  	width: 171px;
+  	height: 105px;
+  	object-fit: cover;
+  	flex-shrink: 0;
+}
+.lightning-duotone-icon {
+  	position: absolute;
+  	top: 484px;
+  	left: 9px;
+  	width: 32.8px;
+  	height: 32.8px;
+  	object-fit: contain;
+  	flex-shrink: 0;
+}
+.vector-icon {
+  	position: absolute;
+  	top: 489px;
+  	left: 215px;
+  	width: 13.4px;
+  	height: 13px;
+  	object-fit: contain;
+  	flex-shrink: 0;
+}
+.button {
+  	position: absolute;
+  	top: 312px;
+  	left: 9px;
+  	box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  	border-radius: 8px;
+  	border: 2px solid #08068d;
+  	box-sizing: border-box;
+  	width: 186px;
+  	height: 205px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 16px 28px;
+  	flex-shrink: 0;
+}
+.dot {
+  	height: 10px;
+  	width: 10px;
+  	position: relative;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: none;
+}
+.vector-icon2 {
+  	position: absolute;
+  	top: 489px;
+  	left: 16px;
+  	width: 13.4px;
+  	height: 13px;
+  	object-fit: contain;
+  	flex-shrink: 0;
+}
+.image-25-icon {
+  	position: absolute;
+  	top: 547px;
+  	left: 230px;
+  	border-radius: 8px;
+  	width: 158px;
+  	height: 158px;
+  	object-fit: cover;
+  	flex-shrink: 0;
+}
+.usina-boa-vista2 {
+  	position: absolute;
+  	top: 544px;
+  	left: 19px;
+  	font-size: 15px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	font-weight: 600;
+  	color: #08068d;
+  	display: flex;
+  	align-items: center;
+  	width: 124px;
+  	height: 23px;
+  	flex-shrink: 0;
+}
+.nova-lima-2 {
+  	position: absolute;
+  	top: 563px;
+  	left: 19px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	display: flex;
+  	align-items: center;
+  	width: 111px;
+  	height: 23px;
+  	flex-shrink: 0;
+}
+.a-usina-boa {
+  	position: absolute;
+  	top: 575px;
+  	left: 19px;
+  	line-height: 20px;
+  	display: flex;
+  	align-items: center;
+  	width: 197px;
+  	height: 59px;
+  	flex-shrink: 0;
+}
+.iphone-17-13-inner {
+  	position: absolute;
+  	top: 634px;
+  	left: 19px;
+  	border-radius: 8px;
+  	background-color: #fff;
+  	border: 1px solid #e5e5e5;
+  	box-sizing: border-box;
+  	width: 57px;
+  	height: 73px;
+  	flex-shrink: 0;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 634px;
+  	left: 90px;
+  	border-radius: 8px;
+  	background-color: #fff;
+  	border: 1px solid #e5e5e5;
+  	box-sizing: border-box;
+  	width: 57px;
+  	height: 73px;
+  	flex-shrink: 0;
+}
+.iphone-17-13-child2 {
+  	position: absolute;
+  	top: 634px;
+  	left: 159px;
+  	border-radius: 8px;
+  	background-color: #fff;
+  	border: 1px solid #e5e5e5;
+  	box-sizing: border-box;
+  	width: 57px;
+  	height: 73px;
+  	flex-shrink: 0;
+}
+.image-22-icon {
+  	position: absolute;
+  	top: 642px;
+  	left: 178px;
+  	width: 19px;
+  	height: 15px;
+  	object-fit: cover;
+  	flex-shrink: 0;
+}
+.vector-icon3 {
+  	position: absolute;
+  	top: 639px;
+  	left: 109px;
+  	width: 19px;
+  	height: 19px;
+  	object-fit: contain;
+  	flex-shrink: 0;
+}
+.raio-azul-icon {
+  	position: absolute;
+  	top: 639px;
+  	left: 38px;
+  	width: 20.6px;
+  	height: 20.6px;
+  	object-fit: contain;
+  	flex-shrink: 0;
+}
+.potncia {
+  	position: absolute;
+  	top: 657px;
+  	left: 21px;
+  	font-size: 10px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	font-weight: 600;
+  	text-align: center;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 54px;
+  	height: 30px;
+  	flex-shrink: 0;
+}
+.usurios {
+  	position: absolute;
+  	top: 660px;
+  	left: 161px;
+  	font-size: 10px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	font-weight: 600;
+  	text-align: center;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 54px;
+  	height: 25px;
+  	flex-shrink: 0;
+}
+.economia {
+  	position: absolute;
+  	top: 659px;
+  	left: 92px;
+  	font-size: 10px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	font-weight: 600;
+  	text-align: center;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 54px;
+  	height: 27px;
+  	flex-shrink: 0;
+}
+.mwp {
+  	position: absolute;
+  	top: 680px;
+  	left: 23px;
+  	font-size: 10px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	font-weight: 600;
+  	color: #08068d;
+  	text-align: center;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 50px;
+  	height: 23px;
+  	flex-shrink: 0;
+}
+.r200003 {
+  	position: absolute;
+  	top: 685px;
+  	left: 89px;
+  	font-size: 10px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	font-weight: 600;
+  	color: #18814d;
+  	text-align: center;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 60px;
+  	height: 13px;
+  	flex-shrink: 0;
+}
+.div {
+  	position: absolute;
+  	top: 680px;
+  	left: 162px;
+  	font-size: 10px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	font-weight: 600;
+  	color: #08068d;
+  	text-align: center;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 50px;
+  	height: 23px;
+  	flex-shrink: 0;
+}
+.em-aberto-padro {
+  	position: absolute;
+  	top: 734px;
+  	left: 9px;
+  	border-radius: 16px;
+  	background-color: #fff;
+  	border: 1px solid #d1d9e0;
+  	box-sizing: border-box;
+  	width: 384px;
+  	height: 54px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 10px;
+  	flex-shrink: 0;
+}
+.nossas-usinas-produzem {
+  	position: absolute;
+  	top: 757px;
+  	left: 59px;
+  	font-size: 11px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	display: flex;
+  	align-items: center;
+  	width: 214px;
+  	height: 20px;
+  	flex-shrink: 0;
+}
+.vector-icon4 {
+  	position: absolute;
+  	top: 745px;
+  	left: 21px;
+  	width: 26.6px;
+  	height: 27px;
+  	object-fit: contain;
+  	flex-shrink: 0;
+}
+.co2-evitado-ms {
+  	position: absolute;
+  	top: 735px;
+  	left: 278px;
+  	font-size: 11px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	text-align: center;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 111px;
+  	height: 24px;
+  	flex-shrink: 0;
+}
+.energia-que-gera {
+  	position: absolute;
+  	top: 740px;
+  	left: 58.9px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 193px;
+  	flex-shrink: 0;
+}
+.ton {
+  	position: absolute;
+  	top: 754px;
+  	left: 299px;
+  	font-size: 15px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	font-weight: 600;
+  	color: #18814d;
+  	text-align: center;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 64px;
+  	height: 23px;
+  	flex-shrink: 0;
+}
+.line-icon {
+  	position: absolute;
+  	top: 745px;
+  	left: 268px;
+  	width: 2px;
+  	height: 31px;
+  	object-fit: contain;
+  	flex-shrink: 0;
+}
+.conhea-as-usinas-container {
+  	position: absolute;
+  	top: 96px;
+  	left: 17px;
+  	font-size: 27px;
+  	letter-spacing: 0.02em;
+  	line-height: 120%;
+  	display: flex;
+  	align-items: center;
+  	width: 277px;
+  	height: 80px;
+  	flex-shrink: 0;
+  	color: #fff;
+}
+.conhea-as-usinas-container2 {
+  	width: 100%;
+}
+.conhea-as-usinas {
+  	line-height: 120%;
+}
+.economia2 {
+  	color: #26d07c;
+  	line-height: 120%;
+}
+.button2 {
+  	position: absolute;
+  	top: 541px;
+  	left: 7px;
+  	box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  	border-radius: 8px;
+  	border: 1px solid #d1d9e0;
+  	box-sizing: border-box;
+  	width: 384px;
+  	height: 181px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 16px 28px;
+  	flex-shrink: 0;
+}
+.barra-de-navegao {
+  	position: absolute;
+  	top: 789px;
+  	left: calc(50% - 201px);
+  	box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+  	background-color: #fff;
+  	width: 402px;
+  	height: 85px;
+  	display: grid;
+  	box-sizing: border-box;
+  	grid-template-columns: repeat(5, 1fr);
+  	grid-template-rows: 1fr;
+  	gap: 10px;
+  	flex-shrink: 0;
+  	text-align: center;
+  	color: #c2ccd6;
+}
+.faturas {
+  	height: 85px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 8px 0px;
+  	box-sizing: border-box;
+  	gap: 4px;
+  	grid-column: 1;
+  	grid-row: 1;
+}
+.file-06-icon {
+  	width: 24px;
+  	height: 24px;
+  	position: relative;
+}
+.type26 {
+  	align-self: stretch;
+  	position: relative;
+  	line-height: 18px;
+  	font-weight: 500;
+}
+.consumo {
+  	height: 85px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 8px 0px;
+  	box-sizing: border-box;
+  	gap: 4px;
+  	grid-column: 2;
+  	grid-row: 1;
+}
+.incio {
+  	height: 85px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 8px 0px;
+  	box-sizing: border-box;
+  	gap: 4px;
+  	grid-column: 3;
+  	grid-row: 1;
+}
+.mais {
+  	height: 85px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 8px 0px;
+  	box-sizing: border-box;
+  	gap: 4px;
+  	grid-column: 5;
+  	grid-row: 1;
+  	color: #08068d;
+}
+.indicaes {
+  	height: 85px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 8px 0px;
+  	box-sizing: border-box;
+  	gap: 4px;
+  	grid-column: 4;
+  	grid-row: 1;
+}
+.type265 {
+  	position: relative;
+  	line-height: 18px;
+  	font-weight: 500;
+}
+.chatgpt-image-may-20-2026-at {
+  	position: absolute;
+  	top: 106px;
+  	left: 134px;
+  	width: 271px;
+  	height: 185px;
+  	object-fit: cover;
+  	flex-shrink: 0;
+}
+
