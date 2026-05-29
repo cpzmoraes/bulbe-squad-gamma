@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulbe - Visualizar economia</title>
+</head>
+<body>
+    <header class="economy-header">
+    <nav class="top-bar" aria-label="Menu principal">
+        <button class="menu-button" type="button" aria-label="Abrir menu">
+			Menu
+        </button>
+
+        <img src="assets/logo-bulbe.svg" alt="Bulbe" class="logo" />
+
+        <div class="header-actions">
+        <button type="button" aria-label="Notificações" class="icon-button">
+            Sino
+        </button>
+
+        <button type="button" aria-label="Perfil" class="avatar-button"></button>
+        </div>
+    </nav>
+
+    <section class="hero-section" aria-labelledby="economy-title">
+        <h1 id="economy-title">
+        Veja a <strong>economia</strong> em volta de você 
+        </h1>
+
+        <label for="radius-range">Ajuste seu raio de economia:</label>
+
+        <input
+        id="radius-range"
+        name="radius"
+        type="range"
+        min="15"
+        max="45"
+        step="15"
+        value="30"
+        />
+
+        <div class="radius-labels" aria-hidden="true">
+        <span>15km</span>
+        <span>30km</span>
+        <span>45km</span>
+        </div>
+    </section>
+    </header>
+
+    <main class="economy-screen">
+    <section class="map-card" aria-label="Mapa de economia por região">
+        <div id="map-container" aria-label="Mapa da região da Savassi">
+            <div class="map-radius-layer" aria-hidden="true">
+                <div class="radius-circle radius-circle-small"></div>
+                <div class="radius-circle radius-circle-medium"></div>
+                <div class="radius-circle radius-circle-large"></div>
+            </div>
+
+            <div class="user-location" aria-label="Sua localização atual"></div>
+
+            <article class="map-marker marker-lourdes">
+            <strong>Lourdes</strong>
+            <span>R$ 41,8 mil</span>
+            </article>
+
+            <article class="map-marker marker-funcionarios">
+            <strong>Funcionários</strong>
+            <span>R$ 35,1 mil</span>
+            </article>
+
+            <article class="map-marker marker-savassi">
+            <strong>Savassi</strong>
+            <span>R$ 48,3 mil</span>
+            </article>
+
+            <article class="map-marker marker-praca">
+            <strong>Praça da Savassi</strong>
+            </article>
+        </div>
+    </section>
+
+    <section class="summary-card" aria-labelledby="summary-title">
+        <div class="summary-header">
+        <div>
+            <h2 id="summary-title">Economia total em um raio de:</h2>
+            <strong>15 km</strong>
+        </div>
+
+        <div class="summary-divider" aria-hidden="true"></div>
+
+        <div>
+            <p>TOTAL ECONOMIZADO</p>
+            <strong>
+            <small>R$</small>
+            12.345,00
+            </strong>
+        </div>
+        </div>
+
+        <div class="metrics-grid">
+        <article class="metric-card">
+            <span aria-hidden="true">👤</span>
+            <strong>312</strong>
+            <p>clientes</p>
+        </article>
+
+        <article class="metric-card">
+            <span aria-hidden="true">💳</span>
+            <strong>R$ 155</strong>
+            <p>por cliente</p>
+        </article>
+
+        <article class="metric-card">
+            <span aria-hidden="true">🌱</span>
+            <strong>125 ton</strong>
+            <p>CO2 evitado</p>
+        </article>
+        </div>
+
+        <aside class="info-box">
+        <span aria-hidden="true">i</span>
+        <p>
+            Quanto maior o raio, maior o impacto positivo da energia solar na sua
+            região!
+        </p>
+        </aside>
+    </section>
+    </main>
+
+    <footer class="bottom-navigation">
+    <nav aria-label="Navegação inferior">
+        <button class="nav-item">
+                    <div class="nav-icon-ph"></div> 
+                    <span>Faturas</span>
+                </button>
+
+                
+                <button class="nav-item">
+                    <div class="nav-icon-ph"></div>
+                    <span>Consumo</span>
+                </button>
+
+                
+                <button class="nav-item">
+                    <div class="nav-icon-ph"></div> 
+                    <span>Início</span>
+                </button>
+
+                
+                <button class="nav-item">
+                    <div class="nav-icon-ph"></div>
+                    <span>Indicações</span>
+                </button>
+
+                <button class="nav-item">
+                    <div class="nav-icon-ph"></div> 
+                    <span>Mais</span>
+                </button>
+    </nav>
+    </footer>
+</body>
+</html>
