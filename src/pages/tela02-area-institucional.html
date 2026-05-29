@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bulbe – Conheça as usinas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== APP WRAPPER (mobile frame) ===== -->
+  <div class="app-wrapper">
+
+    <!-- ===== TOP NAV ===== -->
+    <header class="topnav">
+      <img src="assets/logo.png" alt="Bulbe logo" class="topnav__logo" />
+      <div class="topnav__icons">
+        <button class="icon-btn" aria-label="Notificações">
+          <img src="assets/icon-bell.png" alt="Bell" />
+        </button>
+        <button class="icon-btn" aria-label="Perfil">
+          <img src="assets/icon-profile.png" alt="Profile" />
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== MAIN SCROLL AREA ===== -->
+    <main class="scroll-area">
+
+      <!-- ===== HERO SECTION ===== -->
+      <section class="hero">
+        <div class="hero__text">
+          <h1 class="hero__title">
+            Conheça as usinas<br />
+            que geram a sua<br />
+            <span class="highlight">economia</span>
+          </h1>
+          <p class="hero__subtitle">
+            Energia limpa, solar e<br />
+            renovável para reduzir<br />
+            sua conta de luz
+          </p>
+        </div>
+        <div class="hero__image">
+          <img src="assets/hero-solar.png" alt="Usina solar" />
+        </div>
+      </section>
+
+      <!-- ===== USINAS PRÓXIMAS ===== -->
+      <section class="section usinas-proximas">
+        <h2 class="section__title">Usinas próximas de você</h2>
+        <p class="section__subtitle">Energia solar que transforma vidas e economiza para você</p>
+
+        <div class="cards-row">
+
+          <!-- Card 1 -->
+          <div class="usina-card">
+            <div class="usina-card__image-wrap">
+              <img src="assets/usina-boa-vista.png" alt="Usina Boa Vista" class="usina-card__image" />
+            </div>
+            <div class="usina-card__body">
+              <h3 class="usina-card__name">Usina Boa Vista</h3>
+              <p class="usina-card__location">
+                <img src="assets/raio-azul.png" alt="" class="usina-card__raio" />
+                Boa Vista – MS
+              </p>
+              <p class="usina-card__label">Economia gerada (mês)</p>
+              <p class="usina-card__value">
+                <img src="assets/icon-folha.png" alt="Folha" class="icon-inline" />
+                R$20.000
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="usina-card">
+            <div class="usina-card__image-wrap">
+              <img src="assets/usina-serra-azul.png" alt="Usina Serra Azul" class="usina-card__image" />
+            </div>
+            <div class="usina-card__body">
+              <h3 class="usina-card__name">Usina Serra Azul</h3>
+              <p class="usina-card__location">
+                <img src="assets/raio-azul.png" alt="" class="usina-card__raio" />
+                Igarapé – MG
+              </p>
+              <p class="usina-card__label">Economia gerada (mês)</p>
+              <p class="usina-card__value">
+                <img src="assets/icon-folha.png" alt="Folha" class="icon-inline" />
+                R$20.000
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== USINA DESTAQUE (Boa Vista expandida) ===== -->
+      <section class="section usina-destaque">
+        <div class="destaque__top">
+          <div class="destaque__info">
+            <h2 class="destaque__name">Usina Boa Vista</h2>
+            <p class="destaque__location">
+              <img src="assets/raio-azul.png" alt="" class="usina-card__raio" />
+              Nova lima – MS
+            </p>
+            <p class="destaque__desc">
+              A Usina Boa Vista produz energia limpa todos os dias.
+            </p>
+
+            <!-- Stats row -->
+            <div class="destaque__stats">
+              <div class="stat">
+                <img src="assets/raio-azul.png" alt="" class="stat__icon" />
+                <p class="stat__label">Capacidade<br />instalada</p>
+                <p class="stat__value">3,1 MWp</p>
+              </div>
+              <div class="stat">
+                <img src="assets/icon-folha.png" alt="" class="stat__icon" />
+                <p class="stat__label">Economia<br />gerada</p>
+                <p class="stat__value green">R$20.000</p>
+              </div>
+              <div class="stat">
+                <img src="assets/icon-pessoas.png" alt="" class="stat__icon" />
+                <p class="stat__label">Clientes<br />beneficiados</p>
+                <p class="stat__value">+2.300</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="destaque__photo">
+            <img src="assets/usina-boa-vista-2.png" alt="Usina Boa Vista foto" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ENERGIA QUE GERA IMPACTO ===== -->
+      <section class="section impacto">
+        <div class="impacto__left">
+          <img src="assets/icon-folha.png" alt="Folha" class="impacto__icon" />
+          <div>
+            <h3 class="impacto__title">Energia que gera impacto</h3>
+            <p class="impacto__desc">
+              Nossas usinas produzem energia limpa, reduzindo emissões de CO2.
+            </p>
+          </div>
+        </div>
+        <div class="impacto__right">
+          <p class="impacto__label">CO2 evitado (mês)</p>
+          <p class="impacto__value">320 ton</p>
+        </div>
+      </section>
+
+    </main><!-- /scroll-area -->
+
+    <!-- ===== BOTTOM NAV ===== -->
+    <nav class="bottomnav">
+      <button class="bottomnav__item" aria-label="Faturas">
+        <img src="assets/icon-documento.png" alt="Faturas" />
+        <span>Faturas</span>
+      </button>
+      <button class="bottomnav__item bottomnav__item--active" aria-label="Consumo">
+        <img src="assets/icon-raio-cinza.png" alt="Consumo" />
+        <span>Consumo</span>
+      </button>
+      <button class="bottomnav__item" aria-label="Home">
+        <img src="assets/icon-home.png" alt="Home" />
+      </button>
+      <button class="bottomnav__item" aria-label="Indicações">
+        <img src="assets/icon-indicacoes.png" alt="Indicações" />
+        <span>Indicações</span>
+      </button>
+      <button class="bottomnav__item" aria-label="Mais">
+        <img src="assets/icon-consumo.png" alt="Mais" />
+      </button>
+    </nav>
+
+  </div><!-- /app-wrapper -->
+
+</body>
+</html>
