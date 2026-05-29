@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Bulbe - Simulação de Desconto</title>
+
+	<!-- LINK .CSS -->
+	<!-- <link rel="stylesheet" href="../styles/"> -->
+
+	<!---
+		Pré-conexão com os servidores do Google Fonts.
+		O "preconnect" reduz a latência
+	-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!-- Importa os pesos da fonte Poppins -->
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<!--
+		.app-viewport
+
+		CONTÊINER RAIZ que simula a tela de um smartphone.
+	-->
+
+	<div class="app-viewport">
+
+		<!--
+			.top-section
+			Faixa de fundo azul que cobre header e section
+		-->
+		<div class="top-section">
+			<!-- 
+				BARRA DE NAVEGAÇÃO SUPERIOR
+				Elemento semântico <header> que representa o cabeçalho
+				da aplicação.
+				[Esquerda] Botão de menu
+				[Centro] Logo da Bulbe
+				[Direito] Ícone de notificação 
+			-->
+
+			<header class="header">
+				<!-- BOTÃO DE MENU (LADO ESQUERDO) -->
+				<button class="icon-btn">
+					<div class="icon-placeholder">Menu</div>
+				</button>
+
+				<!-- LOGO BULBE (CENTRO) -->
+				<div class="logo-container">
+					<img src="../assets/logo-bulbe.png" alt="Logomarca Bulbe Energia">
+				</div>
+
+				<!--- 
+					SINO E AVATAR (LADO DIREIRO)
+					Todos agrupados dentro de uma div com um gap entre eles
+				-->
+				<div class="header-right">
+					<!-- BOTÃO DE NOTIFICAÇÕES (SINO) -->
+					<button class="icon-btn">
+						<div class="icon-placeholder">Sino</div>
+					</button>
+
+					<!-- BOTÃO AVATAR -->
+					<button class="profile-circle"></button>
+				</div>
+			</header>
+
+			<!--
+				SEÇÃO DE DESTAQUE COM CHAMADA PRINCIPAL
+				Elemento semântico <section> que representa a área
+				de destaque visual da tela.
+
+				[Esquerda] .hero-text  -> Título e subtítulo
+				[Direita]  .hero-image -> Ilustração do envelope
+			-->
+			<section class="hero">
+				<!--- Bloco de texto (ESQUERDA) -->
+				<div class="hero-text">
+
+					<!-- TÍTULO PRINCIPAL DA TELA -->
+					<h1 class="hero-title">
+						Sua conta da <br>
+						CEMIG <span class="highlight-yellow">chegou!</span>
+					</h1>
+
+					<!-- SUBTÍTULO -->
+					<p class="hero-subtitle">
+						Informe o valor e veja quanto você vai pagar com a Bulbe
+					</p>
+				</div>
+
+				<!--
+					ÁREA DA IMAGEM ILUSTRATIVA
+				-->
+				<div class="hero-image">
+					<div class="icon-placeholder">Aqui fica a imagem</div>
+				</div>
+			</section>
+		</div>
+		
+		<!-- 
+			--- CONTEÚDO PRINCIPAL --- 
+			Elemento semântico <main> - conteúdo principal da página
+		-->
+		<main class="main-board">
+			<!---
+				ALERT CARD (Card Informativo)
+				[Esquerda] -> Ícone
+				[Direita]  -> Título + parágrafo
+			-->
+			<div class="alert-card">
+				<!-- Ícone circular (ESQUERDA)-->
+				<div class="alert-icon">i</div>
+				
+				<!-- Título + parágrafo (DIREITA) -->
+				<div class="alert-content">
+					<!-- Título em negrito h2 -->
+					<h2 class="alert-title">Porque o seu desconto não foi aplicado:</h2>
+					<p class="alert-text">
+						Seu desconto ainda não apareceu porque estamos em fase de ativação com a concessionária.
+					</p>
+				</div>
+			</div>
+
+			<!--
+				CAIXA DE CALCULADORA INTERATIVA
+				Contêiner principal com borda azul
+			-->
+			<div class="calculator-box">
+				<!-- Título instrucional -->
+				<h3 class="calc-title">Informe o valor da sua conta atual</h3>
+
+				<!-- 
+					Display do valor atual 
+					Separados "R$" e o número para aplicar tamanhos diferentes
+				-->
+				<div class="calc-display">
+					<span class="calc-currency">R$</span>
+					<span class="calc-value">260,72</span>
+				</div>
+
+				<!-- 
+					Área do Slider de Valor
+					<input type="range"> é o elemento HTML nativo
+					para seleção de valor em um intervalo.
+
+					Atributos:
+					- min="50"    -> valor mínimo da conta
+					- max="1000"  -> valor máximo da conta
+					- value="260" -> posição inicial do slider
+				-->
+				<div class="slider-area">
+					<input type="range" min="50" max="1000" value="260" class="value-slider">
+					<div class="slider-labels">
+						<span>R$ 50</span>
+						<span>R$ 1000</span>
+					</div>
+				</div>
+			</div>
+
+			<!--
+				BOTÕES DE ATALHO DE VALOR
+				Permitem ao usuário saltar rapidamente
+				para valores predefinidos sem usar o slider.
+			-->
+			<div class="quick-values">
+				<button class="pill-btn">R$ 250</button>
+				<button class="pill-btn">R$ 500</button>
+				<button class="pill-btn">R$ 750</button>
+			</div>
+
+			<!-- 
+				TEXTO DE TRANSIÇÃO
+				Conecta visualmente o slider/atalhos com
+				painel de comparação abaixo.
+			-->
+			<p class="transition-text">
+				Mas olha o que vai mudar em <span class="text-green">alguns dias</span>
+			</p>
+
+			<!-- 
+				PAINEL DE COMPARAÇÃO (Sem Bulbe vs. Com Bulbe)
+				Exibe dois cards lado a lado para comparação visual
+				do valor da conta com e sem o desconto da Bulbe.
+			-->
+			<div class="comparison-panel">
+				<!-- Card Esquerdo "SEM A BULBE" -->
+				<div class="comp-card comp-red">
+					<span class="comp-badge red-text">SEM A BULBE</span>
+					<p class="comp-label">Você pagaria todo mês</p>
+					<p class="comp-price red-text">R$ 260,72</p>
+				</div>
+
+				<!-- Seta central entre os dois cards -->
+				<div class="comp-arrow-center">&rarr;</div>
+
+				<!-- Card Direito "COM A BULBE" -->
+				<div class="comp-cad comp-green">
+					<span class="comp-badge green-text">COM A BULBE</span>
+					<p class="comp-label">Você vai pagar</p>
+					<p class="comp-price green-text">R$ 208,57</p>
+				</div>
+			</div>
+
+			<!-- 
+				BANNER DE ECONOMIA 
+				Estrutura interna:
+				[Esquerda] -> Quadrado verde com ícone
+				[Direita]  -> Dois parágrafos: título em negrito
+							  com valor verde.
+				
+				O valor "R$ 625,80" está em <span class="text-green">
+				para receber a cor verde de destaque.
+			-->
+			<div class="savings-banner">
+				<!-- Ícone ilustrativo (ESQUERDA) -->
+				<div class="savings-icon">V</div> <!-- Placeholder: ícone de gráfico -->
+			
+				<!-- Parágrafos (DIREITA) -->
+				<div class="savings-text">
+					<p class="savings-title">
+						Em 12 meses, você economiza <span class="text-green">R$ 625,80</span>
+					</p>
+					<p class="savings-sub">
+						Dinheiro que fica com você para o que realmente importa
+					</p>
+				</div>
+			</div>
+		</main>
+		
+		<!-- MENU DE NAVEGAÇÃO (BOTÕES NAVEGAÇÃO) -->
+		<nav class="bottom-nav">
+			<!-- Aba: Faturas (1/5) -->
+			<button class="nav-item">
+				<div class="nav-icon-ph"></div> <!-- Placeholder: ícone de fatura/documento -->
+				<span>Faturas</span>
+			</button>
+
+			<!-- Aba: Consumo (2/5) -->
+			<button class="nav-item">
+				<div class="nav-icon-ph"></div> <!-- Placeholder: ícone de raio/energia -->
+				<span>Consumo</span>
+			</button>
+
+			<!-- Aba: Início (3/5) -->
+			<button class="nav-item">
+				<div class="nav-icon-ph"></div> <!-- Placeholder: ícone de casa/home -->
+				<span>Início</span>
+			</button>
+
+			<!-- Aba: Indicações (4/5) -->
+			<button class="nav-item">
+				<div class="nav-icon-ph"></div> <!-- Placeholder: ícone de pessoa -->
+				<span>Indicações</span>
+			</button>
+
+			<!-- 
+				Aba: Mais (5/5)
+				No qual está ativo nesta tela
+				Deve conter uma classe que diferencia visualmente com cor azul e negrito.
+				Isso deve ser feito via JS.
+			-->
+			<button class="nav-item">
+				<div class="nav-icon-ph"></div> <!-- Placeholder: ícone de três pontos -->
+				<span>Mais</span>
+			</button>
+		</nav>
+	</div>
+</body>
+</html>
