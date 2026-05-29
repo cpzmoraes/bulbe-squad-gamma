@@ -1,180 +1,132 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bulbe – Conheça as usinas</title>
-  <link rel="stylesheet" href="style.css" />
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet"  href="../styles/tela02.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
+  	
+  	<title>Tela02 Usinas</title>
+  	
 </head>
 <body>
-
-  <!-- ===== APP WRAPPER (mobile frame) ===== -->
-  <div class="app-wrapper">
-
-    <!-- ===== TOP NAV ===== -->
-    <header class="topnav">
-      <img src="assets/logo.png" alt="Bulbe logo" class="topnav__logo" />
-      <div class="topnav__icons">
-        <button class="icon-btn" aria-label="Notificações">
-          <img src="assets/icon-bell.png" alt="Bell" />
-        </button>
-        <button class="icon-btn" aria-label="Perfil">
-          <img src="assets/icon-profile.png" alt="Profile" />
-        </button>
-      </div>
-    </header>
-
-    <!-- ===== MAIN SCROLL AREA ===== -->
-    <main class="scroll-area">
-
-      <!-- ===== HERO SECTION ===== -->
-      <section class="hero">
-        <div class="hero__text">
-          <h1 class="hero__title">
-            Conheça as usinas<br />
-            que geram a sua<br />
-            <span class="highlight">economia</span>
-          </h1>
-          <p class="hero__subtitle">
-            Energia limpa, solar e<br />
-            renovável para reduzir<br />
-            sua conta de luz
-          </p>
-        </div>
-        <div class="hero__image">
-          <img src="assets/hero-solar.png" alt="Usina solar" />
-        </div>
-      </section>
-
-      <!-- ===== USINAS PRÓXIMAS ===== -->
-      <section class="section usinas-proximas">
-        <h2 class="section__title">Usinas próximas de você</h2>
-        <p class="section__subtitle">Energia solar que transforma vidas e economiza para você</p>
-
-        <div class="cards-row">
-
-          <!-- Card 1 -->
-          <div class="usina-card">
-            <div class="usina-card__image-wrap">
-              <img src="assets/usina-boa-vista.png" alt="Usina Boa Vista" class="usina-card__image" />
-            </div>
-            <div class="usina-card__body">
-              <h3 class="usina-card__name">Usina Boa Vista</h3>
-              <p class="usina-card__location">
-                <img src="assets/raio-azul.png" alt="" class="usina-card__raio" />
-                Boa Vista – MS
-              </p>
-              <p class="usina-card__label">Economia gerada (mês)</p>
-              <p class="usina-card__value">
-                <img src="assets/icon-folha.png" alt="Folha" class="icon-inline" />
-                R$20.000
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="usina-card">
-            <div class="usina-card__image-wrap">
-              <img src="assets/usina-serra-azul.png" alt="Usina Serra Azul" class="usina-card__image" />
-            </div>
-            <div class="usina-card__body">
-              <h3 class="usina-card__name">Usina Serra Azul</h3>
-              <p class="usina-card__location">
-                <img src="assets/raio-azul.png" alt="" class="usina-card__raio" />
-                Igarapé – MG
-              </p>
-              <p class="usina-card__label">Economia gerada (mês)</p>
-              <p class="usina-card__value">
-                <img src="assets/icon-folha.png" alt="Folha" class="icon-inline" />
-                R$20.000
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- ===== USINA DESTAQUE (Boa Vista expandida) ===== -->
-      <section class="section usina-destaque">
-        <div class="destaque__top">
-          <div class="destaque__info">
-            <h2 class="destaque__name">Usina Boa Vista</h2>
-            <p class="destaque__location">
-              <img src="assets/raio-azul.png" alt="" class="usina-card__raio" />
-              Nova lima – MS
-            </p>
-            <p class="destaque__desc">
-              A Usina Boa Vista produz energia limpa todos os dias.
-            </p>
-
-            <!-- Stats row -->
-            <div class="destaque__stats">
-              <div class="stat">
-                <img src="assets/raio-azul.png" alt="" class="stat__icon" />
-                <p class="stat__label">Capacidade<br />instalada</p>
-                <p class="stat__value">3,1 MWp</p>
-              </div>
-              <div class="stat">
-                <img src="assets/icon-folha.png" alt="" class="stat__icon" />
-                <p class="stat__label">Economia<br />gerada</p>
-                <p class="stat__value green">R$20.000</p>
-              </div>
-              <div class="stat">
-                <img src="assets/icon-pessoas.png" alt="" class="stat__icon" />
-                <p class="stat__label">Clientes<br />beneficiados</p>
-                <p class="stat__value">+2.300</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="destaque__photo">
-            <img src="assets/usina-boa-vista-2.png" alt="Usina Boa Vista foto" />
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== ENERGIA QUE GERA IMPACTO ===== -->
-      <section class="section impacto">
-        <div class="impacto__left">
-          <img src="assets/icon-folha.png" alt="Folha" class="impacto__icon" />
-          <div>
-            <h3 class="impacto__title">Energia que gera impacto</h3>
-            <p class="impacto__desc">
-              Nossas usinas produzem energia limpa, reduzindo emissões de CO2.
-            </p>
-          </div>
-        </div>
-        <div class="impacto__right">
-          <p class="impacto__label">CO2 evitado (mês)</p>
-          <p class="impacto__value">320 ton</p>
-        </div>
-      </section>
-
-    </main><!-- /scroll-area -->
-
-    <!-- ===== BOTTOM NAV ===== -->
-    <nav class="bottomnav">
-      <button class="bottomnav__item" aria-label="Faturas">
-        <img src="assets/icon-documento.png" alt="Faturas" />
-        <span>Faturas</span>
-      </button>
-      <button class="bottomnav__item bottomnav__item--active" aria-label="Consumo">
-        <img src="assets/icon-raio-cinza.png" alt="Consumo" />
-        <span>Consumo</span>
-      </button>
-      <button class="bottomnav__item" aria-label="Home">
-        <img src="assets/icon-home.png" alt="Home" />
-      </button>
-      <button class="bottomnav__item" aria-label="Indicações">
-        <img src="assets/icon-indicacoes.png" alt="Indicações" />
-        <span>Indicações</span>
-      </button>
-      <button class="bottomnav__item" aria-label="Mais">
-        <img src="assets/icon-consumo.png" alt="Mais" />
-      </button>
-    </nav>
-
-  </div><!-- /app-wrapper -->
-
+  	
+  	<div class="tela-02-final">
+    		<div class="iphone-17-13">
+      			<div class="iphone-17-13-child">
+      			</div>
+      			<div class="energia-limpa-solar">Energia limpa, solar e renovável para reduzir sua conta de luz</div>
+      			<div class="component-1">
+        				<img class="component-1-child" src="icons/Component 1.svg" alt="">
+        				        				
+      			</div>
+      			<img class="bell-light-icon" src="icons/Bell_light.svg" alt="">
+      			
+      			<img class="user-cicrle-light-icon" src="icons/User_cicrle_light.svg" alt="">
+      			
+      			<div class="iphone-17-13-item">
+      			</div>
+      			<div class="usinas-prximas-de">Usinas próximas de você</div>
+      			<div class="usina-boa-vista">Usina Boa Vista</div>
+      			<div class="nova-lima-">Nova lima - MG</div>
+      			<div class="economia-gerada-ms">Economia gerada (mês)</div>
+      			<div class="r20000">R$20.000</div>
+      			<div class="economia-gerada-ms2">Economia gerada (mês)</div>
+      			<div class="r200002">R$20.000</div>
+      			<div class="igarap-mg">Igarapé - MG</div>
+      			<div class="usina-serra-azul">Usina Serra Azul</div>
+      			<div class="energia-solar-que">Energia solar que transforma vidas e economiza para você</div>
+      			<img class="image-23-icon" src="imgs/image 23.png" alt="">
+      			
+      			<img class="image-38-icon" src="imgs/image 23.png" alt="">
+      			
+      			
+      			<img class="vector-icon" src="icons/Vector-1.svg" alt="">
+      			
+      			<div class="button">
+        				<div class="dot">
+        				</div>
+      			</div>
+      			<img class="vector-icon2" src="icons/Vector-1.svg" alt="">
+      			
+      			<img class="image-25-icon" src="imgs/image 25.png" alt="">
+      			
+      			<div class="usina-boa-vista2">Usina Boa Vista</div>
+      			<div class="nova-lima-2">Nova lima - MG</div>
+      			<div class="a-usina-boa">A Usina Boa Vista produz energia limpa todos os dias.</div>
+      			<div class="iphone-17-13-inner">
+      			</div>
+      			<div class="rectangle-div">
+      			</div>
+      			<div class="iphone-17-13-child2">
+      			</div>
+      			<img class="image-22-icon" src="imgs/image 22.png" alt="">
+      			
+      			<img class="vector-icon3" src="icons/Vector-2.svg" alt="">
+      			
+      			<img class="raio-azul-icon" src="imgs/Raio Azul.png" alt="">
+      			
+      			<div class="potncia">Potência</div>
+      			<div class="usurios">Usuários</div>
+      			<div class="economia">Economia</div>
+      			<div class="mwp">3,1 MWp</div>
+      			<div class="r200003">R$20.000</div>
+      			<div class="div">+2.300</div>
+      			<div class="em-aberto-padro">
+      			</div>
+      			<div class="nossas-usinas-produzem">Nossas usinas produzem energia limpa, reduzindo emissões de CO2.</div>
+      			<img class="vector-icon4" src="icons/Vector-3.svg" alt="">
+      			
+      			<div class="co2-evitado-ms">CO2 evitado (mês)</div>
+      			<div class="energia-que-gera">Energia que gera impacto</div>
+      			<div class="ton">320 ton</div>
+      			<img class="line-icon" src="icons/Line 80.svg" alt="">
+      			
+      			<b class="conhea-as-usinas-container">
+        				<span class="conhea-as-usinas-container2">
+          					<span class="conhea-as-usinas">Conheça as usinas que geram a sua </span>
+          					<span class="economia2">economia</span>
+        				</span>
+      			</b>
+      			<div class="button2">
+        				<div class="dot">
+        				</div>
+      			</div>
+      			<div class="barra-de-navegao">
+        				<div class="faturas">
+          					<img class="file-06-icon" src="icons/file-06.svg" alt="">
+          					
+          					<div class="type26">Faturas</div>
+        				</div>
+        				<div class="consumo">
+          					<img class="file-06-icon" src="icons/flash.svg" alt="">
+          					
+          					<div class="type26">Consumo</div>
+        				</div>
+        				<div class="incio">
+          					<img class="file-06-icon" src="icons/Icone - Início.svg" alt="">
+          					
+          					<div class="type26">Início</div>
+        				</div>
+        				<div class="mais">
+          					<img class="file-06-icon" src="icons/Meatballs_menu.svg" alt="">
+          					
+          					<div class="type26">Mais</div>
+        				</div>
+        				<div class="indicaes">
+          					<img class="file-06-icon" src="icons/users-plus.svg" alt="">
+          					
+          					<div class="type265">Indicações</div>
+        				</div>
+      			</div>
+      			<img class="chatgpt-image-may-20-2026-at" src="imgs/ChatGPT Image May 20, 2026 at 12_30_27 AM 1.png" alt="">
+      			
+    		</div>
+  	</div>
+  	
+  	
+  	
+  	
 </body>
 </html>
