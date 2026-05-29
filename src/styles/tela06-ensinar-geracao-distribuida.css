@@ -1,0 +1,363 @@
+/* 1. CSS RESET & VARIÁVEIS BASE */
+:root {
+    --color-dark: #1B1C67;
+    --color-blue: #2B51C1;
+    --color-card-blue-bg: #F3F7FD;
+    --color-card-blue-border: #D6E1F5;
+    --color-green-text: #1B7A42;
+    --color-green-circle: #5BC282;
+    --color-card-green-bg: #EFFAF2;
+    --color-card-green-border: #CCE8D5;
+    --color-gray-text: #6B7280; /* Ajustado para um cinza ligeiramente mais legível */
+    --color-gray-dark: #4B5563; /* Cinza escuro para textos de FAQ */
+    --color-gray-nav: #A0AABF;
+    --color-bg-body: #F3F4F6;
+    --color-border-light: #F3F4F6;
+    --color-white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--color-bg-body);
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+/* 2. ESTRUTURA PRINCIPAL (VIEWPORT) */
+.app-viewport {
+    min-width: 402px;
+    width: 100%;
+    min-height: 874px;
+    background-color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid #e5e7eb;
+}
+
+/* 3. CABEÇALHO (HEADER) */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    background-color: var(--color-white);
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.header-btn {
+    color: #6b7280;
+    transition: color 0.2s;
+}
+.header-btn:hover { color: #1f2937; }
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 32px;
+    width: auto;
+}
+
+/* 4. ÁREA DE CONTEÚDO (MAIN) */
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px 20px 112px 20px;
+    background-color: var(--color-white);
+    
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.main-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* 5. COMPONENTES INTERNOS */
+.hero-banner {
+    background: linear-gradient(to bottom right, #193297, #459599);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    color: var(--color-white);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.hero-banner h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.hero-banner p {
+    font-size: 15px;
+    color: #eff6ff;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* CAIXA ENVOLVENTE DAS ETAPAS */
+.process-wrapper {
+    border: 1px solid #e5e7eb;
+    background-color: var(--color-white);
+    border-radius: 16px;
+    padding: 24px 16px;
+}
+
+.divider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.divider-line {
+    height: 1px;
+    background-color: #e5e7eb;
+    flex: 1;
+}
+
+.divider-text {
+    padding: 0 16px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-gray-text);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* Cards de Etapas */
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.step-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: var(--color-card-blue-bg);
+    border: 1px solid var(--color-card-blue-border);
+}
+
+.step-card.green-theme {
+    background-color: var(--color-card-green-bg);
+    border-color: var(--color-card-green-border);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.step-circle {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.step-circle.green-theme {
+    background-color: var(--color-green-circle);
+}
+
+.step-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2px;
+}
+
+.step-title {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--color-dark);
+}
+
+.step-title.green-theme {
+    color: var(--color-green-text);
+}
+
+.step-description {
+    font-size: 14px;
+    color: var(--color-gray-text);
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+.step-description.green-theme {
+    color: var(--color-green-text);
+    opacity: 0.8;
+}
+
+/* --- NOVOS COMPONENTES (INFO CARD & FAQ) --- */
+
+.info-card, .faq-card {
+    border: 1px solid var(--color-card-blue-border); /* Borda baseada na sua imagem */
+    background-color: var(--color-white);
+    border-radius: 16px;
+    padding: 24px 20px;
+    margin-top: 16px; /* Espaço para desgrudar do bloco de cima */
+}
+
+/* Info Card Especifico */
+.info-card-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 20px;
+}
+
+.info-card-body {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.info-card-icon {
+    color: var(--color-dark);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2px;
+}
+
+.info-card-text {
+    font-size: 14px;
+    color: var(--color-gray-dark);
+    line-height: 1.5;
+}
+
+.info-card-alert {
+    background-color: var(--color-card-blue-bg);
+    border: 1px solid var(--color-card-blue-border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.info-card-alert-text {
+    font-size: 13px;
+    color: var(--color-gray-dark);
+    line-height: 1.4;
+}
+
+/* FAQ Especifico */
+.faq-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 8px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #E5E7EB;
+    cursor: pointer;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.faq-question {
+    font-size: 14px;
+    color: var(--color-gray-dark);
+    font-weight: 500;
+    padding-right: 16px; /* Evita que o texto encoste na seta */
+    line-height: 1.4;
+}
+
+.faq-icon {
+    color: var(--color-gray-dark);
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+/* 6. NAVEGAÇÃO INFERIOR (BOTTOM NAV) */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    /* Removido o border-top e adicionada uma sombra leve negativa no eixo Y (projetada para cima) */
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.04);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 12px 8px 24px 8px;
+    z-index: 20;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 4px;
+    color: var(--color-gray-nav);
+    transition: color 0.2s;
+}
+
+.nav-item:hover {
+    color: var(--color-blue);
+}
+
+.nav-item.active {
+    color: var(--color-dark);
+}
+
+.nav-item.active:hover {
+    color: var(--color-blue);
+}
+
+.nav-item span {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.nav-item.active span {
+    font-weight: 700;
+}
