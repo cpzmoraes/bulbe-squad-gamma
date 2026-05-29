@@ -1,173 +1,177 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Bulbe - Protótipo</title>
-    <link rel="stylesheet" href="../styles/tela06-ensinar-geracao-distribuida.css">
+    <link rel="stylesheet" href="../styles/style-root.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
-    <div class="app-viewport">
-        <header class="header">
-            <button class="header-btn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 14 4 9 9 4"></polyline>
-                    <path d="M20 20v-7a4 4 0 0 0-4-4H4"></path>
-                </svg>
+    <!-- BARRA SUPERIOR -->
+    <header class="header">
+        <div class="header-left">
+            <button class="icon-btn" aria-label="Abrir menu lateral">
+                <i data-lucide="menu"></i>
             </button>
-            
-            <div class="logo-container">
-                <img src="assets/logo_header.png" alt="Logotipo Bulbe" class="logo-img">
-            </div>
-        </header>
+        </div>
 
-        <main class="main-content">
-            
-            <section class="hero-banner">
-                <h1>Entenda como<br>funciona o processo</h1>
-                <p>Transparência em cada etapa para você economizar com segurança.</p>
-            </section>
+        <div class="header-center">
+            <img src="../assets/logo-bulbe-branca.png" alt="Bulbe" />
+        </div>
 
-            <div class="process-wrapper">
-                <div class="divider-container">
-                    <div class="divider-line"></div>
-                    <span class="divider-text">Como funciona em 5 etapas</span>
-                    <div class="divider-line"></div>
-                </div>
+        <div class="header-right">
+            <button class="icon-btn" aria-label="Notificações">
+                <i data-lucide="bell"></i>
+            </button>
 
-                <div class="steps-container">
-                    
-                    <div class="step-card">
-                        <div class="step-circle">1</div>
-                        <div class="step-content">
-                            <h3 class="step-title">Cadastro</h3>
-                            <p class="step-description">Você faz cadastro com seus dados.</p>
-                        </div>
-                    </div>
+            <button class="profile-circle" aria-label="Acessar Perfil"></button>
+        </div>
+    </header>
 
-                    <div class="step-card">
-                        <div class="step-circle">2</div>
-                        <div class="step-content">
-                            <h3 class="step-title">Análise</h3>
-                            <p class="step-description">Analisamos suas informações e enviamos para a concessionária.</p>
-                        </div>
-                    </div>
+    <!-- CONTEUDO VARIAVEL -->
+    <main class="main-content">
 
-                    <div class="step-card">
-                        <div class="step-circle">3</div>
-                        <div class="step-content">
-                            <h3 class="step-title">Integração</h3>
-                            <p class="step-description">A concessionária realiza a integração e validação.</p>
-                        </div>
-                    </div>
+        <section class="hero-banner">
+            <h1>Entenda como<br>funciona o processo</h1>
+            <p>Transparência em cada etapa para você economizar com segurança.</p>
+        </section>
 
-                    <div class="step-card">
-                        <div class="step-circle">4</div>
-                        <div class="step-content">
-                            <h3 class="step-title">Aguarde</h3>
-                            <p class="step-description">Esse processo pode levar até 90 dias.</p>
-                        </div>
-                    </div>
-
-                    <div class="step-card green-theme">
-                        <div class="step-circle green-theme">5</div>
-                        <div class="step-content">
-                            <h3 class="step-title green-theme">Desconto ativo</h3>
-                            <p class="step-description green-theme">Pronto! Seu desconto é aplicado na sua conta.</p>
-                        </div>
-                    </div>
-
-                </div>
+        <div class="process-wrapper">
+            <div class="divider-container">
+                <div class="divider-line"></div>
+                <span class="divider-text">Como funciona em 5 etapas</span>
+                <div class="divider-line"></div>
             </div>
 
-            <div class="info-card">
-                <h3 class="info-card-title">Por que leva até 90 dias?</h3>
-                
-                <div class="info-card-body">
-                    <div class="info-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                            <path d="M9 12l2 2 4-4"></path>
-                        </svg>
+            <div class="steps-container">
+
+                <div class="step-card">
+                    <div class="step-circle">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Cadastro</h3>
+                        <p class="step-description">Você faz cadastro com seus dados.</p>
                     </div>
-                    <p class="info-card-text">O prazo depende da concessionária de energia da sua região. É um processo que envolve validações internas, integrações e análises de segurança.</p>
                 </div>
 
-                <div class="info-card-alert">
-                    <div class="info-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
+                <div class="step-card">
+                    <div class="step-circle">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Análise</h3>
+                        <p class="step-description">Analisamos suas informações e enviamos para a concessionária.
+                        </p>
                     </div>
-                    <p class="info-card-alert-text">Fique tranquilo! Acompanhe tudo pelo app e receba atualizações sobre cada etapa.</p>
                 </div>
+
+                <div class="step-card">
+                    <div class="step-circle">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Integração</h3>
+                        <p class="step-description">A concessionária realiza a integração e validação.</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-circle">4</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Aguarde</h3>
+                        <p class="step-description">Esse processo pode levar até 90 dias.</p>
+                    </div>
+                </div>
+
+                <div class="step-card green-theme">
+                    <div class="step-circle green-theme">5</div>
+                    <div class="step-content">
+                        <h3 class="step-title green-theme">Desconto ativo</h3>
+                        <p class="step-description green-theme">Pronto! Seu desconto é aplicado na sua conta.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h3 class="info-card-title">Por que leva até 90 dias?</h3>
+
+            <div class="info-card-body">
+                <div class="info-card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <path d="M9 12l2 2 4-4"></path>
+                    </svg>
+                </div>
+                <p class="info-card-text">O prazo depende da concessionária de energia da sua região. É um processo
+                    que envolve validações internas, integrações e análises de segurança.</p>
             </div>
 
-            <div class="faq-card">
-                <h3 class="faq-card-title">Perguntas frequentes</h3>
-                
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <span class="faq-question">Vou pagar algo durante esses 90 dias?</span>
-                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <span class="faq-question">E se meu desconto não for aprovado?</span>
-                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <span class="faq-question">Posso cancelar a qualquer momento?</span>
-                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <span class="faq-question">O desconto é acumulativo com outros benefícios?</span>
-                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </div>
+            <div class="info-card-alert">
+                <div class="info-card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <p class="info-card-alert-text">Fique tranquilo! Acompanhe tudo pelo app e receba atualizações sobre
+                    cada etapa.</p>
+            </div>
+        </div>
+
+        <div class="faq-card">
+            <h3 class="faq-card-title">Perguntas frequentes</h3>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <span class="faq-question">Vou pagar algo durante esses 90 dias?</span>
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+
+                <div class="faq-item">
+                    <span class="faq-question">E se meu desconto não for aprovado?</span>
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+
+                <div class="faq-item">
+                    <span class="faq-question">Posso cancelar a qualquer momento?</span>
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+
+                <div class="faq-item">
+                    <span class="faq-question">O desconto é acumulativo com outros benefícios?</span>
+                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
                 </div>
             </div>
+        </div>
 
-        </main>
 
-        <nav class="bottom-nav">
-            
-            <button class="nav-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                <span>Faturas</span>
-            </button>
-
-            <button class="nav-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                <span>Consumo</span>
-            </button>
-
-            <button class="nav-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                <span>Início</span>
-            </button>
-
-            <button class="nav-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
-                <span>Indicações</span>
-            </button>
-
-            <button class="nav-item active">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
-                <span>Mais</span>
-            </button>
-
+        <!-- BARRA DE NAVEGACAO INFERIOR -->
+        <nav class="nav">
+            <a href="faturas.html" class="nav-item"><i data-lucide="file-text"></i>Faturas</a>
+            <a href="consumo.html" class="nav-item"><i data-lucide="zap"></i>Consumo</a>
+            <a href="inicio.html" class="nav-item"><i data-lucide="house"></i>Início</a>
+            <a href="indicacoes.html" class="nav-item"><i data-lucide="user-round-plus"></i>Indicações</a>
+            <a href="mais.html" class="nav-item"><i data-lucide="ellipsis"></i>Mais</a>
         </nav>
-    </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
+
 </html>

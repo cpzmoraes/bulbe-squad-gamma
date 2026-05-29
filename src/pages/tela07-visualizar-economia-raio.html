@@ -1,163 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bulbe - Visualizar economia</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulbe - Economia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="../styles/style-root.css">
+    <link rel="stylesheet" href="economia_raio.css" />
+    <script src="economia_raio.js" defer></script>
+
 </head>
+
 <body>
-    <header class="economy-header">
-    <nav class="top-bar" aria-label="Menu principal">
-        <button class="menu-button" type="button" aria-label="Abrir menu">
-			Menu
-        </button>
 
-        <img src="assets/logo-bulbe.svg" alt="Bulbe" class="logo" />
-
-        <div class="header-actions">
-        <button type="button" aria-label="Notificações" class="icon-button">
-            Sino
-        </button>
-
-        <button type="button" aria-label="Perfil" class="avatar-button"></button>
+    <!-- BARRA SUPERIOR -->
+    <header class="header">
+        <div class="header-left">
+            <button class="icon-btn" aria-label="Abrir menu lateral">
+                <i data-lucide="menu"></i>
+            </button>
         </div>
-    </nav>
 
-    <section class="hero-section" aria-labelledby="economy-title">
-        <h1 id="economy-title">
-        Veja a <strong>economia</strong> em volta de você 
-        </h1>
-
-        <label for="radius-range">Ajuste seu raio de economia:</label>
-
-        <input
-        id="radius-range"
-        name="radius"
-        type="range"
-        min="15"
-        max="45"
-        step="15"
-        value="30"
-        />
-
-        <div class="radius-labels" aria-hidden="true">
-        <span>15km</span>
-        <span>30km</span>
-        <span>45km</span>
+        <div class="header-center">
+            <img src="../assets/logo-bulbe-branca.png" alt="Bulbe" />
         </div>
-    </section>
+
+        <div class="header-right">
+            <button class="icon-btn" aria-label="Notificações">
+                <i data-lucide="bell"></i>
+            </button>
+
+            <button class="profile-circle" aria-label="Acessar Perfil"></button>
+        </div>
     </header>
 
-    <main class="economy-screen">
-    <section class="map-card" aria-label="Mapa de economia por região">
-        <div id="map-container" aria-label="Mapa da região da Savassi">
-            <div class="map-radius-layer" aria-hidden="true">
-                <div class="radius-circle radius-circle-small"></div>
-                <div class="radius-circle radius-circle-medium"></div>
-                <div class="radius-circle radius-circle-large"></div>
+    <!-- CONTEUDO VARIAVEL -->
+    <main>
+        <h1>Veja a <span class="orange">economia</span> em<br>volta de você <span class="sun"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#ff9e1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-sun-icon lucide-sun">
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 2v2" />
+                    <path d="M12 20v2" />
+                    <path d="m4.93 4.93 1.41 1.41" />
+                    <path d="m17.66 17.66 1.41 1.41" />
+                    <path d="M2 12h2" />
+                    <path d="M20 12h2" />
+                    <path d="m6.34 17.66-1.41 1.41" />
+                    <path d="m19.07 4.93-1.41 1.41" />
+                </svg></span></h1>
+        <label for="radius">Ajuste o raio de economia:</label>
+        <input id="radius" type="range" min="15" max="45" step="15" value="30">
+        <div class="range-labels"><span>15km</span><span>30km</span><span>45km</span></div>
+        </section>
+
+        <section class="content">
+            <div class="map-card">
+                <div id="map"></div>
+                <div class="circle-layer" id="circleLayer">
+                    <div class="ring r3"></div>
+                    <div class="center-dot"></div>
+                </div>
             </div>
 
-            <div class="user-location" aria-label="Sua localização atual"></div>
+            <div class="metrics" id="metrics">
+                <div class="top-metrics">
+                    <div class="left-title">Economia total<br>em um raio de:<span id="kmText">30 km</span></div>
+                    <div class="divider"></div>
+                    <div class="saved">TOTAL ECONOMIZADO<div class="money"><small>R$</small><span
+                                id="moneyText">12.345,00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="mini"><i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="#08068D" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-user-round-icon lucide-user-round">
+                                <circle cx="12" cy="8" r="5" />
+                                <path d="M20 21a8 8 0 0 0-16 0" />
+                            </svg></i>
+                        <div><b id="clientsText">312</b><br><span>clientes</span></div>
+                    </div>
+                    <div class="mini"><i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="#08068D" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-credit-card-icon lucide-credit-card">
+                                <rect width="20" height="14" x="2" y="5" rx="2" />
+                                <line x1="2" x2="22" y1="10" y2="10" />
+                            </svg></i>
+                        <div><b id="perClientText">R$ 155</b><br><span>por cliente</span></div>
+                    </div>
+                    <div class="mini green"><i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="#18814D" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-sprout-icon lucide-sprout">
+                                <path
+                                    d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3" />
+                                <path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4" />
+                                <path d="M5 21h14" />
+                            </svg></i>
+                        <div><b id="co2Text">125 ton</b><br><span>CO2 evitado</span></div>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="i"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="#08068D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-info-icon lucide-info">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 16v-4" />
+                            <path d="M12 8h.01" />
+                        </svg></div>
+                    <p>Quanto maior o raio, maior o impacto positivo da energia solar na sua região!</p>
+                </div>
+            </div>
+        </section>
 
-            <article class="map-marker marker-lourdes">
-            <strong>Lourdes</strong>
-            <span>R$ 41,8 mil</span>
-            </article>
 
-            <article class="map-marker marker-funcionarios">
-            <strong>Funcionários</strong>
-            <span>R$ 35,1 mil</span>
-            </article>
-
-            <article class="map-marker marker-savassi">
-            <strong>Savassi</strong>
-            <span>R$ 48,3 mil</span>
-            </article>
-
-            <article class="map-marker marker-praca">
-            <strong>Praça da Savassi</strong>
-            </article>
-        </div>
-    </section>
-
-    <section class="summary-card" aria-labelledby="summary-title">
-        <div class="summary-header">
-        <div>
-            <h2 id="summary-title">Economia total em um raio de:</h2>
-            <strong>15 km</strong>
-        </div>
-
-        <div class="summary-divider" aria-hidden="true"></div>
-
-        <div>
-            <p>TOTAL ECONOMIZADO</p>
-            <strong>
-            <small>R$</small>
-            12.345,00
-            </strong>
-        </div>
-        </div>
-
-        <div class="metrics-grid">
-        <article class="metric-card">
-            <span aria-hidden="true">👤</span>
-            <strong>312</strong>
-            <p>clientes</p>
-        </article>
-
-        <article class="metric-card">
-            <span aria-hidden="true">💳</span>
-            <strong>R$ 155</strong>
-            <p>por cliente</p>
-        </article>
-
-        <article class="metric-card">
-            <span aria-hidden="true">🌱</span>
-            <strong>125 ton</strong>
-            <p>CO2 evitado</p>
-        </article>
-        </div>
-
-        <aside class="info-box">
-        <span aria-hidden="true">i</span>
-        <p>
-            Quanto maior o raio, maior o impacto positivo da energia solar na sua
-            região!
-        </p>
-        </aside>
-    </section>
+        <!-- BARRA DE NAVEGACAO INFERIOR -->
+        <nav class="nav">
+            <a href="faturas.html" class="nav-item"><i data-lucide="file-text"></i>Faturas</a>
+            <a href="consumo.html" class="nav-item"><i data-lucide="zap"></i>Consumo</a>
+            <a href="inicio.html" class="nav-item"><i data-lucide="house"></i>Início</a>
+            <a href="indicacoes.html" class="nav-item"><i data-lucide="user-round-plus"></i>Indicações</a>
+            <a href="mais.html" class="nav-item"><i data-lucide="ellipsis"></i>Mais</a>
+        </nav>
     </main>
 
-    <footer class="bottom-navigation">
-    <nav aria-label="Navegação inferior">
-        <button class="nav-item">
-                    <div class="nav-icon-ph"></div> 
-                    <span>Faturas</span>
-                </button>
-
-                
-                <button class="nav-item">
-                    <div class="nav-icon-ph"></div>
-                    <span>Consumo</span>
-                </button>
-
-                
-                <button class="nav-item">
-                    <div class="nav-icon-ph"></div> 
-                    <span>Início</span>
-                </button>
-
-                
-                <button class="nav-item">
-                    <div class="nav-icon-ph"></div>
-                    <span>Indicações</span>
-                </button>
-
-                <button class="nav-item">
-                    <div class="nav-icon-ph"></div> 
-                    <span>Mais</span>
-                </button>
-    </nav>
-    </footer>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
+
 </html>
