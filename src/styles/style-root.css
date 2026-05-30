@@ -7,7 +7,6 @@
 
 /* BARRA SUPERIOR */
 
-/* O CONTÊINER PRINCIPAL: 3 Colunas travadas */
 .header {
   background-color: #08068d;
   width: 100%;
@@ -33,7 +32,7 @@
 }
 
 .header-center img {
-  height: 30px;
+  height: 28px;
   width: auto;
 }
 
@@ -74,6 +73,19 @@
   background: transparent;
   display: block;
   cursor: pointer;
+}
+
+/* CLASSE MODIFICADORA: Variação Branca */
+.header.variant-white {
+  background-color: #ffffff;
+  color: #475569;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.header.variant-white .logo-header {
+  height: 28px;
+  width: auto;
+  display: block;
 }
 
 /* BARRA DE NAVEGACAO INFERIOR */
