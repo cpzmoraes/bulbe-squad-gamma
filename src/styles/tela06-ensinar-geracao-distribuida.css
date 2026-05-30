@@ -8,8 +8,10 @@
     --color-green-circle: #5BC282;
     --color-card-green-bg: #EFFAF2;
     --color-card-green-border: #CCE8D5;
-    --color-gray-text: #6B7280; /* Ajustado para um cinza ligeiramente mais legível */
-    --color-gray-dark: #4B5563; /* Cinza escuro para textos de FAQ */
+    --color-gray-text: #6B7280;
+    /* Ajustado para um cinza ligeiramente mais legível */
+    --color-gray-dark: #4B5563;
+    /* Cinza escuro para textos de FAQ */
     --color-gray-nav: #A0AABF;
     --color-bg-body: #F3F4F6;
     --color-border-light: #F3F4F6;
@@ -27,9 +29,8 @@ body {
     background-color: var(--color-bg-body);
     color: #1f2937;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100%;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 button {
@@ -39,58 +40,17 @@ button {
     font: inherit;
 }
 
-/* 2. ESTRUTURA PRINCIPAL (VIEWPORT) */
-.app-viewport {
-    min-width: 402px;
-    width: 100%;
-    min-height: 874px;
-    background-color: var(--color-white);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    border: 1px solid #e5e7eb;
-}
-
-/* 3. CABEÇALHO (HEADER) */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 24px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-    background-color: var(--color-white);
-    flex-shrink: 0;
-    z-index: 10;
-}
-
-.header-btn {
-    color: #6b7280;
-    transition: color 0.2s;
-}
-.header-btn:hover { color: #1f2937; }
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo-img {
-    height: 32px;
-    width: auto;
-}
-
 /* 4. ÁREA DE CONTEÚDO (MAIN) */
 .main-content {
     flex: 1;
     overflow-y: auto;
     padding: 24px 20px 112px 20px;
     background-color: var(--color-white);
-    
+
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
 .main-content::-webkit-scrollbar {
     display: none;
 }
@@ -102,7 +62,7 @@ button {
     padding: 24px;
     margin-bottom: 16px;
     color: var(--color-white);
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .hero-banner h1 {
@@ -169,7 +129,7 @@ button {
 .step-card.green-theme {
     background-color: var(--color-card-green-bg);
     border-color: var(--color-card-green-border);
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .step-circle {
@@ -220,12 +180,15 @@ button {
 
 /* --- NOVOS COMPONENTES (INFO CARD & FAQ) --- */
 
-.info-card, .faq-card {
-    border: 1px solid var(--color-card-blue-border); /* Borda baseada na sua imagem */
+.info-card,
+.faq-card {
+    border: 1px solid var(--color-card-blue-border);
+    /* Borda baseada na sua imagem */
     background-color: var(--color-white);
     border-radius: 16px;
     padding: 24px 20px;
-    margin-top: 16px; /* Espaço para desgrudar do bloco de cima */
+    margin-top: 16px;
+    /* Espaço para desgrudar do bloco de cima */
 }
 
 /* Info Card Especifico */
@@ -306,7 +269,8 @@ button {
     font-size: 14px;
     color: var(--color-gray-dark);
     font-weight: 500;
-    padding-right: 16px; /* Evita que o texto encoste na seta */
+    padding-right: 16px;
+    /* Evita que o texto encoste na seta */
     line-height: 1.4;
 }
 
@@ -314,50 +278,4 @@ button {
     color: var(--color-gray-dark);
     flex-shrink: 0;
     transition: transform 0.2s ease;
-}
-
-/* 6. NAVEGAÇÃO INFERIOR (BOTTOM NAV) */
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--color-white);
-    /* Removido o border-top e adicionada uma sombra leve negativa no eixo Y (projetada para cima) */
-    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.04);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 12px 8px 24px 8px;
-    z-index: 20;
-}
-
-.nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    gap: 4px;
-    color: var(--color-gray-nav);
-    transition: color 0.2s;
-}
-
-.nav-item:hover {
-    color: var(--color-blue);
-}
-
-.nav-item.active {
-    color: var(--color-dark);
-}
-
-.nav-item.active:hover {
-    color: var(--color-blue);
-}
-
-.nav-item span {
-    font-size: 10px;
-    font-weight: 600;
-}
-
-.nav-item.active span {
-    font-weight: 700;
 }
