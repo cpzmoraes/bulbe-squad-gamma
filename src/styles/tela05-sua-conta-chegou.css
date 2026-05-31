@@ -1,0 +1,377 @@
+/* =========================================
+   ESTILOS DO CONTEÚDO PRINCIPAL (TELA 05)
+   
+   Este arquivo estiliza exclusivamente a Tela 05 do app Bulbe.
+   Os estilos globais (reset, header, nav) estão em style-root.css.
+   ========================================= */
+
+
+/* =========================================
+   CONTAINER PRINCIPAL
+   Envolve toda a área de conteúdo entre o
+   header fixo e a nav inferior.
+   O fundo azul no topo acompanha visualmente
+   a cor do header.
+   ========================================= */
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;        /* Empilha as seções verticalmente */
+    background-color: #08068d;     /* Azul: "preenche" o espaço atrás da seção hero */
+    min-height: 100vh;             /* Garante que a tela ocupe a altura total da viewport */
+}
+
+
+/* =========================================
+   SEÇÃO HERO (fundo azul)
+   Exibe o título da tela e a imagem do envelope.
+   Fica sobre o fundo azul do conteudo-principal.
+   ========================================= */
+.secao-hero {
+    display: flex;
+    justify-content: space-between; /* Texto à esquerda, imagem à direita */
+    align-items: flex-start;
+    padding: 24px 24px 0 24px;     /* Sem padding inferior: a imagem "invade" a seção branca */
+    color: #ffffff;
+    gap: 16px;
+}
+
+/* Bloco de texto do hero: título e subtítulo */
+.hero-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;                        /* Ocupa o espaço restante após a imagem */
+}
+
+.hero-texto h1 {
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+/* Palavra "chegou!" em amarelo para dar destaque visual */
+.hero-texto .destaque {
+    color: #fed029;
+}
+
+.hero-texto p {
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 180px;               /* Limita largura para não colidir com a imagem */
+}
+
+/* Container da imagem do envelope */
+.hero-imagem {
+    width: 130px;
+    flex-shrink: 0;                 /* Impede que a imagem encolha em telas pequenas */
+    /* Desloca a imagem para baixo, sobrepondo-a à seção branca abaixo,
+       criando o efeito visual de "flutuação" sobre o card branco */
+    transform: translateY(20px);
+    z-index: 2;                     /* Fica acima da secao-info (z-index: 1) */
+}
+
+.hero-imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-height: 120px;
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   SEÇÃO INFO (fundo branco)
+   Card branco arredondado que "cobre" o fundo azul.
+   Contém todos os cards de informação e ação.
+   O border-radius no topo cria o efeito de
+   folha sobreposta ao hero.
+   ========================================= */
+.secao-info {
+    background-color: #ffffff;
+    border-radius: 16px 16px 0 0;  /* Arredondamento apenas nos cantos superiores */
+    padding: 24px 24px 100px 24px; /* padding-bottom de 100px evita que o conteúdo
+                                      fique escondido sob a nav inferior (85px) */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;                     /* Espaço uniforme entre os cards internos */
+    flex-grow: 1;                  /* Expande para ocupar o restante da tela */
+    z-index: 1;                    /* Fica abaixo da imagem do hero (z-index: 2) */
+}
+
+
+/* =========================================
+   CARD INFORMATIVO (roxo claro)
+   Aviso explicando por que o desconto
+   ainda não foi aplicado na conta atual.
+   ========================================= */
+.card-informativo {
+    background-color: #e8e8ff;
+    border: 1px solid #ceceff;
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    color: #040263;
+}
+
+/* Ícone circular do card informativo */
+.icone-info {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;                 /* Mantém tamanho fixo independente do conteúdo */
+    border-radius: 50%;
+}
+
+/* Textos do card informativo */
+.info-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-texto strong {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.info-texto p {
+    font-size: 12px;
+    color: #333333;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   CARD PRINCIPAL (borda azul clara)
+   Container que agrupa os três blocos:
+   envio da conta, comparação de valores
+   e economia anual.
+   ========================================= */
+.card-principal {
+    border: 2px solid #e6f1fe;
+    border-radius: 14px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;                      /* Espaçamento generoso entre os três blocos */
+}
+
+
+/* =========================================
+   BLOCO DE ENVIO
+   Convida o usuário a enviar a foto da
+   conta de luz via câmera ou galeria.
+   ========================================= */
+.bloco-envio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+/* Texto da pergunta acima do botão */
+.pergunta-conta {
+    font-size: 16px;
+    color: #08068d;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Link sublinhado alternativo ao botão */
+.link-enviar {
+    color: #08068d;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* Botão CTA principal de envio da conta (ação primária da tela) */
+.btn-enviar-conta {
+    background-color: #08068d;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;                    /* Ocupa toda a largura do card */
+    cursor: pointer;
+    /* Sombra azul-escura para dar profundidade ao botão */
+    box-shadow: 0px 4px 6px rgba(8, 6, 141, 0.2);
+    transition: opacity 0.2s;
+}
+
+/* Feedback visual ao toque/clique */
+.btn-enviar-conta:active {
+    opacity: 0.8;
+}
+
+
+/* =========================================
+   BLOCO DE COMPARAÇÃO
+   Mostra lado a lado o valor sem e com a
+   Bulbe, destacando a diferença de preço.
+   ========================================= */
+.bloco-comparacao {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Título da seção de comparação com seta inline */
+.titulo-comparacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #08068d;
+}
+
+/* Utilitários de cor para valores e textos de destaque */
+.texto-verde  { color: #18814d; }   /* Economia / positivo */
+.texto-vermelho { color: #b42318; } /* Custo sem Bulbe / negativo */
+
+/* Ícone de seta no título da comparação */
+.icone-seta {
+    width: 16px;
+    height: 16px;
+}
+
+/* Container dos dois lados da comparação.
+   position: relative permite posicionar a
+   divisória circular no centro via absolute. */
+.box-comparacao {
+    display: flex;
+    position: relative;
+    border-radius: 12px;
+}
+
+/* Estilos compartilhados dos dois lados da comparação */
+.comp-sem-bulbe,
+.comp-com-bulbe {
+    flex: 1;                        /* Cada lado ocupa metade do container */
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Lado esquerdo: SEM a Bulbe (tom avermelhado) */
+.comp-sem-bulbe {
+    background-color: #fef3f2;
+    border: 1px solid #ffa9a3;
+    border-right: none;             /* Remove borda direita para fundir com o lado verde */
+    border-radius: 12px 0 0 12px;  /* Arredonda apenas os cantos esquerdos */
+}
+
+/* Lado direito: COM a Bulbe (tom esverdeado) */
+.comp-com-bulbe {
+    background-color: #ecfdf3;
+    border: 1px solid #6ce9a6;
+    border-left: none;              /* Remove borda esquerda para fundir com o lado vermelho */
+    border-radius: 0 12px 12px 0;  /* Arredonda apenas os cantos direitos */
+}
+
+/* Cabeçalho de cada lado (label + emoji) */
+.comp-header {
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Cores dos cabeçalhos de acordo com o lado */
+.comp-sem-bulbe .comp-header { color: #b42318; }
+.comp-com-bulbe .comp-header { color: #18814d; }
+
+/* Emoji decorativo ao lado do label */
+.emoji {
+    width: 14px;
+    height: 14px;
+}
+
+/* Subtexto descritivo abaixo do label */
+.comp-subtexto {
+    font-size: 10px;
+    color: #667085;
+}
+
+/* Valor monetário principal de cada lado */
+.comp-valor {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+/* Círculo divisório central com seta.
+   Posicionado exatamente no centro da box
+   usando position absolute + transform. */
+.comp-divisoria {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza tanto horizontal quanto verticalmente */
+    background-color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comp-divisoria img {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* =========================================
+   BLOCO DE ECONOMIA ANUAL
+   Destaca a economia acumulada em 12 meses
+   para reforçar o benefício do serviço.
+   ========================================= */
+.bloco-economia {
+    background-color: #deffef;
+    border: 1px solid #a6f4c5;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Ícone de gráfico à esquerda do texto */
+.icone-economia {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;                 /* Mantém tamanho fixo */
+    border-radius: 6px;
+}
+
+/* Textos do bloco de economia */
+.economia-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.economia-texto strong {
+    font-size: 12px;
+    color: #000000;
+}
+
+.economia-texto p {
+    font-size: 10px;
+    color: #667085;
+    line-height: 1.3;
+}
