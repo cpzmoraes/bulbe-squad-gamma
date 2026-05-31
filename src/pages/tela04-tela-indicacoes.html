@@ -1,238 +1,237 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulbe - Indicações</title>
+    
+    <!-- =========================
+        >>>>> MUDAR O DIRETÓRIO DO STYLE-ROOT APÓS MERGEAR <<<<<
+         ========================= -->
+
+    <!-- Estilos globais compartilhados entre todas as telas (reset, header, nav) -->
+    <link rel="stylesheet" href="style-root.css" />
+
+    <!-- Estilos específicos desta tela de Indicações -->
+    <link rel="stylesheet" href="css-04-gemini.css" />
+    
+    <!-- Fonte Poppins do Google Fonts (pesos 400, 500, 600 e 700) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
+    
+    <!-- Biblioteca de ícones Lucide (via CDN) — usada para os ícones do header e da nav -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-    <div class="app-viewport">
+    <!-- =============================================
+         HEADER — Barra superior fixa (sticky)
+         Definida no style-root.css com layout em grid
+         de 3 colunas: [esquerda | centro | direita]
+    ============================================== -->
+    <header class="header">
 
-        <div class="top-section">
-
-            <!-- HEADER - BARRA SUPERIOR -->
-            <header class="header">
-                <button class="icon-btn">
-                    <div class="icon-placeholder">Menu</div>
-                </button>
-
-                <div class="logo-container">
-                    <div class="logo-placeholder">Logo Bulbe</div>
-                </div>
-
-                <div class="header-actions">
-                    <button class="icon-btn">
-                        <div class="icon-placeholder">Sino</div>
-                    </button>
-
-                    <button class="profile-circle"></button>
-                </div>
-            </header>
-
-            <!-- CHAMADA PRINCIPAL-->
-            <section class="hero">
-                
-                <!-- Área textual -->
-                <div class="hero-text">
-                    <!-- Título principal -->
-                    <h1 class="hero-title">
-                        Indique amigos e <span class="highlight-yellow">ganhe dinheiro</span>
-                    </h1>
-
-                    <!-- Texto explicativo -->
-                    <p class="hero-description">
-                        Quando seu amigo assina com a Bulbe,
-                        você ganha e todo mundo economiza.
-                    </p>
-                </div>
-
-                <!-- Área da ilustração -->
-                <figure class="hero-image">
-                    
-                    <!-- Placeholder da imagem -->
-                    <div class="image-placeholder">
-                        Ilustração Indicações
-                    </div>
-                </figure>
-            </section>
+        <!-- Coluna esquerda: botão de menu hamburguer -->
+        <div class="header-left">
+            <button class="icon-btn" aria-label="Abrir menu lateral">
+                <i data-lucide="menu"></i>
+            </button>
         </div>
 
-        <!-- CONTEÚDO PRINCIPAL -->
-        <main class="main-board">
+        <!-- Coluna central: logotipo da Bulbe -->
+        <div class="header-center">
+            <img src="../assets/icons/icons-tela04/logo-base.svg" alt="Bulbe" />
+        </div>
 
-            <!-- STATS CARD - Resumo de Indicações -->
-            <section class="stats-card">
+        <!-- Coluna direita: ícone de notificações + avatar de perfil -->
+        <div class="header-right">
+            <button class="icon-btn" aria-label="Notificações">
+                <i data-lucide="bell"></i>
+            </button>
 
-                <!-- Coluna de ganhos -->
-                <article class="stats-column">
+            <!-- Círculo vazio que representa o avatar do usuário -->
+            <button class="profile-circle" aria-label="Acessar Perfil"></button>
+        </div>
+    </header>
 
-                    <h2 class="stats-title">
-                        Economia por indicação
-                    </h2>
+    <!-- =============================================
+         CONTEÚDO PRINCIPAL
+         Ocupa toda a altura da viewport e empilha
+         o hero (azul) com o sheet branco por cima
+    ============================================== -->
+    <main class="conteudo-principal">
+        
+        <!-- ==========================================
+             HERO SECTION — Bloco azul escuro no topo
+             Contém o título, subtítulo e a ilustração
+             de "High Five" posicionada à direita
+        =========================================== -->
+        <section class="hero-section">
 
-                    <p class="stats-value">
-                        R$ 260,72
-                    </p>
+            <!-- Texto do hero: título com destaque amarelo e subtítulo -->
+            <div class="hero-text">
+                <h1>Indique amigos e <span class="highlight">ganhe dinheiro</span></h1>
+                <p>Seu amigo economiza na<br>conta de luz.<br>E você recebe uma recompensa.</p>
+            </div>
+            
+            <!-- Ilustração decorativa posicionada no canto inferior direito do hero -->
+            <div class="hero-image-wrapper">
+                <!-- Blob cinza-azulado de fundo, gerado via CSS com border-radius orgânico -->
+                <div class="hero-bg-blob"></div>
+                <img src="../assets/icons/icons-tela04/High-five.svg" alt="Ilustração de amigos comemorando" class="hero-illustration">
+            </div>
+        </section>
 
-                    <p class="stats-status">
-                        Você já ganhou
-                    </p>
-
-                </article>
-
-                <!-- Coluna de amigos -->
-                <article class="stats-column">
-
-                    <h2 class="stats-title">
-                        Amigos que você já ajudou
-                    </h2>
-
-                    <p class="stats-value">
-                        08
-                    </p>
-
-                    <p class="stats-status">
-                        Já estão economizando
-                    </p>
-
-                </article>
-            </section>
-
-            <!-- COMO FUNCIONA -->
-            <section class="steps-section">
+        <!-- ==========================================
+             MAIN CONTENT SHEET — Painel branco
+             Sobrepõe o hero com margin-top negativa
+             e border-radius no topo para efeito "sheet"
+        =========================================== -->
+        <div class="main-content-sheet">
+            <section class="content-section">
                 
-                <!-- Título da seção -->
-                <h2 class="section-title">
-                    COMO FUNCIONA
-                </h2>
+                <!-- =====================================
+                     CARD DE ESTATÍSTICAS
+                     Exibe dois indicadores lado a lado:
+                     1. Total ganho em reais
+                     2. Quantidade de amigos indicados
+                ====================================== -->
+                <div class="card stats-card">
 
-                <!-- Lista de etapas -->
-                <div class="steps-container">
+                    <!-- Indicador 1: Valor acumulado em R$ -->
+                    <div class="stat-item">
+                        <span class="stat-label">Economia por indicação</span>
+                        <!-- stat-value-baseline alinha "R$" e o número pela linha de base -->
+                        <div class="stat-value stat-value-baseline">
+                            <span class="currency">R$</span>
+                            <span class="amount">260,72</span>
+                        </div>
+                        <!-- Tag verde com ícone e texto de confirmação -->
+                        <div class="stat-tag">
+                            <img src="../assets/images/images-tela04/Card/image-21.png" alt="Ícone de Dinheiro">
+                            <span>Você já ganhou</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Divisor vertical entre os dois stat-items -->
+                    <div class="divider"></div>
+                    
+                    <!-- Indicador 2: Número de amigos indicados -->
+                    <div class="stat-item">
+                        <span class="stat-label">Amigos indicados</span>
+                        <!-- stat-value-center alinha o número e o ícone de usuário pelo centro -->
+                        <div class="stat-value stat-value-center">
+                            <span class="amount">08</span>
+                            <img src="../assets/icons/icons-tela04/Card/Group_duotone_fill.svg" alt="Ícone de Usuário">
+                        </div>
+                        <div class="stat-tag">
+                            <img src="../assets/images/images-tela04/Card/image-21.png" alt="Ícone de Dinheiro">
+                            <span>Já estão economizando</span>
+                        </div>
+                    </div>
+                </div>
 
-                    <!-- Etapa 1 -->
-                    <article class="step-item">
+                <!-- =====================================
+                     CARD "COMO FUNCIONA"
+                     Apresenta o fluxo de 3 etapas
+                     (ícones + linha tracejada + textos)
+                     seguido dos botões de ação e um
+                     banner de bônus por contrato aprovado
+                ====================================== -->
+                <div class="card how-it-works-card">
 
-                        <div class="step-number">1</div>
-                        <div class="step-icon">Link</div> <!-- Placeholder: ícone de corrente -->
-                        <p class="step-description">
-                            Compartilhe seu link com amigos e familiares.
-                        </p>
-                    </article>
+                    <!-- Cabeçalho do card: título centralizado com linhas decorativas nas laterais -->
+                    <div class="section-title">
+                        <div class="line"></div>
+                        <h2>COMO FUNCIONA</h2>
+                        <div class="line"></div>
+                    </div>
 
-                    <!-- Etapa 2 -->
-                    <article class="step-item">
+                    <!-- Fluxo das 3 etapas: ícones na linha de cima, textos embaixo -->
+                    <div class="steps-flow">
 
-                        <div class="step-number">2</div>
-                        <div class="step-icon">Cadastro</div> <!-- Placeholder: ícone de pessoa -->
-                        <p class="step-description">
-                            Ele faz o cadastro e assina com a Bulbe.
-                        </p>
-                    </article>
+                        <!-- Linha visual: 3 ícones separados por linhas tracejadas -->
+                        <div class="steps-visual-wrapper">
+                            <!-- Etapa 1: Compartilhar link -->
+                            <div class="step-icon">
+                                <img src="../assets/images/images-tela04/ChatGPT_Image_May_5__2026_at_02_52_48_PM-removebg-preview-1.png" alt="Ícone Link">
+                            </div>
+                            
+                            <!-- Linha tracejada decorativa entre etapa 1 e 2 -->
+                            <div class="step-dashed-line"></div>
+                            
+                            <!-- Etapa 2: Amigo faz cadastro -->
+                            <div class="step-icon">
+                                <img src="../assets/images/images-tela04/image-removebg-preview-3-2.png" alt="Ícone Cadastro">
+                            </div>
+                            
+                            <!-- Linha tracejada decorativa entre etapa 2 e 3 -->
+                            <div class="step-dashed-line"></div>
+                            
+                            <!-- Etapa 3: Receber prêmio -->
+                            <div class="step-icon">
+                                <img src="../assets/images/images-tela04/image-removebg-preview-4-1.png" alt="Ícone Dinheiro">
+                            </div>
+                        </div>
 
-                    <!-- Etapa 3 -->
-                    <article class="step-item">
+                        <!-- Textos descritivos de cada etapa, alinhados abaixo dos ícones -->
+                        <div class="steps-text-wrapper">
+                            <p>Compartilhe seu link com amigos e familiares.</p>
+                            <p>Ele faz o cadastro e assina com a Bulbe</p>
+                            <p>Quando o contrato é aprovado, você recebe seu prêmio</p>
+                        </div>
+                    </div>
 
-                        <div class="step-number">3</div>
-                        <div class="step-icon">Dinheiro</div> <!-- Placeholder: ícone de dinheiro -->
-                        <p class="step-description">
-                            Quando o contrato é aprovado,
-                            você recebe seu prêmio.
-                        </p>
-                    </article>
+                    <!-- Botões de ação: WhatsApp (primário) e copiar link (secundário) -->
+                    <div class="action-buttons">
+                        <button class="btn btn-whatsapp">
+                            <img src="../assets/icons/icons-tela04/Icon.svg" alt="Ícone WhatsApp">
+                            Indicar por WhatsApp
+                        </button>
+                        <button class="btn btn-outline">
+                            <img src="../assets/icons/icons-tela04/Icon-1.svg" alt="Ícone Copiar">
+                            Copiar link de indicação
+                        </button>
+                    </div>
 
+                    <!-- Banner informativo verde: reforça o valor do bônus por contrato aprovado -->
+                    <div class="bonus-banner">
+                        <!-- Ícone de ciclo/atualização dentro de círculo verde escuro -->
+                        <div class="bonus-icon">
+                            <img src="../assets/icons/icons-tela04/Refresh_2_light.svg" alt="Ícone Atualizar/Ciclo">
+                        </div>
+                        <!-- Texto descritivo do benefício -->
+                        <div class="bonus-text">
+                            <span>Cada amigo que assina, você ganha.</span>
+                        </div>
+                        <!-- Valor do bônus em destaque -->
+                        <div class="bonus-value">
+                            <strong>R$ 20,00</strong>
+                            <span>por contrato aprovado</span>
+                        </div>
+                    </div>
                 </div>
 
             </section>
+        </div>
+    </main>
 
-            <!-- BOTÕES DE AÇÃO -->
-            <section class="actions-section">
+    <!-- =============================================
+         NAV — Barra de navegação inferior fixa
+         5 abas: Faturas | Consumo | Início | Indicações | Mais
+         A aba ativa recebe a classe "active" para
+         destacar o item com a cor primária azul
+    ============================================== -->
+    <nav class="nav">
+        <a href="faturas.html" class="nav-item"><i data-lucide="file-text"></i>Faturas</a>
+        <a href="consumo.html" class="nav-item"><i data-lucide="zap"></i>Consumo</a>
+        <a href="inicio.html" class="nav-item"><i data-lucide="house"></i>Início</a>
+        <a href="indicacoes.html" class="nav-item"><i data-lucide="user-round-plus"></i>Indicações</a>
+        <a href="mais.html" class="nav-item"><i data-lucide="ellipsis"></i>Mais</a>
+    </nav>
 
-                <!-- Botão principal -->
-                <button class="primary-button">
-
-                    <div class="button-icon">WhatsApp</div> <!-- Placeholder: ícone do WhatsApp -->
-
-                    <span>
-                        Indicar por WhatsApp
-                    </span>
-                </button>
-
-                <!-- Botão secundário -->
-                <button class="secondary-button">
-
-                    <div class="button-icon">Copiar</div> <!-- Placeholder: ícone de folhas -->
-                    <span>
-                        Copiar link de indicação
-                    </span>
-                </button>
-            </section>
-
-            <!-- RECOMPENSA POR INDICAÇÃO -->
-            <section class="reward-banner">
-
-                <!-- Ícone ilustrativo -->
-                <div class="reward-icon">$</div>
-
-                <!-- Texto da recompensa -->
-                <div class="reward-content">
-
-                    <p class="reward-text">
-                        Cada amigo que assina, você ganha.
-                    </p>
-                </div>
-
-                <!-- Valor da recompensa -->
-                <div class="reward-value">
-
-                    <strong>
-                        R$ 20,00
-                    </strong>
-
-                    <small>
-                        por contrato aprovado
-                    </small>
-                </div>
-            </section>
-        </main>
-
-        <!-- MENU DE NAVEGAÇÃO (BOTÕES NAVEGAÇÃO) -->
-		<nav class="bottom-nav">
-			<!-- Aba: Faturas (1/5) -->
-			<button class="nav-item">
-				<div class="nav-icon-ph"></div> <!-- Placeholder: ícone de fatura/documento -->
-				<span>Faturas</span>
-			</button>
-
-			<!-- Aba: Consumo (2/5) -->
-			<button class="nav-item">
-				<div class="nav-icon-ph"></div> <!-- Placeholder: ícone de raio/energia -->
-				<span>Consumo</span>
-			</button>
-
-			<!-- Aba: Início (3/5) -->
-			<button class="nav-item">
-				<div class="nav-icon-ph"></div> <!-- Placeholder: ícone de casa/home -->
-				<span>Início</span>
-			</button>
-
-			<!-- Aba: Indicações (4/5) -->
-			<button class="nav-item">
-				<div class="nav-icon-ph"></div> <!-- Placeholder: ícone de pessoa -->
-				<span>Indicações</span>
-			</button>
-
-			<!-- 
-				Aba: Mais (5/5)
-				No qual está ativo nesta tela
-				Deve conter uma classe que diferencia visualmente com cor azul e negrito.
-				Isso deve ser feito via JS.
-			-->
-			<button class="nav-item">
-				<div class="nav-icon-ph"></div> <!-- Placeholder: ícone de três pontos -->
-				<span>Mais</span>
-			</button>
-		</nav>
-    </div>
+    <!-- Inicializa todos os ícones Lucide renderizados via atributo data-lucide -->
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
