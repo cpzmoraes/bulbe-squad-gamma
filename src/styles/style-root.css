@@ -1,3 +1,32 @@
+:root {
+  /* Brand Colors */
+  --primary: #08068d;
+  --primary-dark: #000038;
+  --primary-medium-light: #0762C7;
+  --primary-light: #bedbff;
+  --primary-bg: #e6f1fe;
+
+  /* Feedback Colors */
+  --success: #18814d;
+  --success-light: #26d07c;
+  --success-bg: #e9fbf2;
+  --danger: #cf4b2c;
+  --danger-bright: #ea0909;
+
+  /* Neutrals & Text */
+  --text-main: #000000;
+  --text-secondary: #536679;
+  --text-muted: #7e869e;
+  
+  /* Borders */
+  --border-strong: #c2ccd6;
+  --border-light: #e4e6eb;
+
+  /* Backgrounds */
+  --bg-app: #f1f4fd;
+  --bg-card: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +37,7 @@
 /* BARRA SUPERIOR */
 
 .header {
-  background-color: #08068d;
+  background-color: var(--primary);
   width: 100%;
   padding: 15px 25px;
   box-sizing: border-box;
@@ -18,7 +47,7 @@
   position: sticky;
   top: 0;
   z-index: 30;
-  color: #ffffff;
+  color: var(--bg-card);
 }
 
 .header-left {
@@ -69,7 +98,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--bg-card);
   background: transparent;
   display: block;
   cursor: pointer;
@@ -77,8 +106,8 @@
 
 /* CLASSE MODIFICADORA: Variação Branca */
 .header.variant-white {
-  background-color: #ffffff;
-  color: #475569;
+  background-color: var(--bg-card);
+  color: var(--text-secondary);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
@@ -95,7 +124,7 @@
   bottom: 0;
   height: 85px;
   width: 100%;
-  background-color: #ffffff; /* PADRONIZAR CORES COM VARIAVEIS */
+  background-color: var(--bg-card);
   box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
   padding: 12px 8px 24px 8px;
   z-index: 20;
@@ -104,7 +133,7 @@
   grid-template-columns: repeat(5, 1fr);
   align-items: end;
   text-align: center;
-  color: #c2ccd6; /* PADRONIZAR CORES COM VARIAVEIS */
+  color: var(--border-strong);
 }
 
 .nav-item {
@@ -119,7 +148,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--color-gray-nav, #c2ccd6);  /* PADRONIZAR CORES COM VARIAVEIS */
+  color: var(--border-strong);
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;
@@ -136,5 +165,5 @@
 }
 
 .nav-item.active {
-  color: #08068d; /* PADRONIZAR CORES COM VARIAVEIS */
+  color: var(--primary);
 }

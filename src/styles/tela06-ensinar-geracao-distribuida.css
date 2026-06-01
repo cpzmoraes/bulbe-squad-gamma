@@ -1,22 +1,4 @@
 /* 1. CSS RESET & VARIÁVEIS BASE */
-:root {
-    --color-dark: #1B1C67;
-    --color-blue: #2B51C1;
-    --color-card-blue-bg: #F3F7FD;
-    --color-card-blue-border: #D6E1F5;
-    --color-green-text: #1B7A42;
-    --color-green-circle: #5BC282;
-    --color-card-green-bg: #EFFAF2;
-    --color-card-green-border: #CCE8D5;
-    --color-gray-text: #6B7280;
-    /* Ajustado para um cinza ligeiramente mais legível */
-    --color-gray-dark: #4B5563;
-    /* Cinza escuro para textos de FAQ */
-    --color-gray-nav: #A0AABF;
-    --color-bg-body: #F3F4F6;
-    --color-border-light: #F3F4F6;
-    --color-white: #FFFFFF;
-}
 
 * {
     margin: 0;
@@ -26,8 +8,8 @@
 }
 
 body {
-    background-color: var(--color-bg-body);
-    color: #1f2937;
+    background-color: var(--bg-app);
+    color: var(--text-main);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -45,7 +27,7 @@ button {
     flex: 1;
     overflow-y: auto;
     padding: 24px 20px 112px 20px;
-    background-color: var(--color-white);
+    background-color: var(--bg-card);
 
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -61,7 +43,7 @@ button {
     border-radius: 16px;
     padding: 24px;
     margin-bottom: 16px;
-    color: var(--color-white);
+    color: var(--bg-card);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
@@ -81,8 +63,8 @@ button {
 
 /* CAIXA ENVOLVENTE DAS ETAPAS */
 .process-wrapper {
-    border: 1px solid #e5e7eb;
-    background-color: var(--color-white);
+    border: 1px solid var(--border-light);
+    background-color: var(--bg-card);
     border-radius: 16px;
     padding: 24px 16px;
 }
@@ -96,7 +78,7 @@ button {
 
 .divider-line {
     height: 1px;
-    background-color: #e5e7eb;
+    background-color: var(--border-light);
     flex: 1;
 }
 
@@ -104,7 +86,7 @@ button {
     padding: 0 16px;
     font-size: 11px;
     font-weight: 700;
-    color: var(--color-gray-text);
+    color: var(--text-muted);
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
@@ -122,13 +104,13 @@ button {
     gap: 16px;
     padding: 16px;
     border-radius: 12px;
-    background-color: var(--color-card-blue-bg);
-    border: 1px solid var(--color-card-blue-border);
+    background-color: var(--primary-bg);
+    border: 1px solid var(--primary-light);
 }
 
 .step-card.green-theme {
-    background-color: var(--color-card-green-bg);
-    border-color: var(--color-card-green-border);
+    background-color: var(--success-bg);
+    border-color: var(--success-light);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
@@ -137,8 +119,8 @@ button {
     height: 40px;
     flex-shrink: 0;
     border-radius: 50%;
-    background-color: var(--color-blue);
-    color: var(--color-white);
+    background-color: var(--primary-medium-light);
+    color: var(--bg-card);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,7 +129,7 @@ button {
 }
 
 .step-circle.green-theme {
-    background-color: var(--color-green-circle);
+    background-color: var(--success-light);
 }
 
 .step-content {
@@ -159,22 +141,22 @@ button {
 .step-title {
     font-weight: 700;
     font-size: 15px;
-    color: var(--color-dark);
+    color: var(--primary);
 }
 
 .step-title.green-theme {
-    color: var(--color-green-text);
+    color: var(--success);
 }
 
 .step-description {
     font-size: 14px;
-    color: var(--color-gray-text);
+    color: var(--text-muted);
     margin-top: 4px;
     line-height: 1.4;
 }
 
 .step-description.green-theme {
-    color: var(--color-green-text);
+    color: var(--success);
     opacity: 0.8;
 }
 
@@ -182,9 +164,9 @@ button {
 
 .info-card,
 .faq-card {
-    border: 1px solid var(--color-card-blue-border);
+    border: 1px solid var(--primary-light);
     /* Borda baseada na sua imagem */
-    background-color: var(--color-white);
+    background-color: var(--bg-card);
     border-radius: 16px;
     padding: 24px 20px;
     margin-top: 16px;
@@ -196,7 +178,7 @@ button {
     text-align: center;
     font-size: 16px;
     font-weight: 700;
-    color: var(--color-dark);
+    color: var(--primary);
     margin-bottom: 20px;
 }
 
@@ -208,7 +190,7 @@ button {
 }
 
 .info-card-icon {
-    color: var(--color-dark);
+    color: var(--primary);
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -218,13 +200,13 @@ button {
 
 .info-card-text {
     font-size: 14px;
-    color: var(--color-gray-dark);
+    color: var(--text-secondary);
     line-height: 1.5;
 }
 
 .info-card-alert {
-    background-color: var(--color-card-blue-bg);
-    border: 1px solid var(--color-card-blue-border);
+    background-color: var(--primary-bg);
+    border: 1px solid var(--primary-light);
     border-radius: 12px;
     padding: 16px;
     display: flex;
@@ -234,7 +216,7 @@ button {
 
 .info-card-alert-text {
     font-size: 13px;
-    color: var(--color-gray-dark);
+    color: var(--text-secondary);
     line-height: 1.4;
 }
 
@@ -242,7 +224,7 @@ button {
 .faq-card-title {
     font-size: 16px;
     font-weight: 700;
-    color: var(--color-dark);
+    color: var(--primary);
     margin-bottom: 8px;
 }
 
@@ -256,7 +238,7 @@ button {
     justify-content: space-between;
     align-items: center;
     padding: 16px 0;
-    border-bottom: 1px solid #E5E7EB;
+    border-bottom: 1px solid var(--border-light);
     cursor: pointer;
 }
 
@@ -267,7 +249,7 @@ button {
 
 .faq-question {
     font-size: 14px;
-    color: var(--color-gray-dark);
+    color: var(--text-secondary);
     font-weight: 500;
     padding-right: 16px;
     /* Evita que o texto encoste na seta */
@@ -275,7 +257,7 @@ button {
 }
 
 .faq-icon {
-    color: var(--color-gray-dark);
+    color: var(--text-secondary);
     flex-shrink: 0;
     transition: transform 0.2s ease;
 }
