@@ -235,6 +235,7 @@ button {
 
 .faq-item {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 16px 0;
@@ -259,5 +260,41 @@ button {
 .faq-icon {
     color: var(--text-secondary);
     flex-shrink: 0;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
+}
+
+/* Estado Ativo do FAQ */
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, margin-top 0.3s ease-out;
+}
+
+.faq-answer p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    padding-top: 12px;
+}
+
+.faq-item.active .faq-answer {
+    /* Um valor alto o suficiente para caber o texto, mas não tão alto para a animação ficar estranha */
+    max-height: 200px; 
+}
+
+/* --- ANIMAÇÕES DE ENTRADA --- */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
