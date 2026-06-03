@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bulbe - Economia</title>
-  <script src="economia_raio.js" defer></script>
+  <script src="../script/tela07-visualizar-economia-raio.js" defer></script>
+  <link rel="stylesheet" href="../styles/tela07-visualizar-economia-raio.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
@@ -13,7 +14,6 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="economia_raio.css" />
 </head>
 
 <body>
@@ -21,12 +21,24 @@
     <section class="hero">
       <div class="top">
         <div><i data-lucide="menu" class="menu"></i></div>
-        <div><img src="logo-bulbe.png" class="logo" alt="Bulbe Logo"></div>
+        <div><img src="../assets/logo-bulbe-branca.png" class="logo" alt="Bulbe Logo"></div>
         <div class="right-icons"><i data-lucide="bell"></i>
           <div class="avatar"></div>
         </div>
       </div>
-      <h1>Veja a <span class="orange">economia</span> em<br>volta de você <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff9e1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></span></h1>
+      <h1>Veja a <span class="orange">economia</span> em<br>volta de você <span class="sun"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff9e1b"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="m4.93 4.93 1.41 1.41" />
+            <path d="m17.66 17.66 1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="m6.34 17.66-1.41 1.41" />
+            <path d="m19.07 4.93-1.41 1.41" />
+          </svg></span></h1>
       <label for="radius">Ajuste o raio de economia:</label>
       <input id="radius" type="range" min="15" max="45" step="15" value="30">
       <div class="range-labels"><span>15km</span><span>30km</span><span>45km</span></div>
@@ -50,18 +62,41 @@
           </div>
         </div>
         <div class="cards">
-          <div class="mini"><i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#08068D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-icon lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></i>
+          <div class="mini"><i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="#08068D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-user-round-icon lucide-user-round">
+                <circle cx="12" cy="8" r="5" />
+                <path d="M20 21a8 8 0 0 0-16 0" />
+              </svg></i>
             <div><b id="clientsText">312</b><br><span>clientes</span></div>
           </div>
-          <div class="mini"><i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#08068D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-credit-card-icon lucide-credit-card"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></i>
+          <div class="mini"><i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="#08068D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-credit-card-icon lucide-credit-card">
+                <rect width="20" height="14" x="2" y="5" rx="2" />
+                <line x1="2" x2="22" y1="10" y2="10" />
+              </svg></i>
             <div><b id="perClientText">R$ 155</b><br><span>por cliente</span></div>
           </div>
-          <div class="mini green"><i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#18814D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sprout-icon lucide-sprout"><path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3"/><path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4"/><path d="M5 21h14"/></svg></i>
+          <div class="mini green"><i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="#18814D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-sprout-icon lucide-sprout">
+                <path
+                  d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3" />
+                <path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4" />
+                <path d="M5 21h14" />
+              </svg></i>
             <div><b id="co2Text">125 ton</b><br><span>CO2 evitado</span></div>
           </div>
         </div>
         <div class="info">
-          <div class="i"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#08068D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div>
+          <div class="i"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="#08068D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-info-icon lucide-info">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 16v-4" />
+              <path d="M12 8h.01" />
+            </svg></div>
           <p>Quanto maior o raio, maior o impacto positivo da energia solar na sua região!</p>
         </div>
       </div>
@@ -78,4 +113,5 @@
     </nav>
   </main>
 </body>
+
 </html>
