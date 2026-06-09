@@ -66,60 +66,27 @@ body{
 }
 
 .app{
-  width:390px;
-  height:844px;
   background:var(--cor-fundo-principal);
-  border-radius:30px;
-  overflow:hidden;
   position:relative;
-  box-shadow:var(--shadow-md);
 }
 
 .main-content{
-  min-height:844px;
+  min-height:100vh;
   transition:filter .3s ease;
+  padding-bottom: 80px; /* espaco da nav */
 }
 
 .main-content.blurred{
   filter:blur(5px);
 }
 
-.header{
-  background:var(--cor-azul-bulbe);
-  color:var(--cor-branco);
-  padding:var(--space-xl);
-}
 
-.topbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:28px;
-}
 
-.logo-placeholder img{
-  width:100px;
-  height:30px;
-  margin-left: 40px;
-}
-
-.icons{
-  display:flex;
-  gap:14px;
-  align-items:center;
-}
-
-.menu,
-.bell{
-  font-size:21px;
-}
-
-.profile{
-  margin-bottom: 11px;
-  width:22px;
-  height:22px;
-  border:2px solid var(--cor-branco);
-  border-radius:50%;
+.welcome-header {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 85px 20px 20px; /* Padding-top extra para o header fixo */
+  text-align: left;
 }
 
 .title{

@@ -1,57 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Bulbe - Indicações</title>
-    
-    <!-- =========================
-        >>>>> MUDAR O DIRETÓRIO DO STYLE-ROOT APÓS MERGEAR <<<<<
-         ========================= -->
 
-    <!-- Estilos globais compartilhados entre todas as telas (reset, header, nav) -->
-    <link rel="stylesheet" href="style-root.css" />
+    <link rel="stylesheet" href="../styles/style-root.css">
+    <link rel="stylesheet" href="../styles/tela04-tela-indicacoes.css">
 
-    <!-- Estilos específicos desta tela de Indicações -->
-    <link rel="stylesheet" href="css-04-gemini.css" />
-    
-    <!-- Fonte Poppins do Google Fonts (pesos 400, 500, 600 e 700) -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
-    
-    <!-- Biblioteca de ícones Lucide (via CDN) — usada para os ícones do header e da nav -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
-
-    <!-- =============================================
-         HEADER — Barra superior fixa (sticky)
-         Definida no style-root.css com layout em grid
-         de 3 colunas: [esquerda | centro | direita]
-    ============================================== -->
+    <!-- HEADER FIXO NO TOPO -->
     <header class="header">
-
-        <!-- Coluna esquerda: botão de menu hamburguer -->
         <div class="header-left">
-            <button class="icon-btn" aria-label="Abrir menu lateral">
+            <button class="icon-btn" id="menuBtn" aria-label="Abrir menu lateral">
                 <i data-lucide="menu"></i>
             </button>
         </div>
 
-        <!-- Coluna central: logotipo da Bulbe -->
         <div class="header-center">
-            <img src="../assets/icons/icons-tela04/logo-base.svg" alt="Bulbe" />
+            <img src="../assets/logo-bulbe-branca.png" alt="Bulbe" />
         </div>
 
-        <!-- Coluna direita: ícone de notificações + avatar de perfil -->
         <div class="header-right">
             <button class="icon-btn" aria-label="Notificações">
                 <i data-lucide="bell"></i>
             </button>
-
-            <!-- Círculo vazio que representa o avatar do usuário -->
             <button class="profile-circle" aria-label="Acessar Perfil"></button>
         </div>
     </header>
+
+    <!-- OVERLAY E SIDEBAR -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="../assets/logo-bulbe-azul.png" alt="Bulbe Logo" class="sidebar-logo">
+            <button class="icon-btn close-sidebar" id="closeSidebarBtn">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <div class="sidebar-nav">
+            <a href="tela06-ensinar-geracao-distribuida.html" class="sidebar-item">
+                <i data-lucide="file-question"></i>
+                <span>Como funciona?</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <i data-lucide="sparkles"></i>
+                <span>Mudança de endereço</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <i data-lucide="message-square"></i>
+                <span>Fale conosco</span>
+            </a>
+            <a href="tela07-visualizar-economia-raio.html" class="sidebar-item">
+                <i data-lucide="map-pin"></i>
+                <span>Em volta de você</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <i data-lucide="file-text"></i>
+                <span>Termos</span>
+            </a>
+            <a href="tela02-area-institucional.html" class="sidebar-item">
+                <i data-lucide="zap"></i>
+                <span>Nossas instalações</span>
+            </a>
+        </div>
+    </aside>
 
     <!-- =============================================
          CONTEÚDO PRINCIPAL
@@ -59,7 +76,7 @@
          o hero (azul) com o sheet branco por cima
     ============================================== -->
     <main class="conteudo-principal">
-        
+
         <!-- ==========================================
              HERO SECTION — Bloco azul escuro no topo
              Contém o título, subtítulo e a ilustração
@@ -72,12 +89,13 @@
                 <h1>Indique amigos e <span class="highlight">ganhe dinheiro</span></h1>
                 <p>Seu amigo economiza na<br>conta de luz.<br>E você recebe uma recompensa.</p>
             </div>
-            
+
             <!-- Ilustração decorativa posicionada no canto inferior direito do hero -->
             <div class="hero-image-wrapper">
                 <!-- Blob cinza-azulado de fundo, gerado via CSS com border-radius orgânico -->
                 <div class="hero-bg-blob"></div>
-                <img src="../assets/icons/icons-tela04/High-five.svg" alt="Ilustração de amigos comemorando" class="hero-illustration">
+                <img src="../assets/icons/icons-tela04/High-five.svg" alt="Ilustração de amigos comemorando"
+                    class="hero-illustration">
             </div>
         </section>
 
@@ -88,7 +106,7 @@
         =========================================== -->
         <div class="main-content-sheet">
             <section class="content-section">
-                
+
                 <!-- =====================================
                      CARD DE ESTATÍSTICAS
                      Exibe dois indicadores lado a lado:
@@ -111,10 +129,10 @@
                             <span>Você já ganhou</span>
                         </div>
                     </div>
-                    
+
                     <!-- Divisor vertical entre os dois stat-items -->
                     <div class="divider"></div>
-                    
+
                     <!-- Indicador 2: Número de amigos indicados -->
                     <div class="stat-item">
                         <span class="stat-label">Amigos indicados</span>
@@ -153,23 +171,26 @@
                         <div class="steps-visual-wrapper">
                             <!-- Etapa 1: Compartilhar link -->
                             <div class="step-icon">
-                                <img src="../assets/images/images-tela04/ChatGPT_Image_May_5__2026_at_02_52_48_PM-removebg-preview-1.png" alt="Ícone Link">
+                                <img src="../assets/images/images-tela04/ChatGPT_Image_May_5__2026_at_02_52_48_PM-removebg-preview-1.png"
+                                    alt="Ícone Link">
                             </div>
-                            
+
                             <!-- Linha tracejada decorativa entre etapa 1 e 2 -->
                             <div class="step-dashed-line"></div>
-                            
+
                             <!-- Etapa 2: Amigo faz cadastro -->
                             <div class="step-icon">
-                                <img src="../assets/images/images-tela04/image-removebg-preview-3-2.png" alt="Ícone Cadastro">
+                                <img src="../assets/images/images-tela04/image-removebg-preview-3-2.png"
+                                    alt="Ícone Cadastro">
                             </div>
-                            
+
                             <!-- Linha tracejada decorativa entre etapa 2 e 3 -->
                             <div class="step-dashed-line"></div>
-                            
+
                             <!-- Etapa 3: Receber prêmio -->
                             <div class="step-icon">
-                                <img src="../assets/images/images-tela04/image-removebg-preview-4-1.png" alt="Ícone Dinheiro">
+                                <img src="../assets/images/images-tela04/image-removebg-preview-4-1.png"
+                                    alt="Ícone Dinheiro">
                             </div>
                         </div>
 
@@ -222,16 +243,19 @@
          destacar o item com a cor primária azul
     ============================================== -->
     <nav class="nav">
-        <a href="faturas.html" class="nav-item"><i data-lucide="file-text"></i>Faturas</a>
-        <a href="consumo.html" class="nav-item"><i data-lucide="zap"></i>Consumo</a>
-        <a href="inicio.html" class="nav-item"><i data-lucide="house"></i>Início</a>
-        <a href="indicacoes.html" class="nav-item"><i data-lucide="user-round-plus"></i>Indicações</a>
-        <a href="mais.html" class="nav-item"><i data-lucide="ellipsis"></i>Mais</a>
+        <a href="tela01-cronograma-ativacao.html" class="nav-item"><i data-lucide="file-text"></i>Faturas</a>
+        <a href="#" class="nav-item"><i data-lucide="zap"></i>Consumo</a>
+        <a href="tela05-sua-conta-chegou.html" class="nav-item"><i data-lucide="house"></i>Início</a>
+        <a href="tela04-tela-indicacoes.html" class="nav-item active"><i
+                data-lucide="user-round-plus"></i>Indicações</a>
+        <a href="#" class="nav-item" id="maisBtn"><i data-lucide="ellipsis"></i>Mais</a>
     </nav>
 
     <!-- Inicializa todos os ícones Lucide renderizados via atributo data-lucide -->
+    <script src="../script/sidebar.js"></script>
     <script>
         lucide.createIcons();
     </script>
 </body>
+
 </html>

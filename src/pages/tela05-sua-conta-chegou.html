@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sua Conta Bulbe</title>
-    
-    <!-- Estilos base globais (reset, header, nav) -->
-    <link rel="stylesheet" href="style-root.css" />
-    <!-- Estilos específicos desta tela (Tela 05) -->
-    <link rel="stylesheet" href="style.css" />
-    
-    <!-- Fonte Poppins do Google Fonts, usada em toda a interface -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
-    
-    <!-- Biblioteca Lucide: fornece os ícones SVG usados na nav e no header -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bulbe - Sua Conta Chegou</title>
+
+    <link rel="stylesheet" href="../styles/style-root.css">
+    <link rel="stylesheet" href="../styles/tela05-sua-conta-chegou.css">
+
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
 
     <!-- =============================================
@@ -25,172 +21,211 @@
     ============================================= -->
     <header class="header">
 
-        <!-- Lado esquerdo: botão de menu hamburguer (abre sidebar/gaveta lateral) -->
-        <div class="header-left">
-            <button class="icon-btn" aria-label="Abrir menu lateral">
-                <i data-lucide="menu"></i>
-            </button>
-        </div>
+        <!-- HEADER FIXO NO TOPO -->
+        <header class="header">
+            <div class="header-left">
+                <button class="icon-btn" id="menuBtn" aria-label="Abrir menu lateral">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
 
-        <!-- Centro: logotipo da Bulbe -->
-        <div class="header-center">
-            <img src="../assets/icons/icons-tela05/logo-base.svg" alt="Bulbe" />
-        </div>
+            <div class="header-center">
+                <img src="../assets/logo-bulbe-branca.png" alt="Bulbe" />
+            </div>
 
-        <!-- Lado direito: ícone de notificações e avatar do perfil do usuário -->
-        <div class="header-right">
-            <button class="icon-btn" aria-label="Notificações">
-                <i data-lucide="bell"></i>
-            </button>
+            <div class="header-right">
+                <button class="icon-btn" aria-label="Notificações">
+                    <i data-lucide="bell"></i>
+                </button>
+                <button class="profile-circle" aria-label="Acessar Perfil"></button>
+            </div>
+        </header>
 
-            <!-- Círculo vazio representando a foto de perfil do usuário -->
-            <button class="profile-circle" aria-label="Acessar Perfil"></button>
-        </div>
-    </header>
+        <!-- OVERLAY E SIDEBAR -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/logo-bulbe-azul.png" alt="Bulbe Logo" class="sidebar-logo">
+                <button class="icon-btn close-sidebar" id="closeSidebarBtn">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="sidebar-nav">
+                <a href="tela06-ensinar-geracao-distribuida.html" class="sidebar-item">
+                    <i data-lucide="file-question"></i>
+                    <span>Como funciona?</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i data-lucide="sparkles"></i>
+                    <span>Mudança de endereço</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i data-lucide="message-square"></i>
+                    <span>Fale conosco</span>
+                </a>
+                <a href="tela07-visualizar-economia-raio.html" class="sidebar-item">
+                    <i data-lucide="map-pin"></i>
+                    <span>Em volta de você</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i data-lucide="file-text"></i>
+                    <span>Termos</span>
+                </a>
+                <a href="tela02-area-institucional.html" class="sidebar-item">
+                    <i data-lucide="zap"></i>
+                    <span>Nossas instalações</span>
+                </a>
+            </div>
+        </aside>
 
-    <!-- =============================================
+        <!-- =============================================
          CONTEÚDO PRINCIPAL
          Área rolável entre o header fixo e a nav inferior.
          Dividida em duas seções: hero (azul) e info (branca).
     ============================================= -->
-    <main class="conteudo-principal">
-        
-        <!-- -----------------------------------------
+        <main class="conteudo-principal">
+
+            <!-- -----------------------------------------
              SEÇÃO HERO
              Fundo azul, exibe o título da tela e a imagem
              do envelope com a conta de energia.
         ----------------------------------------- -->
-        <section class="secao-hero">
+            <section class="secao-hero">
 
-            <!-- Bloco de texto com título e subtítulo da tela -->
-            <div class="hero-texto">
-                <h1>Sua conta da<br>CEMIG <span class="destaque">chegou!</span></h1>
-                <!-- A palavra "chegou!" recebe cor amarela via classe .destaque -->
-                <p>Informe o valor e veja quanto você vai pagar com a Bulbe</p>
-            </div>
+                <!-- Bloco de texto com título e subtítulo da tela -->
+                <div class="hero-texto">
+                    <h1>Sua conta da<br>CEMIG <span class="destaque">chegou!</span></h1>
+                    <!-- A palavra "chegou!" recebe cor amarela via classe .destaque -->
+                    <p>Informe o valor e veja quanto você vai pagar com a Bulbe</p>
+                </div>
 
-            <!-- Imagem decorativa do envelope, sobreposta à seção branca abaixo via translateY -->
-            <div class="hero-imagem">
-                <img src="../assets/images/image.png" alt="Envelope da conta de energia">
-            </div>
-        </section>
+                <!-- Imagem decorativa do envelope, sobreposta à seção branca abaixo via translateY -->
+                <div class="hero-imagem">
+                    <img src="../assets/images/image.png" alt="Envelope da conta de energia">
+                </div>
+            </section>
 
-        <!-- -----------------------------------------
+            <!-- -----------------------------------------
              SEÇÃO INFO
              Fundo branco com borda arredondada no topo,
              sobreposta à seção hero criando o efeito de "card flutuante".
              Contém os cards informativos e de comparação.
         ----------------------------------------- -->
-        <section class="secao-info">
-            
-            <!-- Card explicativo (roxo claro): informa ao usuário por que
-                 o desconto ainda não foi aplicado na conta atual -->
-            <div class="card-informativo">
-                <img src="../assets/icons/icons-tela05/Info_fill.svg" alt="Ícone de informação" class="icone-info">
-                <div class="info-texto">
-                    <strong>Porque o seu desconto não foi aplicado:</strong>
-                    <p>Seu desconto ainda não apareceu porque estamos em fase de ativação com a concessionária.</p>
-                </div>
-            </div>
+            <section class="secao-info">
 
-            <!-- Card principal (borda azul clara): agrupa todas as ações
+                <!-- Card explicativo (roxo claro): informa ao usuário por que
+                 o desconto ainda não foi aplicado na conta atual -->
+                <div class="card-informativo">
+                    <img src="../assets/icons/icons-tela05/Info_fill.svg" alt="Ícone de informação" class="icone-info">
+                    <div class="info-texto">
+                        <strong>Porque o seu desconto não foi aplicado:</strong>
+                        <p>Seu desconto ainda não apareceu porque estamos em fase de ativação com a concessionária.</p>
+                    </div>
+                </div>
+
+                <!-- Card principal (borda azul clara): agrupa todas as ações
                  e comparações da tela em um único container -->
-            <div class="card-principal">
-                
-                <!-- BLOCO DE ENVIO DA CONTA
+                <div class="card-principal">
+
+                    <!-- BLOCO DE ENVIO DA CONTA
                      Convida o usuário a enviar a foto da conta de luz.
                      Contém um link e um botão de ação principal. -->
-                <div class="bloco-envio">
-                    <p class="pergunta-conta">Está com a sua conta em mãos?<br>
-                        <!-- Link alternativo de envio (texto clicável) -->
-                        <a href="#" class="link-enviar">Envie aqui!</a>
-                    </p>
+                    <div class="bloco-envio">
+                        <p class="pergunta-conta">Está com a sua conta em mãos?<br>
+                            <!-- Link alternativo de envio (texto clicável) -->
+                            <a href="#" class="link-enviar">Envie aqui!</a>
+                        </p>
 
-                    <!-- Botão CTA principal: abre câmera ou galeria para envio da conta -->
-                    <button class="btn-enviar-conta">
-                        Enviar conta de luz
-                        <img src="../assets/icons/icons-tela05/camera-plus.svg" alt="Ícone de câmera">
-                    </button>
-                </div>
+                        <!-- Botão CTA principal: abre câmera ou galeria para envio da conta -->
+                        <button class="btn-enviar-conta">
+                            Enviar conta de luz
+                            <img src="../assets/icons/icons-tela05/camera-plus.svg" alt="Ícone de câmera">
+                        </button>
+                    </div>
 
-                <!-- BLOCO DE COMPARAÇÃO
+                    <!-- BLOCO DE COMPARAÇÃO
                      Mostra lado a lado o valor sem e com a Bulbe,
                      evidenciando a economia gerada pelo serviço. -->
-                <div class="bloco-comparacao">
+                    <div class="bloco-comparacao">
 
-                    <!-- Título da comparação com destaque em verde e ícone de seta -->
-                    <p class="titulo-comparacao">
-                        Mas olha o que vai mudar em <span class="texto-verde">alguns dias</span>
-                        <img src="../assets/icons/icons-tela05/Arrow_right.svg" alt="Seta" class="icone-seta">
-                    </p>
-                    
-                    <!-- Container do comparativo lado a lado (vermelho vs verde) -->
-                    <div class="box-comparacao">
+                        <!-- Título da comparação com destaque em verde e ícone de seta -->
+                        <p class="titulo-comparacao">
+                            Mas olha o que vai mudar em <span class="texto-verde">alguns dias</span>
+                            <img src="../assets/icons/icons-tela05/Arrow_right.svg" alt="Seta" class="icone-seta">
+                        </p>
 
-                        <!-- Lado esquerdo: valor SEM a Bulbe (fundo vermelho claro) -->
-                        <div class="comp-sem-bulbe">
-                            <div class="comp-header">
-                                <span>SEM A BULBE</span>
-                                <img src="../assets/icons/icons-tela05/Sad_light.svg" alt="Rosto triste" class="emoji">
+                        <!-- Container do comparativo lado a lado (vermelho vs verde) -->
+                        <div class="box-comparacao">
+
+                            <!-- Lado esquerdo: valor SEM a Bulbe (fundo vermelho claro) -->
+                            <div class="comp-sem-bulbe">
+                                <div class="comp-header">
+                                    <span>SEM A BULBE</span>
+                                    <img src="../assets/icons/icons-tela05/Sad_light.svg" alt="Rosto triste"
+                                        class="emoji">
+                                </div>
+                                <span class="comp-subtexto">Você pagaria todo mês</span>
+                                <!-- Valor em vermelho, representando custo mais alto -->
+                                <strong class="comp-valor texto-vermelho">R$ 260,72</strong>
                             </div>
-                            <span class="comp-subtexto">Você pagaria todo mês</span>
-                            <!-- Valor em vermelho, representando custo mais alto -->
-                            <strong class="comp-valor texto-vermelho">R$ 260,72</strong>
-                        </div>
-                        
-                        <!-- Lado direito: valor COM a Bulbe (fundo verde claro) -->
-                        <div class="comp-com-bulbe">
-                            <div class="comp-header">
-                                <span>COM A BULBE</span>
-                                <img src="../assets/icons/icons-tela05/happy_light.svg" alt="Rosto feliz" class="emoji">
+
+                            <!-- Lado direito: valor COM a Bulbe (fundo verde claro) -->
+                            <div class="comp-com-bulbe">
+                                <div class="comp-header">
+                                    <span>COM A BULBE</span>
+                                    <img src="../assets/icons/icons-tela05/happy_light.svg" alt="Rosto feliz"
+                                        class="emoji">
+                                </div>
+                                <span class="comp-subtexto">Você vai pagar</span>
+                                <!-- Valor em verde, representando economia -->
+                                <strong class="comp-valor texto-verde">R$ 208,57</strong>
                             </div>
-                            <span class="comp-subtexto">Você vai pagar</span>
-                            <!-- Valor em verde, representando economia -->
-                            <strong class="comp-valor texto-verde">R$ 208,57</strong>
-                        </div>
-                        
-                        <!-- Divisória central circular com seta, posicionada
+
+                            <!-- Divisória central circular com seta, posicionada
                              em cima da borda entre os dois lados via position: absolute -->
-                        <div class="comp-divisoria">
-                            <img src="../assets/icons/icons-tela05/Arrow_right.svg" alt="Seta indicando economia">
+                            <div class="comp-divisoria">
+                                <img src="../assets/icons/icons-tela05/Arrow_right.svg" alt="Seta indicando economia">
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- BLOCO DE ECONOMIA ANUAL
+                    <!-- BLOCO DE ECONOMIA ANUAL
                      Destaca a economia acumulada em 12 meses
                      para reforçar o valor do serviço ao usuário. -->
-                <div class="bloco-economia">
-                    <img src="../assets/icons/icons-tela05/Chart_alt_fill.svg" alt="Gráfico de economia" class="icone-economia">
-                    <div class="economia-texto">
-                        <strong>Em 12 meses, você economiza <span class="texto-verde">R$ 625,80</span></strong>
-                        <p>Dinheiro que fica com você para o que realmente importa</p>
+                    <div class="bloco-economia">
+                        <img src="../assets/icons/icons-tela05/Chart_alt_fill.svg" alt="Gráfico de economia"
+                            class="icone-economia">
+                        <div class="economia-texto">
+                            <strong>Em 12 meses, você economiza <span class="texto-verde">R$ 625,80</span></strong>
+                            <p>Dinheiro que fica com você para o que realmente importa</p>
+                        </div>
                     </div>
-                </div>
 
-            </div><!-- /card-principal -->
-        </section><!-- /secao-info -->
+                </div><!-- /card-principal -->
+            </section><!-- /secao-info -->
 
-    </main><!-- /conteudo-principal -->
+        </main><!-- /conteudo-principal -->
 
-    <!-- =============================================
+        <!-- =============================================
          NAV INFERIOR FIXA
          Barra de navegação principal do app, fixada no rodapé.
          Cada item leva a uma tela diferente do aplicativo.
          Estilizada pela classe .nav definida em style-root.css.
     ============================================= -->
-    <nav class="nav">
-        <a href="faturas.html" class="nav-item"><i data-lucide="file-text"></i>Faturas</a>
-        <a href="consumo.html" class="nav-item"><i data-lucide="zap"></i>Consumo</a>
-        <a href="inicio.html" class="nav-item"><i data-lucide="house"></i>Início</a>
-        <a href="indicacoes.html" class="nav-item"><i data-lucide="user-round-plus"></i>Indicações</a>
-        <!-- Item "Mais" marcado como ativo (.active) nesta tela -->
-        <a href="mais.html" class="nav-item"><i data-lucide="ellipsis"></i>Mais</a>
-    </nav>
+        <nav class="nav">
+            <a href="tela01-cronograma-ativacao.html" class="nav-item"><i data-lucide="file-text"></i>Faturas</a>
+            <a href="#" class="nav-item"><i data-lucide="zap"></i>Consumo</a>
+            <a href="tela05-sua-conta-chegou.html" class="nav-item active"><i data-lucide="house"></i>Início</a>
+            <a href="tela04-tela-indicacoes.html" class="nav-item"><i data-lucide="user-round-plus"></i>Indicações</a>
+            <!-- Item "Mais" marcado como ativo (.active) nesta tela -->
+            <a href="#" class="nav-item" id="maisBtn"><i data-lucide="ellipsis"></i>Mais</a>
+        </nav>
 
-    <!-- Inicializa todos os ícones <i data-lucide="..."> encontrados no DOM -->
-    <script>
-        lucide.createIcons();
-    </script>
+        <!-- Inicializa todos os ícones <i data-lucide="..."> encontrados no DOM -->
+        <script src="../script/sidebar.js"></script>
+        <script>
+            lucide.createIcons();
+        </script>
 </body>
+
 </html>
