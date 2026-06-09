@@ -1,3 +1,27 @@
+    // --- SIDEBAR LOGIC ---
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const menuBtn = document.getElementById('menuBtn');
+    const maisBtn = document.getElementById('maisBtn');
+    const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+
+    function openSidebar(e) {
+      if (e) e.preventDefault();
+      sidebar.classList.add('open');
+      sidebarOverlay.classList.add('open');
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      sidebarOverlay.classList.remove('open');
+    }
+
+    if(menuBtn) menuBtn.addEventListener('click', openSidebar);
+    if(maisBtn) maisBtn.addEventListener('click', openSidebar);
+    if(closeSidebarBtn) closeSidebarBtn.addEventListener('click', closeSidebar);
+    if(sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
+
+    // --- MAPA E ECONOMIA LOGIC ---
     const radius = document.getElementById('radius');
     const circleLayer = document.getElementById('circleLayer');
     const metrics = document.getElementById('metrics');
@@ -86,4 +110,6 @@
 
     lucide.createIcons();
     setTimeout(() => map.invalidateSize(), 150);
+    useUserLocation();
+
     useUserLocation();
