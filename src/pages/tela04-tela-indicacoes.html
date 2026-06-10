@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="../styles/style-root.css">
     <link rel="stylesheet" href="../styles/tela04-tela-indicacoes.css">
-
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
@@ -55,7 +54,7 @@
                 <i data-lucide="message-square"></i>
                 <span>Fale conosco</span>
             </a>
-            <a href="tela07-visualizar-economia-raio.html" class="sidebar-item">
+            <a href="tela07-visualizar-economia-raio.html" class="sidebar-item active">
                 <i data-lucide="map-pin"></i>
                 <span>Em volta de você</span>
             </a>
@@ -70,18 +69,8 @@
         </div>
     </aside>
 
-    <!-- =============================================
-         CONTEÚDO PRINCIPAL
-         Ocupa toda a altura da viewport e empilha
-         o hero (azul) com o sheet branco por cima
-    ============================================== -->
-    <main class="conteudo-principal">
+    <main class="main-content">
 
-        <!-- ==========================================
-             HERO SECTION — Bloco azul escuro no topo
-             Contém o título, subtítulo e a ilustração
-             de "High Five" posicionada à direita
-        =========================================== -->
         <section class="hero-section">
 
             <!-- Texto do hero: título com destaque amarelo e subtítulo -->
@@ -99,33 +88,20 @@
             </div>
         </section>
 
-        <!-- ==========================================
-             MAIN CONTENT SHEET — Painel branco
-             Sobrepõe o hero com margin-top negativa
-             e border-radius no topo para efeito "sheet"
-        =========================================== -->
         <div class="main-content-sheet">
             <section class="content-section">
 
-                <!-- =====================================
-                     CARD DE ESTATÍSTICAS
-                     Exibe dois indicadores lado a lado:
-                     1. Total ganho em reais
-                     2. Quantidade de amigos indicados
-                ====================================== -->
                 <div class="card stats-card">
 
                     <!-- Indicador 1: Valor acumulado em R$ -->
                     <div class="stat-item">
                         <span class="stat-label">Economia por indicação</span>
-                        <!-- stat-value-baseline alinha "R$" e o número pela linha de base -->
                         <div class="stat-value stat-value-baseline">
                             <span class="currency">R$</span>
                             <span class="amount">260,72</span>
                         </div>
-                        <!-- Tag verde com ícone e texto de confirmação -->
                         <div class="stat-tag">
-                            <img src="../assets/images/images-tela04/Card/image-21.png" alt="Ícone de Dinheiro">
+                            <i data-lucide="circle-dollar-sign"></i>
                             <span>Você já ganhou</span>
                         </div>
                     </div>
@@ -136,25 +112,17 @@
                     <!-- Indicador 2: Número de amigos indicados -->
                     <div class="stat-item">
                         <span class="stat-label">Amigos indicados</span>
-                        <!-- stat-value-center alinha o número e o ícone de usuário pelo centro -->
                         <div class="stat-value stat-value-center">
                             <span class="amount">08</span>
-                            <img src="../assets/icons/icons-tela04/Card/Group_duotone_fill.svg" alt="Ícone de Usuário">
+                            <i data-lucide="users"></i>
                         </div>
                         <div class="stat-tag">
-                            <img src="../assets/images/images-tela04/Card/image-21.png" alt="Ícone de Dinheiro">
+                            <i data-lucide="circle-dollar-sign"></i>
                             <span>Já estão economizando</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- =====================================
-                     CARD "COMO FUNCIONA"
-                     Apresenta o fluxo de 3 etapas
-                     (ícones + linha tracejada + textos)
-                     seguido dos botões de ação e um
-                     banner de bônus por contrato aprovado
-                ====================================== -->
                 <div class="card how-it-works-card">
 
                     <!-- Cabeçalho do card: título centralizado com linhas decorativas nas laterais -->
@@ -164,61 +132,52 @@
                         <div class="line"></div>
                     </div>
 
-                    <!-- Fluxo das 3 etapas: ícones na linha de cima, textos embaixo -->
-                    <div class="steps-flow">
+                        <!-- Fluxo das 3 etapas: Ícone + Texto em colunas -->
+                        <div class="steps-flow">
+                            <!-- Linha tracejada conectando os passos (via CSS pseudo-element ou absolute) -->
+                            <div class="steps-line-background"></div>
 
-                        <!-- Linha visual: 3 ícones separados por linhas tracejadas -->
-                        <div class="steps-visual-wrapper">
-                            <!-- Etapa 1: Compartilhar link -->
-                            <div class="step-icon">
-                                <img src="../assets/images/images-tela04/ChatGPT_Image_May_5__2026_at_02_52_48_PM-removebg-preview-1.png"
-                                    alt="Ícone Link">
+                            <!-- Etapa 1 -->
+                            <div class="step-column">
+                                <div class="step-icon">
+                                    <i data-lucide="link"></i>
+                                </div>
+                                <p>Compartilhe seu link com amigos e familiares.</p>
                             </div>
 
-                            <!-- Linha tracejada decorativa entre etapa 1 e 2 -->
-                            <div class="step-dashed-line"></div>
-
-                            <!-- Etapa 2: Amigo faz cadastro -->
-                            <div class="step-icon">
-                                <img src="../assets/images/images-tela04/image-removebg-preview-3-2.png"
-                                    alt="Ícone Cadastro">
+                            <!-- Etapa 2 -->
+                            <div class="step-column">
+                                <div class="step-icon">
+                                    <i data-lucide="user-plus"></i>
+                                </div>
+                                <p>Ele faz o cadastro e assina com a Bulbe</p>
                             </div>
 
-                            <!-- Linha tracejada decorativa entre etapa 2 e 3 -->
-                            <div class="step-dashed-line"></div>
-
-                            <!-- Etapa 3: Receber prêmio -->
-                            <div class="step-icon">
-                                <img src="../assets/images/images-tela04/image-removebg-preview-4-1.png"
-                                    alt="Ícone Dinheiro">
+                            <!-- Etapa 3 -->
+                            <div class="step-column">
+                                <div class="step-icon">
+                                    <i data-lucide="gift"></i>
+                                </div>
+                                <p>Quando o contrato é aprovado, você recebe prêmio</p>
                             </div>
                         </div>
-
-                        <!-- Textos descritivos de cada etapa, alinhados abaixo dos ícones -->
-                        <div class="steps-text-wrapper">
-                            <p>Compartilhe seu link com amigos e familiares.</p>
-                            <p>Ele faz o cadastro e assina com a Bulbe</p>
-                            <p>Quando o contrato é aprovado, você recebe seu prêmio</p>
-                        </div>
-                    </div>
 
                     <!-- Botões de ação: WhatsApp (primário) e copiar link (secundário) -->
                     <div class="action-buttons">
                         <button class="btn btn-whatsapp">
-                            <img src="../assets/icons/icons-tela04/Icon.svg" alt="Ícone WhatsApp">
+                            <img src="../assets/whatsapp-icon.png" alt="WhatsApp icon">
                             Indicar por WhatsApp
                         </button>
-                        <button class="btn btn-outline">
-                            <img src="../assets/icons/icons-tela04/Icon-1.svg" alt="Ícone Copiar">
-                            Copiar link de indicação
-                        </button>
+                        <button class="btn btn-outline" id="btn-copiar">
+                        <i data-lucide="copy"></i>
+                        <span>Copiar link de indicação</span>
+                    </button>
                     </div>
 
                     <!-- Banner informativo verde: reforça o valor do bônus por contrato aprovado -->
                     <div class="bonus-banner">
-                        <!-- Ícone de ciclo/atualização dentro de círculo verde escuro -->
                         <div class="bonus-icon">
-                            <img src="../assets/icons/icons-tela04/Refresh_2_light.svg" alt="Ícone Atualizar/Ciclo">
+                            <i data-lucide="refresh-cw"></i>
                         </div>
                         <!-- Texto descritivo do benefício -->
                         <div class="bonus-text">
@@ -236,22 +195,16 @@
         </div>
     </main>
 
-    <!-- =============================================
-         NAV — Barra de navegação inferior fixa
-         5 abas: Faturas | Consumo | Início | Indicações | Mais
-         A aba ativa recebe a classe "active" para
-         destacar o item com a cor primária azul
-    ============================================== -->
+    <!-- BARRA DE NAVEGACAO INFERIOR (PADRÃO TELA06) -->
     <nav class="nav">
         <a href="tela01-cronograma-ativacao.html" class="nav-item"><i data-lucide="file-text"></i>Faturas</a>
         <a href="#" class="nav-item"><i data-lucide="zap"></i>Consumo</a>
         <a href="tela05-sua-conta-chegou.html" class="nav-item"><i data-lucide="house"></i>Início</a>
-        <a href="tela04-tela-indicacoes.html" class="nav-item active"><i
-                data-lucide="user-round-plus"></i>Indicações</a>
+        <a href="tela04-tela-indicacoes.html" class="nav-item"><i data-lucide="user-round-plus"></i>Indicações</a>
         <a href="#" class="nav-item" id="maisBtn"><i data-lucide="ellipsis"></i>Mais</a>
     </nav>
 
-    <!-- Inicializa todos os ícones Lucide renderizados via atributo data-lucide -->
+    <script src="../script/tela04-tela-indicacoes.js"></script>
     <script src="../script/sidebar.js"></script>
     <script>
         lucide.createIcons();
