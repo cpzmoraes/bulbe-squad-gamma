@@ -5,10 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Bulbe Economia</title>
-
   <link rel="stylesheet" href="../styles/style-root.css">
   <link rel="stylesheet" href="../styles/tela03-simulacao-de-economia.css">
-
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
@@ -23,7 +21,7 @@
     </div>
 
     <div class="header-center">
-      <img src="../assets/logo-bulbe-azul.png" alt="Bulbe" />
+      <img src="../assets/logo-bulbe-branca.png" alt="Bulbe" />
     </div>
 
     <div class="header-right">
@@ -34,128 +32,119 @@
     </div>
   </header>
 
-  <div class="app">
+  <!-- OVERLAY E SIDEBAR -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <img src="../assets/logo-bulbe-azul.png" alt="Bulbe Logo" class="sidebar-logo">
+      <button class="icon-btn close-sidebar" id="closeSidebarBtn">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="sidebar-nav">
+      <a href="tela06-ensinar-geracao-distribuida.html" class="sidebar-item">
+        <i data-lucide="file-question"></i>
+        <span>Como funciona?</span>
+      </a>
+      <a href="#" class="sidebar-item">
+        <i data-lucide="sparkles"></i>
+        <span>Mudança de endereço</span>
+      </a>
+      <a href="#" class="sidebar-item">
+        <i data-lucide="message-square"></i>
+        <span>Fale conosco</span>
+      </a>
+      <a href="tela07-visualizar-economia-raio.html" class="sidebar-item">
+        <i data-lucide="map-pin"></i>
+        <span>Em volta de você</span>
+      </a>
+      <a href="#" class="sidebar-item">
+        <i data-lucide="file-text"></i>
+        <span>Termos</span>
+      </a>
+      <a href="tela02-area-institucional.html" class="sidebar-item">
+        <i data-lucide="zap"></i>
+        <span>Nossas instalações</span>
+      </a>
+    </div>
+  </aside>
 
-    <div class="main-content" id="mainContent">
+  <!-- CONTEUDO PRINCIPAL -->
+  <main class="main-content" id="mainContent">
 
       <div class="welcome-header">
-        <h1 class="title">Descubra quanto você pode economizar</h1>
-        <p class="subtitle">Simule em segundos e veja seu potencial de economia.</p>
+        <h1 class="title">Descubra quanto você<br>pode economizar</h1>
+        <p class="subtitle">Simule em segundos e veja seu potêncial<br>de <span class="text-green">economia.</span></p>
       </div>
 
-      <div class="curve"></div>
+      <div class="content-white-bg">
+        <section class="hero">
+          <div class="image-placeholder">
+            <img src="../assets/mulher-imagem-bulbe.png" alt="Ilustração Bulbe">
+          </div>
+        </section>
 
-      <section class="hero">
-        <div class="image-placeholder">
-          <img src="../assets/mulher-imagem-bulbe.png" alt="Ilustração Bulbe">
-        </div>
-      </section>
+        <section class="card">
+          <h3>Quanto você paga na sua conta mensalmente?</h3>
 
-      <section class="card">
-        <h3>Quanto você paga na sua conta mensalmente?</h3>
+          <div class="input-wrapper">
+            <span class="currency">R$</span>
+            <span class="value" id="valueText">50,00</span>
+          </div>
 
-        <div class="input-wrapper">
-          <span class="currency">R$</span>
-          <span class="value" id="valueText">50,00</span>
-        </div>
+          <div class="range-container">
+            <input type="range" min="50" max="1000" value="50" id="range">
+            <div class="slider-labels">
+              <span>R$ 50</span>
+              <span>R$ 500</span>
+              <span>R$ 1000</span>
+            </div>
+          </div>
 
-        <input type="range" min="50" max="1000" value="50" id="range">
+          <div class="quick-values">
+            <button class="quick-btn" data-value="250">R$ 250</button>
+            <button class="quick-btn" data-value="500">R$ 500</button>
+            <button class="quick-btn" data-value="750">R$ 750</button>
+          </div>
+        </section>
 
-        <div class="slider-labels">
-          <span>R$ 50</span>
-          <span>R$ 500</span>
-          <span>R$ 1000</span>
-        </div>
+        <section class="benefits">
+          <div class="benefit">
+            <div class="benefit-icon-wrapper">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <strong>Sem fidelidade</strong>
+            <small>Cancele quando quiser</small>
+          </div>
 
-        <div class="quick-values">
-          <button class="quick-btn" data-value="250">R$ 250</button>
-          <button class="quick-btn" data-value="500">R$ 500</button>
-          <button class="quick-btn" data-value="750">R$ 750</button>
-        </div>
-      </section>
+          <div class="benefit">
+            <div class="benefit-icon-wrapper">
+              <i data-lucide="lock"></i>
+            </div>
+            <strong>100% digital</strong>
+            <small>Processo simples e seguro</small>
+          </div>
 
-      <section class="benefits">
-        <div class="benefit">
-          <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-              fill="none" stroke="#08068d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="lucide lucide-shield-check-icon lucide-shield-check">
-              <path
-                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
-              <path d="m9 12 2 2 4-4" />
-            </svg></div>
-          Sem fidelidade
-          <small>Cancele quando quiser</small>
-        </div>
+          <div class="benefit">
+            <div class="benefit-icon-wrapper">
+              <i data-lucide="check-circle"></i>
+            </div>
+            <strong>Você só paga</strong>
+            <small>Se realmente economizar</small>
+          </div>
+        </section>
 
-        <div class="benefit">
-          <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-              fill="none" stroke="#08068d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="lucide lucide-lock-icon lucide-lock">
-              <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
-              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-            </svg></div>
-          100% digital
-          <small>Processo simples e seguro</small>
-        </div>
-
-        <div class="benefit">
-          <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-              fill="none" stroke="#08068d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="lucide lucide-circle-check-icon lucide-circle-check">
-              <circle cx="12" cy="12" r="10" />
-              <path d="m9 12 2 2 4-4" />
-            </svg></div>
-          Você só paga
-          <small>se economizar</small>
-        </div>
-      </section>
-
-      <button class="start-btn" type="button">Começar agora</button>
-
-    </div>
-
-    <!-- OVERLAY E SIDEBAR -->
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
-    <aside class="sidebar" id="sidebar">
-      <div class="sidebar-header">
-        <img src="../assets/logo-bulbe-azul.png" alt="Bulbe Logo" class="sidebar-logo">
-        <button class="icon-btn close-sidebar" id="closeSidebarBtn">
-          <i data-lucide="x"></i>
-        </button>
+        <button class="start-btn" id="startBtnMain" type="button" onclick="window.location.href='tela05-sua-conta-chegou.html'">Começar agora <i data-lucide="arrow-right"></i></button>
+        <p class="secure-text"><i data-lucide="lock"></i> Não cobramos <span class="text-blue-light">nada</span> para começar</p>
       </div>
-      <div class="sidebar-nav">
-        <a href="tela06-ensinar-geracao-distribuida.html" class="sidebar-item">
-          <i data-lucide="file-question"></i>
-          <span>Como funciona?</span>
-        </a>
-        <a href="#" class="sidebar-item">
-          <i data-lucide="sparkles"></i>
-          <span>Mudança de endereço</span>
-        </a>
-        <a href="#" class="sidebar-item">
-          <i data-lucide="message-square"></i>
-          <span>Fale conosco</span>
-        </a>
-        <a href="tela07-visualizar-economia-raio.html" class="sidebar-item">
-          <i data-lucide="map-pin"></i>
-          <span>Em volta de você</span>
-        </a>
-        <a href="#" class="sidebar-item">
-          <i data-lucide="file-text"></i>
-          <span>Termos</span>
-        </a>
-        <a href="tela02-area-institucional.html" class="sidebar-item">
-          <i data-lucide="zap"></i>
-          <span>Nossas instalações</span>
-        </a>
-      </div>
-    </aside>
 
-    <div class="overlay" id="overlay"></div>
+  </main>
 
-    <section class="discount-sheet" id="sheet">
+  <div class="overlay" id="overlay"></div>
 
-      <button class="close-sheet" id="closeSheet">×</button>
+  <section class="discount-sheet" id="sheet">
+
+      <button class="close-sheet" id="closeSheet"><i data-lucide="x"></i></button>
 
       <section class="card sheet-card">
         <h3>Quanto você paga na sua conta mensalmente?</h3>
@@ -165,12 +154,13 @@
           <span class="value" id="valueTextOverlay">50,00</span>
         </div>
 
-        <input type="range" min="50" max="1000" value="50" id="rangeOverlay">
-
-        <div class="slider-labels">
-          <span>R$ 50</span>
-          <span>R$ 500</span>
-          <span>R$ 1000</span>
+        <div class="range-container">
+          <input type="range" min="50" max="1000" value="50" id="rangeOverlay">
+          <div class="slider-labels">
+            <span>R$ 50</span>
+            <span>R$ 500</span>
+            <span>R$ 1000</span>
+          </div>
         </div>
 
         <div class="quick-values">
@@ -181,93 +171,76 @@
       </section>
 
       <div class="result-grid">
-        <div class="result">
-          <h4>De <span class="old-price" id="oldMonth">R$ 50,00</span> para</h4>
-
+        <div class="result-col divider-right">
+          <h4>De <span class="old-price" id="oldMonth">R$ 250,00</span> para</h4>
           <div class="price-line">
-            <strong id="newMonth">R$ 42,50</strong>
-            <span>/mês</span>
+            <span class="currency-small">R$</span>
+            <strong id="newMonth">212,50</strong>
+            <span class="period">/mês</span>
           </div>
         </div>
 
-        <div class="result">
-          <h4>De <span class="old-price" id="oldYear">R$ 600,00</span> para</h4>
-
+        <div class="result-col">
+          <h4>De <span class="old-price" id="oldYear">R$ 3000</span> para</h4>
           <div class="price-line">
-            <strong id="newYear">R$ 510,00</strong>
-            <span>/ano</span>
+            <span class="currency-small">R$</span>
+            <strong id="newYear">2550</strong>
+            <span class="period">/ano</span>
           </div>
         </div>
       </div>
 
-      <h3 class="sheet-title">Veja sua economia<br>ao longo do tempo</h3>
+      <section class="card sheet-card graph-card">
+        <h3 class="sheet-title">Veja sua economia<br>ao longo do tempo</h3>
 
-      <div class="graph">
-        <div class="bar-box">
-          <span class="bar-value" id="mes0">R$ 0</span>
-          <div class="bar gray" id="bar0"></div>
-          <span class="bar-label">Mês 0</span>
-        </div>
+        <div class="graph">
+          <div class="bar-box bar-0">
+            <span class="bar-value" id="mes0">R$ 0</span>
+            <div class="bar gray" id="bar0"></div>
+          </div>
 
-        <div class="bar-box">
-          <span class="bar-value" id="mes1">R$ 0</span>
-          <div class="bar" id="bar1"></div>
-          <span class="bar-label">Mês 1</span>
-        </div>
+          <div class="bar-box">
+            <span class="bar-value" id="mes1">R$ 37,5</span>
+            <div class="bar" id="bar1"></div>
+            <span class="bar-label">Mês 1</span>
+          </div>
 
-        <div class="bar-box">
-          <span class="bar-value" id="mes2">R$ 0</span>
-          <div class="bar" id="bar2"></div>
-          <span class="bar-label">Mês 2</span>
-        </div>
+          <div class="bar-box">
+            <span class="bar-value" id="mes3">R$ 112,5</span>
+            <div class="bar" id="bar3"></div>
+            <span class="bar-label">Mês 3</span>
+          </div>
 
-        <div class="bar-box">
-          <span class="bar-value" id="mes3">R$ 0</span>
-          <div class="bar" id="bar3"></div>
-          <span class="bar-label">Mês 3</span>
-        </div>
+          <div class="bar-box">
+            <span class="bar-value" id="mes6">R$ 225</span>
+            <div class="bar" id="bar6"></div>
+            <span class="bar-label">Mês 6</span>
+          </div>
 
-        <div class="bar-box">
-          <span class="bar-value" id="mes4">R$ 0</span>
-          <div class="bar" id="bar4"></div>
-          <span class="bar-label">Mês 4</span>
+          <div class="bar-box">
+            <span class="bar-value" id="mes12">R$ 450</span>
+            <div class="bar green" id="bar12"></div>
+            <span class="bar-label">Mês 12</span>
+          </div>
         </div>
+      </section>
 
-        <div class="bar-box">
-          <span class="bar-value" id="mes5">R$ 0</span>
-          <div class="bar" id="bar5"></div>
-          <span class="bar-label">Mês 5</span>
-        </div>
+      <p class="footnote">Valores aproximados. A economia pode variar de acordo com seu consumo.</p>
 
-        <div class="bar-box">
-          <span class="bar-value" id="mes12">R$ 0</span>
-          <div class="bar green" id="bar12"></div>
-          <span class="bar-label">Mês 12</span>
-        </div>
+      <div class="sheet-footer-info">
+        <span>Desconto Bulbe:</span>
+        <strong class="text-green" id="descontoMensal">R$ 37,70</strong>
+        <span>mensal</span>
       </div>
 
-      <button class="start-btn sheet-button" type="button"
-        onclick="window.location.href='tela05-sua-conta-chegou.html'">Começar agora</button>
-
-    </section>
-
-    <!-- BARRA DE NAVEGACAO INFERIOR -->
-    <nav class="nav">
-      <a href="tela01-cronograma-ativacao.html" class="nav-item"><i data-lucide="file-text"></i>Faturas</a>
-      <a href="#" class="nav-item"><i data-lucide="zap"></i>Consumo</a>
-      <a href="tela05-sua-conta-chegou.html" class="nav-item"><i data-lucide="house"></i>Início</a>
-      <a href="tela04-tela-indicacoes.html" class="nav-item"><i data-lucide="user-round-plus"></i>Indicações</a>
-      <a href="#" class="nav-item" id="maisBtn"><i data-lucide="ellipsis"></i>Mais</a>
-    </nav>
-
-  </div>
+      <button class="start-btn sheet-button" type="button" onclick="window.location.href='tela05-sua-conta-chegou.html'">Começar agora <i data-lucide="arrow-right"></i></button>
+  </section>
 
   <script src="../script/tela03-simulacao-de-economia.js"></script>
   <script src="../script/sidebar.js"></script>
   <script>
     lucide.createIcons();
   </script>
-
 </body>
 
 </html>

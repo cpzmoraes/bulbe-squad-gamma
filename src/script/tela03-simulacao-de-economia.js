@@ -107,7 +107,7 @@ function updateDiscountValues(value){
   document.getElementById("oldYear").textContent = `R$ ${formatMoney(oldYear)}`;
   document.getElementById("newYear").textContent = `R$ ${formatMoney(newYear)}`;
 
-  const meses = [0, 1, 2, 3, 4, 5, 12];
+  const meses = [0, 1, 3, 6, 12];
 
   meses.forEach(mes => {
     const economia = discount * mes;
@@ -117,7 +117,13 @@ function updateDiscountValues(value){
 
     text.textContent = `R$ ${formatMoney(economia)}`;
 
-    const altura = mes === 0 ? 0 : (mes / 12) * 100;
+    const MAX_ECONOMIA = (1000 * 0.15) * 12; // 1800
+    // O valor mínimo de altura para meses > 0 pode ser um pouco maior para não sumir, ou apenas calcular direto:
+    let altura = 0;
+    if (mes > 0) {
+      // 10% de base para garantir visibilidade + 90% proporcional ao valor maximo
+      altura = 10 + ((economia / MAX_ECONOMIA) * 90);
+    }
 
     bar.style.height = `${altura}%`;
   });
