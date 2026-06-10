@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bulbe - Indicações</title>
+
+    <link rel="stylesheet" href="../styles/style-root.css">
+    <link rel="stylesheet" href="../styles/tela04-tela-indicacoes.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- HEADER FIXO NO TOPO -->
+    <header class="header">
+        <div class="header-left">
+            <button class="icon-btn" id="menuBtn" aria-label="Abrir menu lateral">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <div class="header-center">
+            <img src="../assets/logo-bulbe-branca.png" alt="Bulbe" />
+        </div>
+
+        <div class="header-right">
+            <button class="icon-btn" aria-label="Notificações">
+                <i data-lucide="bell"></i>
+            </button>
+            <button class="profile-circle" aria-label="Acessar Perfil"></button>
+        </div>
+    </header>
+
+    <!-- OVERLAY E SIDEBAR -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="../assets/logo-bulbe-azul.png" alt="Bulbe Logo" class="sidebar-logo">
+            <button class="icon-btn close-sidebar" id="closeSidebarBtn">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <div class="sidebar-nav">
+            <a href="tela06-ensinar-geracao-distribuida.html" class="sidebar-item">
+                <i data-lucide="file-question"></i>
+                <span>Como funciona?</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <i data-lucide="sparkles"></i>
+                <span>Mudança de endereço</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <i data-lucide="message-square"></i>
+                <span>Fale conosco</span>
+            </a>
+            <a href="tela07-visualizar-economia-raio.html" class="sidebar-item active">
+                <i data-lucide="map-pin"></i>
+                <span>Em volta de você</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <i data-lucide="file-text"></i>
+                <span>Termos</span>
+            </a>
+            <a href="tela02-area-institucional.html" class="sidebar-item">
+                <i data-lucide="zap"></i>
+                <span>Nossas instalações</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <section class="hero-section">
+
+            <!-- Texto do hero: título com destaque amarelo e subtítulo -->
+            <div class="hero-text">
+                <h1>Indique amigos e <span class="highlight">ganhe dinheiro</span></h1>
+                <p>Seu amigo economiza na<br>conta de luz.<br>E você recebe uma recompensa.</p>
+            </div>
+
+            <!-- Ilustração decorativa posicionada no canto inferior direito do hero -->
+            <div class="hero-image-wrapper">
+                <!-- Blob cinza-azulado de fundo, gerado via CSS com border-radius orgânico -->
+                <div class="hero-bg-blob"></div>
+                <img src="../assets/high-five.svg" alt="Ilustração de amigos comemorando"
+                    class="hero-illustration">
+            </div>
+        </section>
+
+        <div class="main-content-sheet">
+            <section class="content-section">
+
+                <div class="card stats-card">
+
+                    <!-- Indicador 1: Valor acumulado em R$ -->
+                    <div class="stat-item">
+                        <span class="stat-label">Economia por indicação</span>
+                        <div class="stat-value stat-value-baseline">
+                            <span class="currency">R$</span>
+                            <span class="amount">260,72</span>
+                        </div>
+                        <div class="stat-tag">
+                            <i data-lucide="circle-dollar-sign"></i>
+                            <span>Você já ganhou</span>
+                        </div>
+                    </div>
+
+                    <!-- Divisor vertical entre os dois stat-items -->
+                    <div class="divider"></div>
+
+                    <!-- Indicador 2: Número de amigos indicados -->
+                    <div class="stat-item">
+                        <span class="stat-label">Amigos indicados</span>
+                        <div class="stat-value stat-value-center">
+                            <span class="amount">08</span>
+                            <i data-lucide="users"></i>
+                        </div>
+                        <div class="stat-tag">
+                            <i data-lucide="circle-dollar-sign"></i>
+                            <span>Já estão economizando</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card how-it-works-card">
+
+                    <!-- Cabeçalho do card: título centralizado com linhas decorativas nas laterais -->
+                    <div class="section-title">
+                        <div class="line"></div>
+                        <h2>COMO FUNCIONA</h2>
+                        <div class="line"></div>
+                    </div>
+
+                        <!-- Fluxo das 3 etapas: Ícone + Texto em colunas -->
+                        <div class="steps-flow">
+                            <!-- Linha tracejada conectando os passos (via CSS pseudo-element ou absolute) -->
+                            <div class="steps-line-background"></div>
+
+                            <!-- Etapa 1 -->
+                            <div class="step-column">
+                                <div class="step-icon">
+                                    <i data-lucide="link"></i>
+                                </div>
+                                <p>Compartilhe seu link com amigos e familiares.</p>
+                            </div>
+
+                            <!-- Etapa 2 -->
+                            <div class="step-column">
+                                <div class="step-icon">
+                                    <i data-lucide="user-plus"></i>
+                                </div>
+                                <p>Ele faz o cadastro e assina com a Bulbe</p>
+                            </div>
+
+                            <!-- Etapa 3 -->
+                            <div class="step-column">
+                                <div class="step-icon">
+                                    <i data-lucide="gift"></i>
+                                </div>
+                                <p>Quando o contrato é aprovado, você recebe prêmio</p>
+                            </div>
+                        </div>
+
+                    <!-- Botões de ação: WhatsApp (primário) e copiar link (secundário) -->
+                    <div class="action-buttons">
+                        <button class="btn btn-whatsapp">
+                            <img src="../assets/whatsapp-icon.png" alt="WhatsApp icon">
+                            Indicar por WhatsApp
+                        </button>
+                        <button class="btn btn-outline" id="btn-copiar">
+                        <i data-lucide="copy"></i>
+                        <span>Copiar link de indicação</span>
+                    </button>
+                    </div>
+
+                    <!-- Banner informativo verde: reforça o valor do bônus por contrato aprovado -->
+                    <div class="bonus-banner">
+                        <div class="bonus-icon">
+                            <i data-lucide="refresh-cw"></i>
+                        </div>
+                        <!-- Texto descritivo do benefício -->
+                        <div class="bonus-text">
+                            <span>Cada amigo que assina, você ganha.</span>
+                        </div>
+                        <!-- Valor do bônus em destaque -->
+                        <div class="bonus-value">
+                            <strong>R$ 20,00</strong>
+                            <span>por contrato aprovado</span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- BARRA DE NAVEGACAO INFERIOR (PADRÃO TELA06) -->
+    <nav class="nav">
+        <a href="tela01-cronograma-ativacao.html" class="nav-item"><i data-lucide="file-text"></i>Faturas</a>
+        <a href="#" class="nav-item"><i data-lucide="zap"></i>Consumo</a>
+        <a href="tela05-sua-conta-chegou.html" class="nav-item"><i data-lucide="house"></i>Início</a>
+        <a href="tela04-tela-indicacoes.html" class="nav-item active"><i data-lucide="user-round-plus"></i>Indicações</a>
+        <a href="#" class="nav-item" id="maisBtn"><i data-lucide="ellipsis"></i>Mais</a>
+    </nav>
+
+    <script src="../script/tela04-tela-indicacoes.js"></script>
+    <script src="../script/sidebar.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

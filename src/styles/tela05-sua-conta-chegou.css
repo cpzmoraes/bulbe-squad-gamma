@@ -1,0 +1,407 @@
+/* =========================================
+   Estilos Específicos da Tela 05 (Sua conta chegou)
+   Variáveis globais estão no style-root.css
+   ========================================= */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary, #08068d);
+    min-height: 100vh;
+}
+
+.secao-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 24px 24px 0 24px;
+    color: var(--bg-card, #ffffff);
+    gap: 16px;
+}
+
+.hero-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.hero-texto h1 {
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.hero-texto .destaque {
+    color: var(--primary-yellow, #fed029);
+}
+
+.hero-texto p {
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 180px;
+    margin-bottom: 16px; /* Aumentado o espaçamento abaixo do texto */
+}
+
+.hero-imagem {
+    width: 130px;
+    flex-shrink: 0;
+    transform: translateY(20px);
+    z-index: 2;
+}
+
+.hero-imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-height: 120px;
+    border-radius: 8px;
+}
+
+.secao-info {
+    background-color: var(--bg-card, #ffffff);
+    border-radius: 16px 16px 0 0;
+    padding: 24px 16px 110px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex-grow: 1;
+    z-index: 1;
+    width: 100%;
+}
+
+.card-informativo, .card-principal {
+    width: 100%;
+}
+
+.card-informativo {
+    background-color: var(--primary-bg, #e8e8ff);
+    border: 1px solid var(--primary-light, #ceceff);
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    color: var(--primary, #08068d);
+}
+
+.icone-info {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.info-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-texto strong {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.info-texto p {
+    font-size: 12px;
+    color: var(--text-main, #333333);
+    line-height: 1.4;
+}
+
+.card-principal {
+    border: 2px solid var(--border-light, #e6f1fe);
+    border-radius: 14px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.bloco-envio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.pergunta-conta {
+    font-size: 16px;
+    color: var(--primary, #08068d);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.link-enviar {
+    color: var(--primary, #08068d);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.btn-enviar-conta {
+    background-color: var(--primary, #08068d);
+    color: var(--bg-card, #ffffff);
+    border: none;
+    border-radius: 8px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(8, 6, 141, 0.2);
+    transition: opacity 0.2s;
+}
+
+.btn-enviar-conta:active {
+    opacity: 0.8;
+}
+
+.bloco-comparacao {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.titulo-comparacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary, #08068d);
+}
+
+.texto-verde  { color: var(--success, #18814d); }
+.texto-vermelho { color: var(--danger, #b42318); }
+
+.icone-seta {
+    width: 16px;
+    height: 16px;
+}
+
+.box-comparacao {
+    display: flex;
+    position: relative;
+    border-radius: 12px;
+}
+
+.comp-sem-bulbe,
+.comp-com-bulbe {
+    flex: 1;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.comp-sem-bulbe {
+    background-color: var(--danger-bg, #fef3f2);
+    border: 1px solid var(--danger-light, #ffa9a3);
+    border-right: none;
+    border-radius: 12px 0 0 12px;
+    padding-right: 24px;
+}
+
+.comp-com-bulbe {
+    background-color: var(--success-bg, #ecfdf3);
+    border: 1px solid var(--success-light, #6ce9a6);
+    border-left: none;
+    border-radius: 0 12px 12px 0;
+    padding-left: 24px;
+}
+
+.comp-header {
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.comp-sem-bulbe .comp-header { color: var(--danger, #b42318); }
+.comp-com-bulbe .comp-header { color: var(--success, #18814d); }
+
+.emoji {
+    width: 16px;
+    height: 16px;
+}
+
+.comp-subtexto {
+    font-size: 10px;
+    color: var(--text-muted, #667085);
+}
+
+.comp-valor {
+    font-size: clamp(14px, 4.5vw, 18px);
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.comp-divisoria {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-card, #ffffff);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--primary, #08068d);
+}
+
+.comp-divisoria i {
+    width: 16px;
+    height: 16px;
+}
+
+.bloco-economia {
+    background-color: var(--success-bg, #deffef);
+    border: 1px solid var(--success-light, #a6f4c5);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icone-economia {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    color: var(--success, #18814d);
+}
+
+.economia-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.economia-texto strong {
+    font-size: 12px;
+    color: var(--text-main, #333333);
+}
+
+.economia-texto p {
+    font-size: 10px;
+    color: var(--text-muted, #667085);
+    line-height: 1.3;
+}
+
+
+/* =========================================
+   MEDIA QUERIES PARA RESPONSIVIDADE
+   ========================================= */
+
+@media (min-width: 768px) {
+    .secao-hero {
+        padding: 40px 40px 0 40px;
+    }
+
+    .hero-texto h1 {
+        font-size: 32px;
+    }
+
+    .hero-texto p {
+        font-size: 16px;
+        max-width: 300px;
+    }
+
+    .hero-imagem {
+        width: 180px;
+    }
+
+    .secao-info {
+        border-radius: 24px 24px 0 0;
+        padding: 40px 40px 110px 40px;
+    }
+
+    .btn-enviar-conta {
+        max-width: 400px;
+    }
+}
+
+/* =========================================
+   MODAL DE CÂMERA
+   ========================================= */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 24px;
+}
+
+.modal-overlay.hidden {
+    display: none !important;
+}
+
+.modal-content {
+    background-color: var(--bg-card, #ffffff);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-light, #e6f1fe);
+}
+
+.modal-header h2 {
+    font-size: 18px;
+    color: var(--primary, #08068d);
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+#camera-instrucao {
+    font-size: 14px;
+    color: var(--primary, #08068d);
+    font-weight: 500;
+    text-align: center;
+}
+
+.video-container {
+    width: 100%;
+    background-color: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 3/4;
+}
+
+.video-container video, .video-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-container img.hidden {
+    display: none;
+}

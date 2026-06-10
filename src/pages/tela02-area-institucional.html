@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bulbe - Nossas Instalações</title>
+
+  <link rel="stylesheet" href="../styles/style-root.css">
+  <link rel="stylesheet" href="../styles/tela02-area-institucional.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <!-- HEADER FIXO NO TOPO -->
+  <header class="header">
+    <div class="header-left">
+      <button class="icon-btn" id="menuBtn" aria-label="Abrir menu lateral">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <div class="header-center">
+      <img src="../assets/logo-bulbe-branca.png" alt="Bulbe" />
+    </div>
+
+    <div class="header-right">
+      <button class="icon-btn" aria-label="Notificações">
+        <i data-lucide="bell"></i>
+      </button>
+      <button class="profile-circle" aria-label="Acessar Perfil"></button>
+    </div>
+  </header>
+
+  <!-- OVERLAY E SIDEBAR -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <img src="../assets/logo-bulbe-azul.png" alt="Bulbe Logo" class="sidebar-logo">
+      <button class="icon-btn close-sidebar" id="closeSidebarBtn">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="sidebar-nav">
+      <a href="tela06-ensinar-geracao-distribuida.html" class="sidebar-item">
+        <i data-lucide="file-question"></i>
+        <span>Como funciona?</span>
+      </a>
+      <a href="#" class="sidebar-item">
+        <i data-lucide="sparkles"></i>
+        <span>Mudança de endereço</span>
+      </a>
+      <a href="#" class="sidebar-item">
+        <i data-lucide="message-square"></i>
+        <span>Fale conosco</span>
+      </a>
+      <a href="tela07-visualizar-economia-raio.html" class="sidebar-item">
+        <i data-lucide="map-pin"></i>
+        <span>Em volta de você</span>
+      </a>
+      <a href="#" class="sidebar-item">
+        <i data-lucide="file-text"></i>
+        <span>Termos</span>
+      </a>
+      <a href="tela02-area-institucional.html" class="sidebar-item active">
+        <i data-lucide="zap"></i>
+        <span>Nossas instalações</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- CONTEUDO PRINCIPAL -->
+  <main class="main-content">
+
+    <!-- Hero Section -->
+    <section class="welcome-header hero-institucional">
+      <div class="hero-text">
+        <h1 class="greeting">Conheça as usinas que geram a sua <span class="text-green">economia</span></h1>
+        <p class="subtitle">Energia limpa, solar e renovável para reduzir sua conta de luz</p>
+      </div>
+      <img class="hero-image" src="../assets/hero-usinas.png" alt="Ilustração Usinas">
+    </section>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+
+      <div class="section-header">
+        <h2>Usinas próximas de você</h2>
+        <p>Energia solar que transforma vidas e economiza para você</p>
+      </div>
+
+      <!-- Grid de Usinas (2 Colunas) -->
+      <div class="usinas-grid">
+        <!-- Card Usina 1 -->
+        <button class="usina-card active" data-usina="boa-vista">
+          <img src="../assets/usina-boa-vista.png" alt="Usina Boa Vista">
+          <div class="usina-card-content">
+            <h3>Usina Boa Vista</h3>
+            <p class="usina-location"><i data-lucide="map-pin"></i> Nova lima - MG</p>
+            <div class="usina-economy">
+              <span>Economia gerada (mês)</span>
+              <strong>R$ 20.000</strong>
+            </div>
+          </div>
+        </button>
+
+        <!-- Card Usina 2 -->
+        <button class="usina-card" data-usina="serra-azul">
+          <img src="../assets/usina-serra-azul.png" alt="Usina Serra Azul">
+          <div class="usina-card-content">
+            <h3>Usina Serra Azul</h3>
+            <p class="usina-location"><i data-lucide="map-pin"></i> Igarapé - MG</p>
+            <div class="usina-economy">
+              <span>Economia gerada (mês)</span>
+              <strong>R$ 18.500</strong>
+            </div>
+          </div>
+        </button>
+      </div>
+
+      <!-- Detalhes da Usina Selecionada -->
+      <div class="usina-detalhe-card">
+        <div class="detalhe-esquerda">
+          <div class="detalhe-header">
+            <h3 id="detalhe-nome">Usina Boa Vista</h3>
+            <p class="usina-location"><i data-lucide="map-pin"></i> <span id="detalhe-cidade">Nova lima - MG</span></p>
+            <p class="detalhe-desc" id="detalhe-descricao">A Usina Boa Vista produz energia limpa todos os dias.</p>
+          </div>
+
+          <div class="detalhe-metricas">
+            <div class="metrica">
+              <div class="metrica-icon"><i data-lucide="zap"></i></div>
+              <span class="metrica-label">Potência</span>
+              <strong id="detalhe-potencia">3,1 MWp</strong>
+            </div>
+            <div class="metrica">
+              <div class="metrica-icon"><i data-lucide="leaf"></i></div>
+              <span class="metrica-label">Economia</span>
+              <strong id="detalhe-economia" class="text-green">R$ 20.000</strong>
+            </div>
+            <div class="metrica">
+              <div class="metrica-icon"><i data-lucide="users"></i></div>
+              <span class="metrica-label">Usuários</span>
+              <strong id="detalhe-usuarios">+2.300</strong>
+            </div>
+          </div>
+
+          <a class="link-visitar-usina" id="link-visitar" href="https://www.google.com/maps" target="_blank"
+            rel="noopener">
+            <i data-lucide="map"></i> Ver no mapa
+          </a>
+        </div>
+
+        <div class="detalhe-direita">
+          <img class="detalhe-img" id="detalhe-img" src="../assets/usina-boa-vista-detalhe.png" alt="Foto da Usina">
+        </div>
+      </div>
+
+      <!-- Card de Impacto -->
+      <div class="impact-card">
+        <div class="impact-icon-left">
+          <i data-lucide="leaf"></i>
+        </div>
+        <div class="impact-content">
+          <h3>Energia que gera impacto</h3>
+          <p>Nossas usinas produzem energia limpa, reduzindo emissões de CO2.</p>
+        </div>
+        <div class="impact-divider"></div>
+        <div class="impact-stats">
+          <span>CO2 evitado (mês)</span>
+          <strong>320 ton</strong>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- BARRA DE NAVEGACAO INFERIOR -->
+  <nav class="nav">
+    <a href="tela01-cronograma-ativacao.html" class="nav-item"><i data-lucide="file-text"></i>Faturas</a>
+    <a href="#" class="nav-item"><i data-lucide="zap"></i>Consumo</a>
+    <a href="tela05-sua-conta-chegou.html" class="nav-item"><i data-lucide="house"></i>Início</a>
+    <a href="tela04-tela-indicacoes.html" class="nav-item"><i data-lucide="user-round-plus"></i>Indicações</a>
+    <a href="#" class="nav-item" id="maisBtn"><i data-lucide="ellipsis"></i>Mais</a>
+  </nav>
+
+  <script src="../script/tela02-area-institucional.js"></script>
+  <script src="../script/sidebar.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>

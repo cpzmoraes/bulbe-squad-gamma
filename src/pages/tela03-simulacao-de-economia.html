@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bulbe Economia</title>
+  <link rel="stylesheet" href="../styles/style-root.css">
+  <link rel="stylesheet" href="../styles/tela03-simulacao-de-economia.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+  <!-- HEADER FIXO NO TOPO -->
+  <header class="header">
+    <div class="header-left">
+      <button class="icon-btn" id="menuBtn" aria-label="Abrir menu lateral">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <div class="header-center">
+      <img src="../assets/logo-bulbe-branca.png" alt="Bulbe" />
+    </div>
+
+    <div class="header-right">
+      <button class="icon-btn" aria-label="Notificações">
+        <i data-lucide="bell"></i>
+      </button>
+      <button class="profile-circle" aria-label="Acessar Perfil"></button>
+    </div>
+  </header>
+
+  <!-- OVERLAY E SIDEBAR -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <img src="../assets/logo-bulbe-azul.png" alt="Bulbe Logo" class="sidebar-logo">
+      <button class="icon-btn close-sidebar" id="closeSidebarBtn">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="sidebar-nav">
+      <a href="tela06-ensinar-geracao-distribuida.html" class="sidebar-item">
+        <i data-lucide="file-question"></i>
+        <span>Como funciona?</span>
+      </a>
+      <a href="#" class="sidebar-item">
+        <i data-lucide="sparkles"></i>
+        <span>Mudança de endereço</span>
+      </a>
+      <a href="#" class="sidebar-item">
+        <i data-lucide="message-square"></i>
+        <span>Fale conosco</span>
+      </a>
+      <a href="tela07-visualizar-economia-raio.html" class="sidebar-item">
+        <i data-lucide="map-pin"></i>
+        <span>Em volta de você</span>
+      </a>
+      <a href="#" class="sidebar-item">
+        <i data-lucide="file-text"></i>
+        <span>Termos</span>
+      </a>
+      <a href="tela02-area-institucional.html" class="sidebar-item">
+        <i data-lucide="zap"></i>
+        <span>Nossas instalações</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- CONTEUDO PRINCIPAL -->
+  <main class="main-content" id="mainContent">
+
+      <div class="welcome-header">
+        <h1 class="title">Descubra quanto você<br>pode economizar</h1>
+        <p class="subtitle">Simule em segundos e veja seu potêncial<br>de <span class="text-green">economia.</span></p>
+      </div>
+
+      <div class="content-white-bg">
+        <section class="hero">
+          <div class="image-placeholder">
+            <img src="../assets/mulher-imagem-bulbe.png" alt="Ilustração Bulbe">
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Quanto você paga na sua conta mensalmente?</h3>
+
+          <div class="input-wrapper">
+            <span class="currency">R$</span>
+            <span class="value" id="valueText">50,00</span>
+          </div>
+
+          <div class="range-container">
+            <input type="range" min="50" max="1000" value="50" id="range">
+            <div class="slider-labels">
+              <span>R$ 50</span>
+              <span>R$ 500</span>
+              <span>R$ 1000</span>
+            </div>
+          </div>
+
+          <div class="quick-values">
+            <button class="quick-btn" data-value="250">R$ 250</button>
+            <button class="quick-btn" data-value="500">R$ 500</button>
+            <button class="quick-btn" data-value="750">R$ 750</button>
+          </div>
+        </section>
+
+        <section class="benefits">
+          <div class="benefit">
+            <div class="benefit-icon-wrapper">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <strong>Sem fidelidade</strong>
+            <small>Cancele quando quiser</small>
+          </div>
+
+          <div class="benefit">
+            <div class="benefit-icon-wrapper">
+              <i data-lucide="lock"></i>
+            </div>
+            <strong>100% digital</strong>
+            <small>Processo simples e seguro</small>
+          </div>
+
+          <div class="benefit">
+            <div class="benefit-icon-wrapper">
+              <i data-lucide="check-circle"></i>
+            </div>
+            <strong>Você só paga</strong>
+            <small>Se realmente economizar</small>
+          </div>
+        </section>
+
+        <button class="start-btn" id="startBtnMain" type="button" onclick="window.location.href='tela05-sua-conta-chegou.html'">Começar agora <i data-lucide="arrow-right"></i></button>
+        <p class="secure-text"><i data-lucide="lock"></i> Não cobramos <span class="text-blue-light">nada</span> para começar</p>
+      </div>
+
+  </main>
+
+  <div class="overlay" id="overlay"></div>
+
+  <section class="discount-sheet" id="sheet">
+
+      <button class="close-sheet" id="closeSheet"><i data-lucide="x"></i></button>
+
+      <section class="card sheet-card">
+        <h3>Quanto você paga na sua conta mensalmente?</h3>
+
+        <div class="input-wrapper">
+          <span class="currency">R$</span>
+          <span class="value" id="valueTextOverlay">50,00</span>
+        </div>
+
+        <div class="range-container">
+          <input type="range" min="50" max="1000" value="50" id="rangeOverlay">
+          <div class="slider-labels">
+            <span>R$ 50</span>
+            <span>R$ 500</span>
+            <span>R$ 1000</span>
+          </div>
+        </div>
+
+        <div class="quick-values">
+          <button class="quick-btn" data-value="250">R$ 250</button>
+          <button class="quick-btn" data-value="500">R$ 500</button>
+          <button class="quick-btn" data-value="750">R$ 750</button>
+        </div>
+      </section>
+
+      <div class="result-grid">
+        <div class="result-col divider-right">
+          <h4>De <span class="old-price" id="oldMonth">R$ 250,00</span> para</h4>
+          <div class="price-line">
+            <span class="currency-small">R$</span>
+            <strong id="newMonth">212,50</strong>
+            <span class="period">/mês</span>
+          </div>
+        </div>
+
+        <div class="result-col">
+          <h4>De <span class="old-price" id="oldYear">R$ 3000</span> para</h4>
+          <div class="price-line">
+            <span class="currency-small">R$</span>
+            <strong id="newYear">2550</strong>
+            <span class="period">/ano</span>
+          </div>
+        </div>
+      </div>
+
+      <section class="card sheet-card graph-card">
+        <h3 class="sheet-title">Veja sua economia<br>ao longo do tempo</h3>
+
+        <div class="graph">
+          <div class="bar-box bar-0">
+            <span class="bar-value" id="mes0">R$ 0</span>
+            <div class="bar gray" id="bar0"></div>
+          </div>
+
+          <div class="bar-box">
+            <span class="bar-value" id="mes1">R$ 37,5</span>
+            <div class="bar" id="bar1"></div>
+            <span class="bar-label">Mês 1</span>
+          </div>
+
+          <div class="bar-box">
+            <span class="bar-value" id="mes3">R$ 112,5</span>
+            <div class="bar" id="bar3"></div>
+            <span class="bar-label">Mês 3</span>
+          </div>
+
+          <div class="bar-box">
+            <span class="bar-value" id="mes6">R$ 225</span>
+            <div class="bar" id="bar6"></div>
+            <span class="bar-label">Mês 6</span>
+          </div>
+
+          <div class="bar-box">
+            <span class="bar-value" id="mes12">R$ 450</span>
+            <div class="bar green" id="bar12"></div>
+            <span class="bar-label">Mês 12</span>
+          </div>
+        </div>
+      </section>
+
+      <p class="footnote">Valores aproximados. A economia pode variar de acordo com seu consumo.</p>
+
+      <div class="sheet-footer-info">
+        <span>Desconto Bulbe:</span>
+        <strong class="text-green" id="descontoMensal">R$ 37,70</strong>
+        <span>mensal</span>
+      </div>
+
+      <button class="start-btn sheet-button" type="button" onclick="window.location.href='tela05-sua-conta-chegou.html'">Começar agora <i data-lucide="arrow-right"></i></button>
+  </section>
+
+  <script src="../script/tela03-simulacao-de-economia.js"></script>
+  <script src="../script/sidebar.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>

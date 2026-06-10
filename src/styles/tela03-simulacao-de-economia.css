@@ -1,0 +1,483 @@
+/* =========================================================================
+   ESTILOS ESPECÍFICOS TELA 03 (SIMULAÇÃO DE ECONOMIA)
+========================================================================= */
+
+.main-content {
+  min-height: 100vh;
+  transition: filter 0.3s ease;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content.blurred {
+  filter: blur(5px);
+}
+
+.welcome-header {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 70px 24px 40px; /* Padding-top extra para o header fixo */
+  text-align: left;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.text-green {
+  color: var(--success-light);
+}
+
+.text-blue-light {
+  color: var(--primary-medium-light);
+}
+
+.content-white-bg {
+  background-color: var(--bg-card);
+  border-radius: 30px 30px 0 0;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32px;
+}
+
+.hero {
+  padding: 16px 24px 0;
+}
+
+.image-placeholder {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.card {
+  background: var(--bg-app);
+  margin: 0px 20px;
+  padding: 24px 18px;
+  border: 1px solid #d0e1fd;
+  border-radius: 16px;
+}
+
+.card h3 {
+  color: var(--primary);
+  font-size: 13px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.input-wrapper {
+  height: 64px;
+  border: 1px solid #d0e1fd;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.currency {
+  position: absolute;
+  left: 20px;
+  color: var(--border-strong);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.value {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.range-container {
+  position: relative;
+}
+
+input[type="range"] {
+  width: 100%;
+  appearance: none;
+  height: 6px;
+  border-radius: 20px;
+  cursor: pointer;
+  background: linear-gradient(
+    to right,
+    var(--primary) 0%,
+    var(--primary) var(--range-progress, 0%),
+    var(--border-strong) var(--range-progress, 0%),
+    var(--border-strong) 100%
+  );
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border: none;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: 6px;
+}
+
+.quick-values {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.quick-btn {
+  border: 1px solid var(--border-light);
+  background: #fff;
+  color: var(--primary);
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.quick-btn.selected {
+  border: 2px solid var(--primary);
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 12px;
+  margin: 16px 0 20px;
+}
+
+.benefit {
+  width: 31%;
+  text-align: center;
+}
+
+.benefit-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  background: var(--bg-app);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px;
+  color: var(--primary);
+}
+
+.benefit-icon-wrapper svg {
+  width: 18px;
+  height: 18px;
+}
+
+.benefit strong {
+  display: block;
+  font-size: 11px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.benefit small {
+  display: block;
+  margin-top: 2px;
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+.start-btn {
+  width: calc(100% - 40px);
+  height: 56px;
+  margin: 16px 20px 12px;
+  border: none;
+  border-radius: 12px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.secure-text {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.secure-text svg {
+  width: 14px;
+  height: 14px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 50;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.discount-sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  background: var(--bg-card);
+  border-radius: 30px 30px 0 0;
+  padding: 18px 24px 32px;
+  z-index: 60;
+  transition: bottom 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.discount-sheet.active {
+  bottom: 0;
+}
+
+.close-sheet {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  z-index: 2;
+  padding: 4px;
+}
+
+.close-sheet svg {
+  width: 24px;
+  height: 24px;
+}
+
+.sheet-card {
+  margin: 32px 0 24px 0;
+  padding: 20px 16px;
+  background: #fff;
+  border: 1px solid #e1e8f2;
+  border-radius: 16px;
+}
+
+.graph-card {
+  margin-top: 0;
+  margin-bottom: 12px;
+  padding-bottom: 36px;
+}
+
+.result-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.result-col {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.result-col.divider-right {
+  border-right: 1px solid var(--border-light);
+  padding-right: 16px;
+}
+
+.result-col:not(.divider-right) {
+  padding-left: 16px;
+}
+
+.result-col h4 {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.old-price {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+  color: var(--text-muted);
+}
+
+.price-line {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  color: var(--primary);
+}
+
+.currency-small {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.price-line strong {
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.period {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.sheet-title {
+  color: var(--primary);
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.graph {
+  height: 140px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--border-strong);
+  padding-top: 24px;
+}
+
+.bar-box {
+  width: 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.bar-box.bar-0 {
+  width: 20px;
+}
+
+.bar-value {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 6px;
+  white-space: nowrap;
+}
+
+.bar {
+  width: 24px;
+  height: 0%;
+  background: var(--primary-light);
+  border-radius: 6px 6px 0 0;
+  transition: height 0.7s ease;
+}
+
+.bar.animate {
+  animation: barPulse 0.45s ease;
+}
+
+@keyframes barPulse {
+  0% { transform: scaleY(0.85); }
+  60% { transform: scaleY(1.05); }
+  100% { transform: scaleY(1); }
+}
+
+.bar.gray {
+  background: transparent;
+}
+
+.bar.green {
+  background: var(--success-light);
+}
+
+.bar-label {
+  position: absolute;
+  bottom: -22px;
+  font-size: 9px;
+  color: var(--text-main);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.footnote {
+  font-size: 9px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 24px;
+  margin-top: 28px;
+}
+
+.sheet-footer-info {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.sheet-footer-info .text-green {
+  font-size: 16px;
+}
+
+.sheet-button {
+  width: 100%;
+  margin: 0;
+}
