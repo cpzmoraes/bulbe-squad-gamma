@@ -255,6 +255,7 @@ button {
     padding-right: 16px;
     /* Evita que o texto encoste na seta */
     line-height: 1.4;
+    flex: 1;
 }
 
 .faq-icon {
